@@ -2,7 +2,7 @@ from __future__ import annotations
 import re
 from urllib.parse import urljoin
 from bs4 import BeautifulSoup
-from .common import safe_source, fetch, clean, make_record, extract_detail, extractive_summary
+from .common import safe_source, fetch, clean, make_record, extract_detail, extractive_summary, extract_pdf_text
 from .scholarships import classify, extract_dimensions, assess, deadline_fields
 
 LIST_URL = "https://website.ncyu.edu.tw/life/Subject?nodeId=55082"
@@ -85,6 +85,7 @@ def add_page_records(soup, page_url, source, scope, records, seen, detail_state)
         seen.add(href)
         detail_text = ""
         attachments = []
+        attachment_texts = []
         registration_links = []
         detail_status = "not_fetched"
         if detail_state["count"] < MAX_DETAIL_PAGES:
@@ -97,6 +98,21 @@ def add_page_records(soup, page_url, source, scope, records, seen, detail_state)
                         attachments.append(link)
                     elif is_application_link(link):
                         registration_links.append(link)
+                # Many NCYU notices put the actual eligibility rules in attached PDFs,
+                # while the HTML detail page contains only a title and download link.
+                pdf_attachments = [x for x in attachments if re.search(r"\.pdf(?:$|[?#])", x.get("url", ""), re.I)]
+                for attachment in pdf_attachments[:3]:
+                    extracted = extract_pdf_text(attachment["url"])
+                    if extracted:
+                        attachment_texts.append({
+                            "name": attachment.get("title", "公告附件"),
+                            "url": attachment["url"],
+                            "text": extracted[:12000],
+                        })
+                if attachment_texts:
+                    detail_text = "\n".join([detail_text] + [
+                        "附件「" + x["name"] + "」內容：" + x["text"] for x in attachment_texts
+                    ])
                 detail_state["count"] += 1
         full_text = "\n".join(x for x in [title, detail_text] if x)
         grades, departments = extract_dimensions(full_text, "")
@@ -122,6 +138,7 @@ def add_page_records(soup, page_url, source, scope, records, seen, detail_state)
             "deadline_date": deadline_date, "deadline_text": deadline_text, "deadline_conflict_text": deadline_conflict_text,
             "official_listing_url": LIST_URL, "detail_fetch_status": detail_status,
             "attachments": attachments, "application_documents": attachments,
+            "attachment_texts": attachment_texts,
             "registration_links": registration_links,
         })
         rec.update(assess(full_text))
