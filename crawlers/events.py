@@ -54,6 +54,16 @@ def crawl_lectures():
         records.append(rec)
     return records
 
+def crawl_library_events():
+    # The library course catalogue and handout download page are course resources,
+    # not individual campus events; avoid ingesting their whole-page text as one card.
+    records = crawl_listing("圖書館活動", "https://cal.lib.nchu.edu.tw/", max_details=25)
+    navigation_titles = [
+        "開課列表", "講義下載", "申請資源利用課程", "課程滿意度調查",
+        "數位課程搶先看", "報名迷你課程", "管理登入"
+    ]
+    return [r for r in records if not any(k in (r.get("title", "") or "") for k in navigation_titles)]
+
 def diagnose_selfstudy():
     url = "https://selfstudy.nchu.edu.tw/"
     html, final_url = fetch(url)
@@ -74,5 +84,5 @@ def run():
         elif name == "研習暨演講活動":
             results.append(safe_source(name, crawl_lectures))
         else:
-            results.append(safe_source(name, lambda n=name, u=url: crawl_listing(n, u, max_details=25)))
+            results.append(safe_source(name, crawl_library_events)) if name == "圖書館活動" else results.append(safe_source(name, lambda n=name, u=url: crawl_listing(n, u, max_details=25)))
     return results
