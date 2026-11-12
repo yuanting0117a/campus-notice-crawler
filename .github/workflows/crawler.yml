@@ -1,6 +1,8 @@
 name: NCHU Campus Notice Crawler
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
   schedule:
     # GitHub Actions uses UTC. Runs hourly at minute 17; actual start may be delayed.
