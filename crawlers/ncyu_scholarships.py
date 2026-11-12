@@ -100,7 +100,7 @@ def add_page_records(soup, page_url, source, scope, records, seen, detail_state)
                         registration_links.append(link)
                 # Many NCYU notices put the actual eligibility rules in attached PDFs,
                 # while the HTML detail page contains only a title and download link.
-                pdf_attachments = [x for x in attachments if re.search(r"\.pdf(?:$|[?#])", x.get("url", ""), re.I)]
+                pdf_attachments = [x for x in attachments if re.search(r"\.pdf(?:$|[?#])", x.get("title", ""), re.I) or re.search(r"\.pdf(?:$|[?#])", x.get("url", ""), re.I)]
                 for attachment in pdf_attachments[:3]:
                     extracted = extract_pdf_text(attachment["url"])
                     if extracted:
