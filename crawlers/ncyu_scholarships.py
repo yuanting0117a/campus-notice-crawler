@@ -79,7 +79,7 @@ def add_page_records(soup, page_url, source, scope, records, seen, detail_state)
         if re.search(r"(獎助學金|獎學金).{0,20}(設置要點|辦法)$", title) and not re.search(r"(申請公告|受理申請|申請自|申請至)", title):
             continue
         # Older academic-year notices are no longer current application opportunities.
-        old_year = re.search(r"(11[0-4])學年度", title)
+        old_year = re.search(r"(11[0-4])(?:學年度|年度|年|[-－][12])", title)
         if old_year:
             continue
         seen.add(href)
@@ -100,14 +100,26 @@ def add_page_records(soup, page_url, source, scope, records, seen, detail_state)
                 detail_state["count"] += 1
         full_text = "\n".join(x for x in [title, detail_text] if x)
         grades, departments = extract_dimensions(full_text, "")
-        deadline_date, deadline_text = deadline_from_text(full_text)
+        title_deadline, title_deadline_text = deadline_from_text(title)
+        detail_deadline, detail_deadline_text = deadline_from_text(detail_text)
+        deadline_candidates = [x for x in [title_deadline, detail_deadline] if x]
+        deadline_conflict_text = ""
+        if len(set(deadline_candidates)) > 1:
+            # When the heading and detailed body disagree, use the earlier date conservatively
+            # and expose both original texts so the user can verify with the official source.
+            deadline_date = min(deadline_candidates)
+            deadline_text = f"標題：{title_deadline_text}；內文：{detail_deadline_text}"
+            deadline_conflict_text = "公告標題與內文的申請期限不一致，暫以較早日期提醒；請以官方申請系統／承辦單位確認。"
+        else:
+            deadline_date = deadline_candidates[0] if deadline_candidates else ""
+            deadline_text = title_deadline_text or detail_deadline_text
         rec = make_record(source, title, href, full_text)
         rec.update({
             "source": source, "school_scope": scope, "list_text": title,
             "full_text": full_text, "summary": extractive_summary(full_text),
             "eligible_grades": grades, "eligible_departments": departments,
             "categories": classify(title, full_text, ""),
-            "deadline_date": deadline_date, "deadline_text": deadline_text,
+            "deadline_date": deadline_date, "deadline_text": deadline_text, "deadline_conflict_text": deadline_conflict_text,
             "official_listing_url": LIST_URL, "detail_fetch_status": detail_status,
             "attachments": attachments, "application_documents": attachments,
             "registration_links": registration_links,
