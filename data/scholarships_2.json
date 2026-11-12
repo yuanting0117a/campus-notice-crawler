@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-12T10:17:33.825801+00:00",
+  "updated_at": "2026-11-12T10:18:15.974626+00:00",
   "timezone": "Asia/Taipei",
   "policy": "不去重；來源失敗時保留上次成功資料；原文優先於摘要。",
   "sources": [
     {
       "source": "獎學金",
       "status": "ok",
-      "checked_at": "2026-11-12T10:17:32.361368+00:00",
+      "checked_at": "2026-11-12T10:18:14.796982+00:00",
       "count": 43,
       "records": [
         {
@@ -36,7 +36,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.809796+00:00",
+          "last_checked": "2026-11-12T10:18:15.962178+00:00",
           "list_text": "獎學金名稱：115學年度接受各界捐助獎助學金申請公告(收件時間：115年11月2日至11月20日17時止)Scholarships and Grants Sponsored by Various Donors Application dates : 11/2~11/20\n適用對象：大學部與研究所\n獎助對象與條件：接受各界捐助獎助學金獎助對象與條件請參 https://www.osa.nchu.edu.tw/osa/laa/sys/modules/tadnews/index.php?nsn=1542\n申請期限：2026-11-20",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/tadnews/index.php?nsn=1542",
@@ -79,7 +79,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.810074+00:00",
+          "last_checked": "2026-11-12T10:18:15.962393+00:00",
           "list_text": "獎學金名稱：115學年度第1學期員生消費合作社捐贈獎助學金收件期間：11月2日至11月20日17時 Staff and Students Consumer Cooperative Scholarship Application dates : 11/2 ~ 11/20 (For TAIWANESE students ONLY)\n適用對象：大學部與研究所\n獎助對象與條件：1.申請者前一學期學業及操行成績平均85分以上，且未有任何一科不及格者。 2.本學期已領其他獎助學金者，不得申請。 3.在職生及延畢生不得申請。 4.中低收入戶或家境清寒之學生優先獲獎。 更多詳細資訊請參 https://www.osa.nchu.edu.tw/osa/laa/sys/modules/tadnews/index.php?nsn=2089\n申請期限：2026-11-20",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/tadnews/index.php?nsn=2089",
@@ -122,7 +122,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.810955+00:00",
+          "last_checked": "2026-11-12T10:18:15.963063+00:00",
           "list_text": "獎學金名稱：114學年度第1學期員生消費合作社捐贈獎助學金收件期間：11月3日至11月21日17時 Staff and Students Consumer Cooperative Scholarship Application dates : 11/3 ~ 11/21 (For TAIWANESE students ONLY)\n適用對象：大學部與研究所\n獎助對象與條件：申請者前一學期學業及操行成績平均85分以上，且未有任何一科不及格者。 本學期已領其他獎助學金者，不得申請。 在職生及延畢生不得申請。 中低收入戶或家境清寒之學生優先獲獎。\n申請期限：2025-11-21",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -165,7 +165,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.811182+00:00",
+          "last_checked": "2026-11-12T10:18:15.963266+00:00",
           "list_text": "獎學金名稱：114學年度周惠慈副教授奬助學金申請公告(收件期間:11月3日至11月21日17時止)Assistant Professor Chou Hui-Tzu Memorial Scholarship Application dates : 11/3~ 11/21(For TAIWANESE students ONLY)\n適用對象：大學部\n獎助對象與條件：1.本國籍之本校生命科學系大學部在學學生 2.單親家庭子女或家境清寒 3.該學期獲獎前無休、退、轉學者\n申請期限：2025-11-21",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -208,7 +208,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.811800+00:00",
+          "last_checked": "2026-11-12T10:18:15.963734+00:00",
           "list_text": "獎學金名稱：114學年度行銷學人獎學金申請公告(收件期間:11月3日至11月21日17時)Marketing Scholar Scholarship Application dates : 11/3~11/21\n適用對象：大學部\n獎助對象與條件：成績優秀：歷年學業與操行成績平均須達八十分以上，且未有任何一科不及格。 家境清寒：歷年學業與操行成績平均須達七十分以上，且未有任何一科不及格。 行銷學系大四學生。\n申請期限：2025-11-21",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -251,7 +251,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.812367+00:00",
+          "last_checked": "2026-11-12T10:18:15.964162+00:00",
           "list_text": "獎學金名稱：114學年度第2學期建程人文社會獎學金收件期間：2月1日至5月31日17時\n適用對象：大學部與研究所\n獎助對象與條件：文、管理及法政學院大學部二年級以上學生(含碩士及博士生)\n申請期限：2026-05-31",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -294,7 +294,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.812542+00:00",
+          "last_checked": "2026-11-12T10:18:15.964295+00:00",
           "list_text": "獎學金名稱：114學年度第2學期建程科學科技工程數學獎學金收件期間：2月1日至5月31日17時\n適用對象：大學部與研究所\n獎助對象與條件：理、工、電資、生科、獸醫及農資學院相關大學部二年級以上學生(含碩士及博士生)。 註：前一年度或同年度曾獲得理學院應用數學系「建程獎學金」或農資學院食品暨應用生物科技學系「李景玉教授紀念獎學金」者，不得提出申請或領取本獎學金。\n申請期限：2026-05-31",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -339,7 +339,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T10:17:33.812979+00:00",
+          "last_checked": "2026-11-12T10:18:15.964642+00:00",
           "list_text": "獎學金名稱：114學年度第2學期陳守先生紀念獎助學金收件期間：5月4日至5月15日17時\n適用對象：大學部\n獎助對象與條件：1.低收入戶 2. 中低收入戶 3. 特殊境遇家庭子女或孫子女 4. 身心障礙學生或身心障礙人士子女 5. 原住民學生 6. 獲教育部弱勢助學金補助學生 7. 家庭突遭變故且家庭年所得總額114萬元以下經學校審核通過者\n申請期限：2026-05-15",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -382,7 +382,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.813357+00:00",
+          "last_checked": "2026-11-12T10:18:15.964930+00:00",
           "list_text": "獎學金名稱：114學年度第2學期員生消費合作社捐贈獎助學金收件期間：5月18日至5月22日17時\n適用對象：大學部與研究所\n獎助對象與條件：1.申請者前一學期學業及操行成績平均85分以上，且未有任何一科不及格者。 2.本學期已領其他獎助學金者，不得申請。 3.在職生及延畢生不得申請。 4.中低收入戶或家境清寒之學生優先獲獎。\n申請期限：2026-05-22",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -427,7 +427,7 @@
           "important_notes": [
             "需繳交"
           ],
-          "last_checked": "2026-11-12T10:17:33.813912+00:00",
+          "last_checked": "2026-11-12T10:18:15.965365+00:00",
           "list_text": "獎學金名稱：114學年度第2學期校友張慧高女士紀念獎助學金收件期間：5月18日至5月22日17時\n適用對象：大學部與研究所\n獎助對象與條件：1.低收入戶 2.中低收入戶 3.特殊境遇家庭子女或孫子女 4.身心障礙學生或身心障礙人士子女 5.原住民學生 6.獲教育部弱勢助學金計畫補助之學生 申請學生需繳交當學期參加高教深耕輔導活動10小時以上出席時數證明,且前學期成績單(含名次證明)：學業成績總平均75分以上，操行成績85分以上(轉學生用前學校成績申請)。\n申請期限：2026-05-22",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -472,7 +472,7 @@
           "important_notes": [
             "需繳交"
           ],
-          "last_checked": "2026-11-12T10:17:33.814111+00:00",
+          "last_checked": "2026-11-12T10:18:15.965518+00:00",
           "list_text": "獎學金名稱：114學年度第2學期薛克旋教授獎學金收件期間：5月18日至5月22日17時止\n適用對象：大學部\n獎助對象與條件：一、本國籍大學部(含進修學士班)學生，不含應屆畢業生。 二、家境清寒學生前學期學業總平均成績80分以上，操行成績85分以上。 三、同一學年未受公費待遇、學費全額補助與領受政府生活費補助(例如低收入戶)者。 申請者需繳交申請書、前學期成績單含名次證明及導師推薦函。\n申請期限：2026-05-22",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -513,7 +513,7 @@
           "important_notes": [
             "需繳交"
           ],
-          "last_checked": "2026-11-12T10:17:33.814500+00:00",
+          "last_checked": "2026-11-12T10:18:15.965821+00:00",
           "list_text": "獎學金名稱：114學年度第2學期謝武志先生獎學金收件期間：5月18日至5月22日17時\n適用對象：大學部與研究所\n獎助對象與條件：本校本國籍學生（不含在職專班）符合下列情形之一者： 1. 低收入戶 2. 中低收入戶 3. 特殊境遇家庭子女或孫子女 4. 身心障礙學生或身心障礙人士子女 5. 原住民學生 6. 獲教育部弱勢助學金補助學生 7.大學部學生前一學期成績班排名前10%者。 申請者需繳交申請表、前一學期學業與操行成績單(轉學生用前學校成績申請)、3.當學期參加高教深耕輔導活動10小時以上出席時數證明。\n申請期限：2026-03-05",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -556,7 +556,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.815230+00:00",
+          "last_checked": "2026-11-12T10:18:15.966389+00:00",
           "list_text": "獎學金名稱：115學年度達達國際企業股份有限公司（Lagoon）弱勢獎學金收件期間：9月22日至9月30日17時 Lagoon International Enterprise Co., Ltd. Disadvantaged Scholarship Application dates : 9/22~9/30(For TAIWANESE students ONLY)\n適用對象：大學部\n獎助對象與條件：一、本校本國籍大學部在學學生(含大一新生；不含公費生)且有低收入戶、中低收入戶或特殊境遇家庭子女證明。 二、未領取政府各類學雜費減免優待補助、政府各項獎助學金(學校學雜費減免者，不在此限)及軍公教子女教育補助費者。 更多詳細資訊請參 https://www.osa.nchu.edu.tw/osa/laa/sys/modules/tadnews/index.php?nsn=3965\n申請期限：2026-09-30",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/tadnews/index.php?nsn=3965",
@@ -605,7 +605,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.815865+00:00",
+          "last_checked": "2026-11-12T10:18:15.966887+00:00",
           "list_text": "獎學金名稱：115學年度國立中興大學校友總會獎學金收件期間：9月22日至10月8日17時 NCHU Alumni Association Scholarship Application dates : 9/22~10/08 (For TAIWANESE students ONLY)\n適用對象：大學部與研究所\n獎助對象與條件：1.前一學期學業成績達70分以上，操行成績達80分以上。 2.家境清寒或政府登記之低收入戶。 3.家中收入因故銳減致生活困苦、遭重大變故亟需急難救助。 4.優秀博士班清寒研究生出席國外研討會公開口頭發表論文。 更多詳細資訊請參 https://www.osa.nchu.edu.tw/osa/laa/sys/modules/tadnews/index.php?nsn=1381\n申請期限：2026-10-08",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/tadnews/index.php?nsn=1381",
@@ -656,7 +656,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.816155+00:00",
+          "last_checked": "2026-11-12T10:18:15.967116+00:00",
           "list_text": "獎學金名稱：115學年度第1學期林劉金珠女士勤學獎學金收件9月21日至10月21日17時 Ms. Lin Liu Jinzhu Diligence Scholarship Application dates :9/21 ~10/21\n適用對象：大學部與研究所\n獎助對象與條件：1.具國立中興大學學籍學生身分者（惟屬推廣教育之各班級選讀生，不列入申請範圍）。 2.各院系學生前學期學業總平均成績70分以上及操行成績80分以上者。 3.家中收入因故銳減或家境清寒者（家庭年收入70萬元以下）或政府登記之低收入戶。 4.未受公費待遇及未領(申請)其他獎學金者。 更多詳細資訊請參 https://www.osa.nchu.edu.tw/osa/laa/sys/modules/tadnews/index.php?nsn=2091\n申請期限：2026-10-21",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/tadnews/index.php?nsn=2091",
@@ -703,7 +703,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.816757+00:00",
+          "last_checked": "2026-11-12T10:18:15.967577+00:00",
           "list_text": "獎學金名稱：新竹市清寒優秀學生獎學金Hsinchu City Scholarship for Outstanding Students from Low-Income Families\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-18",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -738,7 +738,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.817061+00:00",
+          "last_checked": "2026-11-12T10:18:15.967816+00:00",
           "list_text": "獎學金名稱：財團法人台東縣故立法委員鄭品聰先生文教公益基金會獎學金 Mr. Cheng, Pin-Tsung Cultural and Educational Public Welfare Foundation Scholarship.\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-18",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -773,7 +773,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.817368+00:00",
+          "last_checked": "2026-11-12T10:18:15.968055+00:00",
           "list_text": "獎學金名稱：中央研究院周鴻經獎學金Academia Sinica Chou Hung-ching Scholarship for Department of Mathematics\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-18",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -808,7 +808,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.817706+00:00",
+          "last_checked": "2026-11-12T10:18:15.968321+00:00",
           "list_text": "獎學金名稱：臺東縣清寒優秀學生愛心安心就學獎學金Taitung County Government Scholarship for Financial Hardship\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-18",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -843,7 +843,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.818012+00:00",
+          "last_checked": "2026-11-12T10:18:15.968552+00:00",
           "list_text": "獎學金名稱：基隆市清寒優秀學生獎學金Keelung City Government Scholarship for Financial Hardship\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-18",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -878,7 +878,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.818328+00:00",
+          "last_checked": "2026-11-12T10:18:15.968802+00:00",
           "list_text": "獎學金名稱：財團法人黎明文化事業基金會獎學金Liming Culture Foundation Scholarship\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-18",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -913,7 +913,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.818621+00:00",
+          "last_checked": "2026-11-12T10:18:15.969037+00:00",
           "list_text": "獎學金名稱：上海商業儲蓄銀行文教基金會獎學金THE SHANGHAI COMMERCIAL & SAVINGS BANKS CULTURAL & EDUCATIONAL FOUNDATION Scholarship\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-18",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -948,7 +948,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.818925+00:00",
+          "last_checked": "2026-11-12T10:18:15.969277+00:00",
           "list_text": "獎學金名稱：建大文化教育基金會115年雲林縣建大優秀自強學生獎學金Kenda Cultural and Educational Foundation 114th Academic Year Yunlin County Outstanding Self-Reliant Student Scholarship\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-18",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -983,7 +983,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.819263+00:00",
+          "last_checked": "2026-11-12T10:18:15.969532+00:00",
           "list_text": "獎學金名稱：財團法人和諧孝悌文教基金會第38屆孝娣楷模（含孝悌獎學金）」Harmony Filial Piety and Fraternal Love Cultural and Educational Foundation – 38th Filial Piety and Fraternal Love Role Model Award (including the Filial Piety and Fraternal Love Scholarship)\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-18",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -1018,7 +1018,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.819723+00:00",
+          "last_checked": "2026-11-12T10:18:15.969952+00:00",
           "list_text": "獎學金名稱：新竹縣清寒優秀學生獎學金Hsinchu County Scholarship for Outstanding Students from Low-Income Families HSIN KUANG Charity Foundation Scholarship\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-18",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -1053,7 +1053,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.820014+00:00",
+          "last_checked": "2026-11-12T10:18:15.970188+00:00",
           "list_text": "獎學金名稱：財團法人黃土英文教基金會獎學金Huang Tuying Education Foundation Scholarship\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-18",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -1088,7 +1088,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.820334+00:00",
+          "last_checked": "2026-11-12T10:18:15.970441+00:00",
           "list_text": "獎學金名稱：苗栗縣清寒優秀學生獎學金Miaoli County Scholarship for Financial Hardship\n適用對象：大學部\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-18",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -1123,7 +1123,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.820654+00:00",
+          "last_checked": "2026-11-12T10:18:15.970691+00:00",
           "list_text": "獎學金名稱：財團法人賑災基金會助學金Disaster Relief Foundation Scholarship for disaster-affected families\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-18",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -1158,7 +1158,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.820798+00:00",
+          "last_checked": "2026-11-12T10:18:15.970813+00:00",
           "list_text": "獎學金名稱：桃園市原住民族學生獎助-清寒獎助金及優秀獎學金 Taoyuan City Indigenous Student Financial Aid\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-18",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -1193,7 +1193,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.821119+00:00",
+          "last_checked": "2026-11-12T10:18:15.971068+00:00",
           "list_text": "獎學金名稱：澎湖縣清寒優秀學生獎學金Penghu County Scholarship for Outstanding Students from Low-Income Families\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-18",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -1228,7 +1228,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.821439+00:00",
+          "last_checked": "2026-11-12T10:18:15.971311+00:00",
           "list_text": "獎學金名稱：財團法人臺中市雲田社會福利慈善事業基金會「115年雲田乘風飛揚獎助學金」Taichung Yuntian Social Welfare and Charity Foundation “2026 Yuntian Soaring with the Wind Scholarship”\n適用對象：大學部\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-21",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -1263,7 +1263,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.821749+00:00",
+          "last_checked": "2026-11-12T10:18:15.971554+00:00",
           "list_text": "獎學金名稱：財團法人主計協進社「115年主計獎學金」Accounting Advancement Society “2026 Accounting Scholarship”\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-23",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -1298,7 +1298,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.822037+00:00",
+          "last_checked": "2026-11-12T10:18:15.971777+00:00",
           "list_text": "獎學金名稱：中華民國美國聖路易大學校友會獎學金St. Louis University Alumni Association of the Republic of China Scholarship\n適用對象：大學部\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-24",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -1333,7 +1333,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.822488+00:00",
+          "last_checked": "2026-11-12T10:18:15.972132+00:00",
           "list_text": "獎學金名稱：華科事業群慈善基金會115年聽障學生獎學金Huake Business Group Charitable Foundation 2026 Scholarship for Hearing-Impaired Students\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-10-01",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -1368,7 +1368,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.822846+00:00",
+          "last_checked": "2026-11-12T10:18:15.972421+00:00",
           "list_text": "獎學金名稱：財團法人陳振武防盲教育基金會視障學生獎學金Chen Zhenwu Foundation for Blind Education Scholarship for Visually Impaired Students\n適用對象：大學部\n獎助對象與條件：請查看官方公告\n申請期限：2026-10-06",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -1403,7 +1403,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.823265+00:00",
+          "last_checked": "2026-11-12T10:18:15.972686+00:00",
           "list_text": "獎學金名稱：財團法人慈暉文教基金會「大學以上優秀清寒學生獎助學金」Tzu Hui Cultural and Educational Foundation “Scholarship and Grant Program for Outstanding Economically Disadvantaged University and Graduate Students”\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-10-06",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -1438,7 +1438,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.823625+00:00",
+          "last_checked": "2026-11-12T10:18:15.972944+00:00",
           "list_text": "獎學金名稱：中華郵政股份有限公司產學合作獎助學金The Chunghwa Post Co., Ltd. Industry-Academia Collaboration Scholarship\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-10-12",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -1473,7 +1473,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.824119+00:00",
+          "last_checked": "2026-11-12T10:18:15.973394+00:00",
           "list_text": "獎學金名稱：了凡獎助學金\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-10-15",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -1508,7 +1508,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.824321+00:00",
+          "last_checked": "2026-11-12T10:18:15.973502+00:00",
           "list_text": "獎學金名稱：福澤慈善事業基金會「困學獎學金」uzé Charitable Foundation “Adversity Scholarship”\n適用對象：大學部\n獎助對象與條件：請查看官方公告\n申請期限：2026-10-15",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -1543,7 +1543,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.824664+00:00",
+          "last_checked": "2026-11-12T10:18:15.973733+00:00",
           "list_text": "獎學金名稱：國立臺灣藝術大學「廖有章先生獎學金」National Taiwan University of Arts \"Mr. Liao You-Chang Scholarship\"\n適用對象：大學部\n獎助對象與條件：請查看官方公告\n申請期限：2026-10-22",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -1573,7 +1573,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.825023+00:00",
+          "last_checked": "2026-11-12T10:18:15.974017+00:00",
           "list_text": "獎學金名稱：南投縣政府補助公私立大專院校學生出國學習獎助學金Nantou County Government Scholarship for Students from Public and Private Universities to Study Abroad\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-10-30",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -1603,7 +1603,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.825369+00:00",
+          "last_checked": "2026-11-12T10:18:15.974253+00:00",
           "list_text": "獎學金名稱：台灣農場經營協會「獎優扶弱獎學金」Taiwan Farm Management Association “Academic Excellence and Financial Assistance Scholarship”\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-11-03",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
@@ -1638,7 +1638,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:17:33.825677+00:00",
+          "last_checked": "2026-11-12T10:18:15.974502+00:00",
           "list_text": "獎學金名稱：三重東區扶輪社獎助學金Sanchong East Rotary Club Scholarship\n適用對象：大學部\n獎助對象與條件：請查看官方公告\n申請期限：2026-11-05",
           "official_listing_url": "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html",
           "detail_url": "",
