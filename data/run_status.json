@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-11-12T11:25:07.110976+00:00",
+  "run_at": "2026-11-12T11:26:59.660550+00:00",
   "events": [
     {
       "source": "圖書館活動",
@@ -48,6 +48,18 @@
       "status": "ok",
       "count": 10,
       "error": null
+    },
+    {
+      "source": "教務處選課與學籍",
+      "status": "ok",
+      "count": 10,
+      "error": null
+    },
+    {
+      "source": "研究競賽與獎補助",
+      "status": "error",
+      "count": 0,
+      "error": "HTTPSConnectionPool(host='research.nchu.edu.tw', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))"
     }
   ],
   "scholarships": [
