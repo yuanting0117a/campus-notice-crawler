@@ -46,6 +46,8 @@ jobs:
           git add data/
           if ! git diff --cached --quiet; then
             git commit -m "Update campus notices and scholarships"
+            # Source files may have changed while crawling; rebase the data commit before pushing.
+            git pull --rebase origin main
             git push origin HEAD:main
           else
             echo "No data changes."
