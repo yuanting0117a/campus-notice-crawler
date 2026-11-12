@@ -35,6 +35,50 @@ def page_text(soup):
         node.decompose()
     return clean(soup.get_text(" ", strip=True))
 
+
+def announcement_text(soup, title=""):
+    """Extract announcement content without the university-wide navigation/footer."""
+    for node in soup(["script", "style", "noscript", "svg", "header", "footer", "nav", "aside"]):
+        node.decompose()
+    for node in soup.select('[role="navigation"], [role="contentinfo"], .breadcrumb, .breadcrumbs'):
+        node.decompose()
+    for node in list(soup.find_all(True)):
+        marker = " ".join([str(node.get("id", "")), " ".join(node.get("class", []))]).lower()
+        if re.search(r"(sidebar|side-menu|sidemenu|navbar|navigation|breadcrumb|site-header|site-footer|share-tools|print-tools|pagination)", marker):
+            node.decompose()
+
+    wanted = clean(title)
+    heading = None
+    if wanted:
+        for node in soup.find_all(["h1", "h2", "h3", "h4"]):
+            heading_text = clean(node.get_text(" ", strip=True))
+            if heading_text and (heading_text == wanted or wanted in heading_text or heading_text in wanted):
+                heading = node
+                break
+
+    if heading:
+        candidate = heading
+        for _ in range(6):
+            parent = candidate.parent
+            if not parent or getattr(parent, "name", None) in ("body", "html"):
+                break
+            candidate = parent
+            candidate_text = clean(candidate.get_text(" ", strip=True))
+            if len(candidate_text) >= len(wanted) + 25 and len(candidate_text) <= 12000:
+                break
+        root = candidate
+    else:
+        roots = soup.select("main, article, [role='main'], #main-content, #content, .article-content, .content")
+        root = max(roots, key=lambda n: len(clean(n.get_text(" ", strip=True))), default=soup)
+
+    text = clean(root.get_text(" ", strip=True))
+    if wanted and text.startswith(wanted):
+        text = text[len(wanted):].strip()
+    text = re.sub(r"(友善列印|分享至臉書|分享至 Line|檔案下載).*$", "", text)
+    text = re.sub(r"點閱\s*點閱：?.*$", "", text)
+    text = re.sub(r"回上一頁.*$", "", text)
+    return clean(text)
+
 def absolute(base, href):
     return urljoin(base, href) if href else ""
 
@@ -91,7 +135,7 @@ def extract_detail(url, title=""):
                     "links": [], "dates_found": [], "fetch_status": "binary_attachment"}
         html, final_url = fetch(url)
         soup = BeautifulSoup(html, "lxml")
-        text = page_text(soup)
+        text = announcement_text(soup, title)
         return {"title": title or (soup.title.get_text(strip=True) if soup.title else ""),
                 "url": final_url, "full_text": text, "links": links_from(soup, final_url),
                 "dates_found": extract_dates(text), "fetch_status": "ok"}
