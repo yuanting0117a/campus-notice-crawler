@@ -8,6 +8,9 @@ MAIN_URL = "https://www.osa.nchu.edu.tw/osa/laa/scholarship.html"
 
 def clean_title(value):
     title = clean(value)
+    # Remove duplicated application-window text from display titles.
+    title = re.sub(r"[（(]收件(?:期間|時間)[：:].*$", "", title)
+    title = re.sub(r"收件(?:期間|時間)[：:].*$", "", title)
     # The university appends an English translation to many Chinese announcement titles.
     markers = [
         r"Assistant Professor", r"Scholarships and Grants", r"Staff and Students",
@@ -49,10 +52,13 @@ def short_summary(audience, criteria, deadline):
     if deadline:
         parts.append("截止：" + deadline)
     if criteria:
-        brief = re.sub(r"\s+", " ", criteria).strip()
-        if len(brief) > 105:
-            brief = brief[:105].rstrip() + "…"
-        parts.append("條件：" + brief)
+        brief = re.sub(r"更多詳細資訊.*$", "", criteria)
+        brief = re.sub(r"https?://\S+", "", brief)
+        brief = re.sub(r"\s+", " ", brief).strip(" ：:，,")
+        if len(brief) > 72:
+            brief = brief[:72].rstrip() + "…"
+        if brief:
+            parts.append("條件摘要：" + brief)
     return "｜".join(parts)
 
 def assess(text):
