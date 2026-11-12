@@ -1,44 +1,56 @@
-from .common import crawl_listing, safe_source, fetch, extract_detail, make_record, clean, extractive_summary
+from .common import crawl_listing, safe_source, fetch, make_record, clean, extract_dates, extractive_summary
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 
 SOURCES = [
     ("圖書館活動", "https://cal.lib.nchu.edu.tw/"),
     ("自主學習活動", "https://selfstudy.nchu.edu.tw/"),
-    ("研習暨演講活動", "https://psfcost.nchu.edu.tw/registration/"),
+    ("研習暨演講活動", "https://psfcost.nchu.edu.tw/registration/index/actlist.jsp"),
 ]
 
 def crawl_lectures():
-    """The lecture registration system uses ACTID links and a layout not covered by generic cards."""
-    url = "https://psfcost.nchu.edu.tw/registration/"
+    """Parse the registration system's actual activity table: one row becomes one event card."""
+    url = "https://psfcost.nchu.edu.tw/registration/index/actlist.jsp"
     html, final_url = fetch(url)
     soup = BeautifulSoup(html, "lxml")
     records, seen = [], set()
-    for a in soup.select('a[href*="ACTID="], a[href*="actid="]'):
-        href = urljoin(final_url, a.get("href", ""))
-        if href in seen:
+    for row in soup.select("tr"):
+        cells = row.find_all(["td", "th"], recursive=False)
+        if len(cells) < 4:
             continue
-        seen.add(href)
-        row = a.find_parent("tr")
-        if row is None:
-            row = a.parent
-        row_text = clean(row.get_text(" ", strip=True))
-        cells = row.find_all(["td", "th"], recursive=False) if row else []
-        title = clean(cells[0].get_text(" ", strip=True)) if cells else ""
-        title = title or clean(a.get_text(" ", strip=True))
-        if not title or title.lower() in {"詳細資訊/報名", "event details/register", "報名"}:
+        title = clean(cells[0].get_text(" ", strip=True))
+        if not title or title.lower() in {"活動名稱", "event"}:
             continue
-        rec = make_record("研習暨演講活動", title, href, row_text or title,
-                          {"list_text": row_text or title, "links": []})
-        detail = extract_detail(href, title)
-        if detail.get("fetch_status") == "ok":
-            rec["full_text"] = detail.get("full_text") or rec["full_text"]
-            rec["summary"] = extractive_summary(rec["full_text"])
-            rec["dates_found"] = list(dict.fromkeys(rec["dates_found"] + detail.get("dates_found", [])))
-            rec["detail_fetch_status"] = "ok"
-        else:
-            rec["detail_fetch_status"] = detail.get("fetch_status", "error")
-        rec["registration_links"] = [{"title": "活動詳情／報名", "url": href}]
+        links = []
+        for a in row.select("a[href]"):
+            href = urljoin(final_url, a.get("href", ""))
+            label = clean(a.get_text(" ", strip=True)) or "活動詳情／報名"
+            if href.startswith(("http://", "https://")):
+                links.append({"title": label, "url": href})
+        activity_time = clean(cells[2].get_text(" ", strip=True))
+        registration_time = clean(cells[1].get_text(" ", strip=True))
+        participants = clean(cells[3].get_text(" ", strip=True))
+        registration = links[-1]["url"] if links else final_url
+        key = (title, activity_time, registration)
+        if key in seen:
+            continue
+        seen.add(key)
+        content = "\\n".join([
+            "活動時間：" + activity_time,
+            "報名期間：" + registration_time,
+            "名額資訊：" + participants,
+        ])
+        rec = make_record("研習暨演講活動", title, registration, content, {"links": links})
+        rec.update({
+            "full_text": content,
+            "summary": content,
+            "dates_found": extract_dates(content),
+            "list_text": content,
+            "registration_links": links or [{"title": "活動列表", "url": final_url}],
+            "event_time": activity_time,
+            "registration_time": registration_time,
+            "participant_info": participants,
+        })
         records.append(rec)
     return records
 
