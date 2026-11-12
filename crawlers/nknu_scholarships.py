@@ -29,11 +29,11 @@ def is_pdf_link(link):
 
 def parse_deadline(text):
     text = clean(text or "")
-    date = r"(?:(?:民國)?(?:1\\d{2}|20\\d{2})\\s*[年./-]\\s*)?\\d{1,2}\\s*[月./-]\\s*\\d{1,2}\\s*日?"
+    date = r"(?:(?:民國)?(?:1\d{2}|20\d{2})\s*[年./-]\s*)?\d{1,2}\s*[月./-]\s*\d{1,2}\s*日?"
     patterns = [
-        rf"(?:截止日期|截止日|申請截止|收件截止|受理至|申請至|收件至|截止至|截至)\\s*[：:]?\\s*({date})",
-        rf"(?:於|在)\\s*({date})\\s*(?:前|截止|止)",
-        rf"(?:至|到)\\s*({date})(?:止|截止|為止)?",
+        rf"(?:截止日期|截止日|申請截止|收件截止|受理至|申請至|收件至|截止至|截至)\s*[：:]?\s*({date})",
+        rf"(?:於|在)\s*({date})\s*(?:前|截止|止)",
+        rf"(?:至|到)\s*({date})(?:止|截止|為止)?",
     ]
     found = []
     for pattern in patterns:
@@ -41,7 +41,7 @@ def parse_deadline(text):
     if not found:
         return "", ""
     match = max(found, key=lambda m: m.start(1))
-    raw = re.sub(r"\\s+", "", match.group(1))
+    raw = re.sub(r"\s+", "", match.group(1))
     parsed = deadline_fields(raw, raw)[0]
     return parsed, clean(match.group(0))
 
@@ -61,7 +61,7 @@ def discover_links(soup, page_url):
         if any(k in combined for k in EXCLUDE):
             continue
         # Keep announcement pages, not the attachment or application form itself.
-        if re.search(r"\\.(pdf|docx?|xlsx?|pptx?|zip)(?:$|[?#])", href, re.I):
+        if re.search(r"\.(pdf|docx?|xlsx?|pptx?|zip)(?:$|[?#])", href, re.I):
             continue
         if href not in found:
             found[href] = {"title": title, "url": href, "list_text": row_text}
@@ -100,7 +100,7 @@ def crawl_nknu_scholarships():
                     "url": attachment["url"],
                     "text": text[:12000],
                 })
-        full_text = "\\n".join(
+        full_text = "\n".join(
             x for x in [title, item.get("list_text", ""), detail_text] +
             ["附件「" + x["name"] + "」內容：" + x["text"] for x in attachment_texts] if x
         )
