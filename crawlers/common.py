@@ -99,6 +99,45 @@ def extract_detail(url, title=""):
         return {"title": title, "url": url, "full_text": "", "links": [],
                 "dates_found": [], "fetch_status": "error", "error": str(e)}
 
+
+def is_registration_link(link):
+    label = clean(link.get("title", "")).lower()
+    href = (link.get("url", "") or "").lower()
+    labels = ["線上報名", "立即報名", "我要報名", "報名表單", "填寫報名", "register now", "sign up", "signup"]
+    urls = ["/signup", "/sign-up", "/registration/form", "register.php", "signup.php", "forms.gle", "docs.google.com/forms"]
+    return any(x in label for x in labels) or any(x in href for x in urls)
+
+def crawl_related_pages(links, base_url, max_pages=4, max_depth=2):
+    base_host = urlparse(base_url).netloc
+    queue = [(x, 1) for x in links]
+    seen, pages, attachments = set(), [], []
+    while queue and len(pages) < max_pages:
+        link, depth = queue.pop(0)
+        href = link.get("url", "")
+        if not href or href in seen or urlparse(href).netloc != base_host:
+            continue
+        seen.add(href)
+        if is_registration_link(link):
+            continue
+        if re.search(r"\.(pdf|docx?|xlsx?|pptx?|zip|jpg|jpeg|png)(?:$|[?#])", href, re.I):
+            if re.search(r"\.(pdf|docx?|xlsx?|pptx?)(?:$|[?#])", href, re.I):
+                attachments.append(link)
+            continue
+        if any(x in (link.get("title", "") + " " + href).lower()
+               for x in ["隱私", "個資", "同意書", "privacy", "consent", "policy", "login", "logout"]):
+            continue
+        detail = extract_detail(href, link.get("title", ""))
+        if detail.get("fetch_status") != "ok":
+            continue
+        pages.append({"title": link.get("title", ""), "url": detail["url"],
+                      "full_text": detail["full_text"], "dates_found": detail["dates_found"]})
+        for child in detail.get("links", []):
+            if re.search(r"\.(pdf|docx?|xlsx?|pptx?)(?:$|[?#])", child.get("url", ""), re.I):
+                attachments.append(child)
+            elif depth < max_depth and not is_registration_link(child):
+                queue.append((child, depth + 1))
+    return pages, list({x["url"]: x for x in attachments}.values())
+
 def make_record(source, title, url, text, extra=None):
     text = clean(text)
     rec = {
@@ -173,21 +212,24 @@ def crawl_listing(source, url, max_details=50, title_selector=None):
             records.append(make_record(source, link["title"], href, link["title"], {"links": []}))
             if len(records) >= max_details:
                 break
-    # Enrich a limited number of records with their detail pages.
+    # Enrich records with their detail pages and a bounded number of linked information pages.
     for rec in records[:max_details]:
         if rec["url"] == final_url:
             continue
         detail = extract_detail(rec["url"], rec["title"])
         if detail["fetch_status"] == "ok":
-            rec["full_text"] = detail["full_text"] or rec["full_text"]
+            related_pages, related_attachments = crawl_related_pages(detail["links"], detail["url"])
+            rec["linked_pages"] = related_pages
+            linked_text = "\\n".join(p["full_text"] for p in related_pages if p["full_text"])
+            rec["full_text"] = "\\n".join(x for x in [detail["full_text"], linked_text] if x) or rec["full_text"]
             rec["summary"] = extractive_summary(rec["full_text"])
-            rec["dates_found"] = list(dict.fromkeys(rec["dates_found"] + detail["dates_found"]))
-            rec["registration_links"] = list({x["url"]:x for x in rec["registration_links"] + [
-                l for l in detail["links"] if any(k in l["title"].lower() for k in ["報名","register","申請","填寫"])
-            ]}.values())
-            rec["attachments"] = list({x["url"]:x for x in rec["attachments"] + [
-                l for l in detail["links"] if re.search(r"\.(pdf|docx?|xlsx?)($|\?)", l["url"], re.I)
-            ]}.values())
+            rec["dates_found"] = list(dict.fromkeys(rec["dates_found"] + detail["dates_found"] +
+                [d for p in related_pages for d in p["dates_found"]]))
+            rec["registration_links"] = list({x["url"]: x for x in rec["registration_links"] +
+                [l for l in detail["links"] if is_registration_link(l)]}.values())
+            rec["attachments"] = list({x["url"]: x for x in rec["attachments"] +
+                [l for l in detail["links"] + related_attachments
+                 if re.search(r"\\.(pdf|docx?|xlsx?|pptx?)(?:$|[?#])", l["url"], re.I)]}.values())
             rec["attachment_texts"] = []
             for attachment in rec["attachments"][:5]:
                 if attachment["url"].lower().split("?")[0].endswith(".pdf"):
