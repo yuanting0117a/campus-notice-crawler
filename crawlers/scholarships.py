@@ -2,6 +2,7 @@ from .common import safe_source, fetch, make_record, clean, extract_dates, extra
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 import re
+from datetime import datetime
 
 LIST_URL = "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html"
 MAIN_URL = "https://www.osa.nchu.edu.tw/osa/laa/scholarship.html"
