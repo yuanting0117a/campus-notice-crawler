@@ -143,7 +143,7 @@ def deadline_fields(raw_deadline, full_text=""):
     search_text = raw or clean(full_text)
     date_value = ""
     # Accept Gregorian dates and ROC dates (民國年 or bare 3-digit year).
-    match = re.search(r"(?:(?:民國)?(1\\d{2}|20\\d{2})[年./-]\\s*)?(\\d{1,2})[月./-]\\s*(\\d{1,2})日?", search_text)
+    match = re.search(r"(?:(?:民國)?(1\d{2}|20\d{2})[年./-]\s*)?(\d{1,2})[月./-]\s*(\d{1,2})日?", search_text)
     if match:
         year_text = match.group(1)
         month, day = int(match.group(2)), int(match.group(3))
@@ -154,13 +154,13 @@ def deadline_fields(raw_deadline, full_text=""):
             if 1 <= month <= 12 and 1 <= day <= 31:
                 date_value = f"{year:04d}-{month:02d}-{day:02d}"
     if not date_value:
-        match = re.search(r"(20\\d{2})[-/.](\\d{1,2})[-/.](\\d{1,2})", search_text)
+        match = re.search(r"(20\d{2})[-/.](\d{1,2})[-/.](\d{1,2})", search_text)
         if match:
             year, month, day = map(int, match.groups())
             if 1 <= month <= 12 and 1 <= day <= 31:
                 date_value = f"{year:04d}-{month:02d}-{day:02d}"
     time_value = ""
-    time_match = re.search(r"(\\d{1,2})[:：](\\d{2})|(?<!\\d)(\\d{1,2})時(?:(\\d{1,2})分?)?", raw)
+    time_match = re.search(r"(\d{1,2})[:：](\d{2})|(?<!\d)(\d{1,2})時(?:(\d{1,2})分?)?", raw)
     if time_match:
         hour = int(time_match.group(1) or time_match.group(3))
         minute = int(time_match.group(2) or time_match.group(4) or 0)
