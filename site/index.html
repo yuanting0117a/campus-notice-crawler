@@ -65,16 +65,16 @@ function scholarshipBody(r){
  if(r.school_scope==="ncyu"){
   var at=raw.lastIndexOf(r.title||"");
   if(at>=0)raw=raw.slice(at+(r.title||"").length);
-  raw=raw.replace(/點閱[\\s\\S]*$/,"").replace(/回上一頁[\\s\\S]*$/,"");
+  raw=raw.replace(/點閱[\s\S]*$/,"").replace(/回上一頁[\s\S]*$/,"");
  }
- raw=raw.replace(/https?:\\/\\/\\S+/g,"").replace(/\\s+/g," ").trim();
+ raw=raw.replace(/https?:\\/\\/\S+/g,"").replace(/\s+/g," ").trim();
  return raw;
 }
 function scholarshipSummary(r){
  var raw=scholarshipBody(r);
- if(!raw)raw=(r.summary||"").replace(/https?:\\/\\/\\S+/g,"");
- raw=raw.replace(/^(獎學金名稱|適用對象|對象|申請期限)[：:]\\s*/,"");
- return raw.length>260?raw.slice(0,260).replace(/[，、；：：]?[\\s\\S]*$/,"").trim()+"…":raw;
+ if(!raw)raw=(r.summary||"").replace(/https?:\\/\\/\S+/g,"");
+ raw=raw.replace(/^(獎學金名稱|適用對象|對象|申請期限)[：:]\s*/,"");
+ return raw.length>260?raw.slice(0,260).replace(/[，、；：：]?[\s\S]*$/,"").trim()+"…":raw;
 }
 function scholarshipCard(r){
  var m=scholarshipMatch(r),ls=links(r),deadline=r.deadline_date||"期限未明確";
