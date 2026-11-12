@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; NCHUCampusNoticeCrawler/1.0; +https://github.com/yuanting0117a/campus-notice-crawler)"}
 SESSION = requests.Session()
 SESSION.headers.update(HEADERS)
-TIMEOUT = 25
+TIMEOUT = 12
 
 def fetch(url):
     r = SESSION.get(url, timeout=TIMEOUT)
@@ -67,9 +67,9 @@ def make_record(source, title, url, text, extra=None):
     text = clean(text)
     rec = {
         "source": source, "title": clean(title) or "(未辨識標題)", "url": url,
-        "full_text": text, "summary": text[:900],
+        "full_text": text, "summary": text[:900], "summary_type": "原文前段摘錄（非AI改寫）",
         "dates_found": extract_dates(text), "audience_hints": classify_audience(text),
-        "registration_links": [], "attachments": [], "last_checked": datetime.now(timezone.utc).isoformat(),
+        "registration_links": [], "attachments": [], "important_notes": [k for k in ["限額", "額滿", "需事先報名", "報名截止", "僅限", "限本校", "費用", "免費", "需繳交", "需檢附", "候補", "審核", "取消"] if k in text], "last_checked": datetime.now(timezone.utc).isoformat(),
     }
     extra = extra or {}
     for link in extra.get("links", []):
