@@ -1,0 +1,42 @@
+name: NCHU Campus Notice Crawler
+
+on:
+  workflow_dispatch:
+  schedule:
+    # GitHub Actions uses UTC. Runs hourly at minute 17; actual start may be delayed.
+    - cron: "17 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: campus-crawler
+  cancel-in-progress: false
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run crawlers
+        run: python main.py
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if ! git diff --cached --quiet; then
+            git commit -m "Update campus notices and scholarships"
+            git push
+          else
+            echo "No data changes."
+          fi
