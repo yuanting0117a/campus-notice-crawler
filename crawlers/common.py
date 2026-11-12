@@ -108,7 +108,7 @@ def is_registration_link(link):
     generic_registration = "報名" in label and not any(x in label for x in ["活動詳情", "活動資訊", "報名資訊", "公告"])
     return generic_registration or any(x in label for x in labels) or any(x in href for x in urls)
 
-def crawl_related_pages(links, base_url, max_pages=4, max_depth=2):
+def crawl_related_pages(links, base_url, max_pages=2, max_depth=1):
     base_host = urlparse(base_url).netloc
     queue = [(x, 1) for x in links]
     seen, pages, attachments = set(), [], []
@@ -119,6 +119,9 @@ def crawl_related_pages(links, base_url, max_pages=4, max_depth=2):
             continue
         seen.add(href)
         if is_registration_link(link):
+            continue
+        link_hint = (link.get("title", "") + " " + href).lower()
+        if not any(k in link_hint for k in ["詳細", "辦法", "簡章", "公告", "說明", "資訊", "獎學金", "活動內容", "課程介紹", "申請要點", "nsn=", "actid="]):
             continue
         if re.search(r"\.(pdf|docx?|xlsx?|pptx?|zip|jpg|jpeg|png)(?:$|[?#])", href, re.I):
             if re.search(r"\.(pdf|docx?|xlsx?|pptx?)(?:$|[?#])", href, re.I):
