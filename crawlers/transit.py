@@ -15,15 +15,14 @@ def crawl_timetable():
     response.raise_for_status()
     soup = BeautifulSoup(response.text, "lxml")
     sections = []
-    # Locate each official route/direction heading, then parse the next timetable table.
     heading_nodes = []
-    for string in soup.find_all(string=re.compile(r"9015\\s*[-－]\\s*[0A]\\s*(往程|返程)")):
+    for string in soup.find_all(string=re.compile(r"9015\s*[-－]\s*[0A]\s*(往程|返程)")):
         node = string.parent
         if node and node not in heading_nodes:
             heading_nodes.append(node)
     for heading in heading_nodes:
         label = " ".join(heading.get_text(" ", strip=True).split())
-        match = re.search(r"9015\\s*[-－]\\s*([0A])\\s*(往程|返程)", label)
+        match = re.search(r"9015\s*[-－]\s*([0A])\s*(往程|返程)", label)
         if not match:
             continue
         table = heading.find_next("table")
@@ -33,7 +32,7 @@ def crawl_timetable():
                    "direction": match.group(2), "stop": "", "trips": []}
         for row in table.select("tr"):
             cells = [" ".join(c.get_text(" ", strip=True).split()) for c in row.find_all(["td", "th"], recursive=False)]
-            time_index = next((i for i,c in enumerate(cells) if re.fullmatch(r"\\d{3,4}", c)), None)
+            time_index = next((i for i,c in enumerate(cells) if re.fullmatch(r"\d{3,4}", c)), None)
             if time_index is None:
                 continue
             raw_time = cells[time_index].zfill(4)
@@ -46,7 +45,6 @@ def crawl_timetable():
             })
         if section["trips"]:
             sections.append(section)
-    # Deduplicate repeated headings/tables if the page uses nested layout wrappers.
     unique = {}
     for section in sections:
         unique[(section["route"], section["direction"])] = section
