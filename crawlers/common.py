@@ -43,6 +43,9 @@ def announcement_text(soup, title=""):
     for node in soup.select('[role="navigation"], [role="contentinfo"], .breadcrumb, .breadcrumbs'):
         node.decompose()
     for node in list(soup.find_all(True)):
+        # A parent may already have been decomposed; skip detached descendants.
+        if getattr(node, "attrs", None) is None or node.parent is None:
+            continue
         marker = " ".join([str(node.get("id", "")), " ".join(node.get("class", []))]).lower()
         if re.search(r"(sidebar|side-menu|sidemenu|navbar|navigation|breadcrumb|site-header|site-footer|share-tools|print-tools|pagination)", marker):
             node.decompose()
