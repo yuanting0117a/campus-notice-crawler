@@ -125,10 +125,12 @@ def crawl_nknu_scholarships():
         )
         grades, departments = extract_dimensions("", full_text)
         deadline_date, deadline_text = parse_deadline(full_text)
+        internal_board = item.get("listing_source", "") in ("高師大獎助學金一覽表", "高師大學生就學助學")
+        school_scope = "nknu" if internal_board or re.search(r"(本校學生|本校在學|高師大學生|國立高雄師範大學學生)", full_text) else "external"
         rec = make_record("高雄師範大學獎助學金", title, url, full_text)
         rec.update({
             "source": "高師大獎助學金",
-            "school_scope": "nknu",
+            "school_scope": school_scope,
             "list_text": item.get("list_text", ""),
             "full_text": full_text,
             "summary": extractive_summary(full_text),
