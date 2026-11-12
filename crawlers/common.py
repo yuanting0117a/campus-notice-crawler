@@ -120,12 +120,12 @@ def crawl_related_pages(links, base_url, max_pages=2, max_depth=1):
         seen.add(href)
         if is_registration_link(link):
             continue
-        link_hint = (link.get("title", "") + " " + href).lower()
-        if not any(k in link_hint for k in ["詳細", "辦法", "簡章", "公告", "說明", "資訊", "獎學金", "活動內容", "課程介紹", "申請要點", "nsn=", "actid="]):
-            continue
         if re.search(r"\.(pdf|docx?|xlsx?|pptx?|zip|jpg|jpeg|png)(?:$|[?#])", href, re.I):
             if re.search(r"\.(pdf|docx?|xlsx?|pptx?)(?:$|[?#])", href, re.I):
                 attachments.append(link)
+            continue
+        link_hint = (link.get("title", "") + " " + href).lower()
+        if not any(k in link_hint for k in ["詳細", "辦法", "簡章", "公告", "說明", "資訊", "獎學金", "活動內容", "課程介紹", "申請要點", "nsn=", "actid="]):
             continue
         if any(x in (link.get("title", "") + " " + href).lower()
                for x in ["隱私", "個資", "同意書", "privacy", "consent", "policy", "login", "logout"]):
