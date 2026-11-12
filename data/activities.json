@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-12T09:31:36.252698+00:00",
+  "updated_at": "2026-11-12T09:33:08.054744+00:00",
   "timezone": "Asia/Taipei",
   "policy": "不去重；來源失敗時保留上次成功資料；原文優先於摘要。",
   "sources": [
     {
       "source": "圖書館活動",
       "status": "ok",
-      "checked_at": "2026-11-12T09:31:31.068208+00:00",
+      "checked_at": "2026-11-12T09:33:03.352141+00:00",
       "count": 1,
       "records": [
         {
@@ -25,7 +25,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-12T09:31:32.965334+00:00",
+          "last_checked": "2026-11-12T09:33:04.973784+00:00",
           "list_text": "我已閱讀並同意【 個人資料提供同意書 】 本館因應活動收集之個人資料僅供活動相關使用，不同意者請勿報名。",
           "attachment_texts": [],
           "detail_fetch_status": "ok"
@@ -35,14 +35,14 @@
     {
       "source": "自主學習活動",
       "status": "empty",
-      "checked_at": "2026-11-12T09:31:34.266131+00:00",
+      "checked_at": "2026-11-12T09:33:06.116282+00:00",
       "count": 0,
       "records": []
     },
     {
       "source": "研習暨演講活動",
       "status": "empty",
-      "checked_at": "2026-11-12T09:31:35.359839+00:00",
+      "checked_at": "2026-11-12T09:33:07.164341+00:00",
       "count": 0,
       "records": []
     }
