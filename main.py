@@ -5,6 +5,7 @@ from pathlib import Path
 from crawlers.events import run as run_events
 from crawlers.scholarships import run as run_scholarships
 from crawlers.ncyu_scholarships import run as run_ncyu_scholarships
+from crawlers.nknu_scholarships import run as run_nknu_scholarships
 from crawlers.transit import run as run_transit
 
 ROOT = Path(__file__).parent
@@ -46,7 +47,7 @@ def write_dataset(filename, fresh):
 
 def main():
     events = write_dataset("activities.json", run_events())
-    scholarships = write_dataset("scholarships.json", [run_scholarships(), run_ncyu_scholarships()])
+    scholarships = write_dataset("scholarships.json", [run_scholarships(), run_ncyu_scholarships(), run_nknu_scholarships()])
     # The NCHU scholarship source is the university internal list; tag it explicitly for profile filtering.
     for source in scholarships["sources"]:
         if source.get("source") == "獎學金":
