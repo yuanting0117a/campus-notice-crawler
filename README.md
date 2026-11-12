@@ -14,7 +14,6 @@ https://yuanting0117a.github.io/campus-notice-crawler/
 - 宿舍公告：https://www.osa.nchu.edu.tw/osa/dorm/sys/
 - 電機系公告：https://www.ee.nchu.edu.tw/wb_announcement01.asp?cno=0&pageno=1&url=11
 - 教務處選課與學籍：https://oaa.nchu.edu.tw/course-news
-- 研究競賽與獎補助：https://research.nchu.edu.tw/
 - 圖書館活動：https://cal.lib.nchu.edu.tw/
 - 自主學習活動：https://selfstudy.nchu.edu.tw/
 - 研習暨演講活動：https://psfcost.nchu.edu.tw/registration/index/actlist.jsp
