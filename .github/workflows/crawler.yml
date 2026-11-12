@@ -1,24 +1,28 @@
-name: NCHU Campus Notice Crawler
+name: NCHU Campus Notice Crawler and Website
 
 on:
   push:
     branches: [main]
   workflow_dispatch:
   schedule:
-    # GitHub Actions uses UTC. Runs hourly at minute 17; actual start may be delayed.
     - cron: "17 * * * *"
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
-  group: campus-crawler
+  group: campus-crawler-pages
   cancel-in-progress: false
 
 jobs:
-  crawl:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -43,3 +47,17 @@ jobs:
           else
             echo "No data changes."
           fi
+      - name: Prepare website
+        run: |
+          mkdir -p dist/data
+          cp site/index.html dist/index.html
+          cp data/activities.json data/scholarships.json data/run_status.json dist/data/
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
