@@ -4,6 +4,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from crawlers.events import run as run_events
 from crawlers.scholarships import run as run_scholarships
+from crawlers.ncyu_scholarships import run as run_ncyu_scholarships
 from crawlers.transit import run as run_transit
 
 ROOT = Path(__file__).parent
@@ -45,7 +46,7 @@ def write_dataset(filename, fresh):
 
 def main():
     events = write_dataset("activities.json", run_events())
-    scholarships = write_dataset("scholarships.json", [run_scholarships()])
+    scholarships = write_dataset("scholarships.json", [run_scholarships(), run_ncyu_scholarships()])
     # Keep transit timetable separate so it can be displayed independently.
     transit_path = DATA / "transit_9015.json"
     previous_transit = {}
@@ -63,33 +64,28 @@ def main():
         transit["last_error"] = str(exc)
         if transit:
             transit_path.write_text(json.dumps(transit, ensure_ascii=False, indent=2), encoding="utf-8")
-    # Split scholarship records into two size-balanced JSON files for GitHub's 100 MB limit.
-    scholarship_source = scholarships["sources"][0]
-    records = scholarship_source.get("records", [])
+    # Split all university scholarship sources into two size-balanced JSON files.
+    all_records = [record for source in scholarships["sources"] for record in source.get("records", [])]
     buckets = [[], []]
     sizes = [0, 0]
-    for record in records:
+    for record in all_records:
         payload_size = len(json.dumps(record, ensure_ascii=False, separators=(",", ":")).encode("utf-8"))
         target = 0 if sizes[0] <= sizes[1] else 1
         buckets[target].append(record)
         sizes[target] += payload_size
     for index, bucket in enumerate(buckets, start=1):
-        shard_source = dict(scholarship_source)
-        shard_source["records"] = bucket
-        shard_source["count"] = len(bucket)
         shard = {
             "schema_version": 1,
             "updated_at": scholarships["updated_at"],
             "timezone": scholarships["timezone"],
             "policy": scholarships["policy"],
-            "sources": [shard_source],
+            "sources": [{"source": "獎學金", "status": "ok", "count": len(bucket), "records": bucket}],
         }
         shard_path = DATA / f"scholarships_{index}.json"
         shard_path.write_text(json.dumps(shard, ensure_ascii=False, indent=2), encoding="utf-8")
         actual_size = shard_path.stat().st_size
         if actual_size >= 90 * 1024 * 1024:
             raise RuntimeError(f"{shard_path.name} is too large ({actual_size} bytes); refusing to publish.")
-    # The old combined file is no longer used by the website.
     (DATA / "scholarships.json").unlink(missing_ok=True)
     report = {
         "run_at": datetime.now(timezone.utc).isoformat(),
