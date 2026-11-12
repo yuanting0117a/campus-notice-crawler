@@ -199,6 +199,78 @@ def deadline_fields(raw_deadline, full_text=""):
             time_value = f"{hour:02d}:{minute:02d}"
     return date_value, time_value, raw
 
+def split_collective_award_notice(detail_url, parent_title, parent_deadline=""):
+    """Split the university's collective-donor announcement table into one record per award."""
+    html, final_url = fetch(detail_url)
+    soup = BeautifulSoup(html, "lxml")
+    shared_parts = []
+    content_root = soup.select_one("article, .itemInfo, .news_content, .content, #content") or soup
+    for node in content_root.find_all(["p", "div"]):
+        text = clean(node.get_text(" ", strip=True))
+        if text and any(k in text for k in ["收件時間", "以申請一項為限", "新生(轉學生)", "獎助學金管理委員會"]):
+            if len(text) < 1200 and text not in shared_parts:
+                shared_parts.append(text)
+    shared_text = "\\n".join(shared_parts)
+    records = []
+    for table in soup.find_all("table"):
+        rows = table.find_all("tr")
+        header_text = " ".join(clean(c.get_text(" ", strip=True)) for row in rows[:2] for c in row.find_all(["th", "td"]))
+        if not all(k in header_text for k in ["獎學金名稱", "申請資格"]):
+            continue
+        for row in rows:
+            cells = row.find_all(["td", "th"], recursive=False)
+            if len(cells) < 5:
+                continue
+            values = [clean(c.get_text(" ", strip=True)) for c in cells]
+            if not values[0].isdigit():
+                continue
+            number, award_title, amount, quota, criteria = values[:5]
+            award_title = clean(award_title)
+            criteria = clean(criteria)
+            if not award_title or not criteria:
+                continue
+            full_text = "\\n".join(x for x in [
+                "所屬綜合公告：" + parent_title,
+                shared_text,
+                "獎學金名稱：" + award_title,
+                "獎學金金額：" + amount,
+                "名額：" + quota,
+                "申請資格及方式：" + criteria,
+                "共同申請期限：" + parent_deadline,
+            ] if x)
+            grades, departments = extract_dimensions("", criteria)
+            categories = classify(award_title, "", criteria)
+            rec = make_record("獎學金", award_title, final_url, full_text)
+            rec.update({
+                "title": award_title,
+                "parent_announcement": parent_title,
+                "award_number": number,
+                "award_amount": amount,
+                "award_quota": quota,
+                "full_text": full_text,
+                "list_text": full_text,
+                "summary": short_summary("", criteria, parent_deadline) or extractive_summary(full_text),
+                "target_level": "",
+                "eligible_grades": grades,
+                "eligible_departments": departments,
+                "deadline_date": deadline_fields(parent_deadline, full_text)[0],
+                "deadline_time": deadline_fields(parent_deadline, full_text)[1],
+                "deadline_text": parent_deadline,
+                "categories": categories,
+                "primary_category": categories[0],
+                "official_listing_url": LIST_URL,
+                "detail_url": final_url,
+                "collective_notice": True,
+                "attachments": [],
+                "application_documents": [],
+            })
+            rec.update(assess(full_text))
+            records.append(rec)
+        if records:
+            break
+    return records
+
+
 def crawl_scholarship_table():
     html, final_url = fetch(LIST_URL)
     soup = BeautifulSoup(html, "lxml")
@@ -263,6 +335,17 @@ def crawl_scholarship_table():
         rec.update(assess(content))
         # Follow the scholarship announcement and its information links, but not online application forms.
         if detail:
+            # The collective-donor announcement contains many distinct awards in one HTML table.
+            # Expand it into independent records instead of retaining one giant announcement card.
+            collective_records = []
+            if "nsn=1542" in detail["url"].lower() or "接受各界捐助獎助學金申請公告" in title:
+                try:
+                    collective_records = split_collective_award_notice(detail["url"], title, deadline)
+                except Exception as exc:
+                    print(f"[NCHU] collective award split failed: {exc}")
+            if collective_records:
+                records.extend(collective_records)
+                continue
             detail_page = extract_detail(detail["url"], title)
             if detail_page.get("fetch_status") == "ok":
                 linked_pages, linked_docs = crawl_related_pages(detail_page["links"], detail_page["url"])
