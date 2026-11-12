@@ -95,7 +95,7 @@ def main():
         "run_at": datetime.now(timezone.utc).isoformat(),
         "events": [{"source":s["source"],"status":s["status"],"count":s["count"],"error":s.get("error")} for s in events["sources"]],
         "scholarships": [{"source":s["source"],"status":s["status"],"count":s["count"],"error":s.get("error")} for s in scholarships["sources"]],
-        "transit": {"status": transit.get("status", "error"), "routes": len(transit.get("routes", [])), "error": transit.get("last_error")},
+        "transit": {"status": transit.get("timetable_status", transit.get("status", "error")), "routes": len(transit.get("routes", [])), "notice_count": len(transit.get("notices", [])), "error": transit.get("timetable_error") or transit.get("last_error")},
     }
     (DATA / "run_status.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps(report, ensure_ascii=False, indent=2))
