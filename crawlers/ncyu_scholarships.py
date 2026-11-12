@@ -164,7 +164,7 @@ def crawl_ncyu_scholarships():
             unit_html, unit_final = fetch(unit_url)
             unit_soup = BeautifulSoup(unit_html, "lxml")
             before_count = len(records)
-            add_page_records(unit_soup, unit_final, "嘉義大學院系獎助學金", "ncyu", records, seen, detail_state)
+            add_page_records(unit_soup, unit_final, f"嘉義大學院系獎助學金（{unit_name}）", "ncyu", records, seen, detail_state)
             department_pages_fetched += 1
             print(f"[NCYU] department board {unit_name}: +{len(records) - before_count} records")
         except Exception as exc:
