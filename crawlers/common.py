@@ -104,12 +104,15 @@ def extractive_summary(text, limit=5):
     return " ".join(sentences[i] for i in chosen)[:1200]
 
 def extract_pdf_text(url):
-    if not re.search(r"\.pdf($|\?)", url, re.I):
-        return ""
     try:
-        from pypdf import PdfReader
         response = SESSION.get(url, timeout=TIMEOUT)
         response.raise_for_status()
+        content_type = (response.headers.get("Content-Type") or "").lower()
+        is_pdf = ("application/pdf" in content_type or response.content[:5] == b"%PDF-"
+                  or re.search(r"\.pdf($|[?#])", url, re.I))
+        if not is_pdf:
+            return ""
+        from pypdf import PdfReader
         reader = PdfReader(BytesIO(response.content))
         return clean(" ".join(page.extract_text() or "" for page in reader.pages))
     except Exception:
