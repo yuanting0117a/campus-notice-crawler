@@ -105,7 +105,8 @@ def is_registration_link(link):
     href = (link.get("url", "") or "").lower()
     labels = ["線上報名", "立即報名", "我要報名", "報名表單", "填寫報名", "register now", "sign up", "signup"]
     urls = ["/signup", "/sign-up", "/registration/form", "register.php", "signup.php", "forms.gle", "docs.google.com/forms"]
-    return any(x in label for x in labels) or any(x in href for x in urls)
+    generic_registration = "報名" in label and not any(x in label for x in ["活動詳情", "活動資訊", "報名資訊", "公告"])
+    return generic_registration or any(x in label for x in labels) or any(x in href for x in urls)
 
 def crawl_related_pages(links, base_url, max_pages=4, max_depth=2):
     base_host = urlparse(base_url).netloc
