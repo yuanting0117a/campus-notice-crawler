@@ -37,6 +37,19 @@ jobs:
           cache: "pip"
       - name: Install dependencies
         run: pip install -r requirements.txt
+      - name: Validate crawler and website scripts
+        run: |
+          python -m compileall -q .
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          html = Path("site/index.html").read_text(encoding="utf-8")
+          scripts = re.findall(r"<script>([\\s\\S]*?)</script>", html)
+          if not scripts:
+              raise SystemExit("No inline website script found")
+          Path("/tmp/site-check.js").write_text("\\n".join(scripts), encoding="utf-8")
+          PY
+          node --check /tmp/site-check.js
       - name: Run crawlers
         run: python main.py
       - name: Commit updated data
