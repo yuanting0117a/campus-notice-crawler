@@ -47,6 +47,11 @@ def write_dataset(filename, fresh):
 def main():
     events = write_dataset("activities.json", run_events())
     scholarships = write_dataset("scholarships.json", [run_scholarships(), run_ncyu_scholarships()])
+    # The NCHU scholarship source is the university internal list; tag it explicitly for profile filtering.
+    for source in scholarships["sources"]:
+        if source.get("source") == "獎學金":
+            for record in source.get("records", []):
+                record.setdefault("school_scope", "nchu")
     # Keep transit timetable separate so it can be displayed independently.
     transit_path = DATA / "transit_9015.json"
     previous_transit = {}
