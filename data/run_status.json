@@ -1,11 +1,11 @@
 {
-  "run_at": "2026-11-12T14:34:06.870683+00:00",
+  "run_at": "2026-11-12T17:36:41.853505+00:00",
   "events": [
     {
       "source": "圖書館活動",
-      "status": "empty",
+      "status": "error",
       "count": 0,
-      "error": null
+      "error": "HTTPSConnectionPool(host='cal.lib.nchu.edu.tw', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='cal.lib.nchu.edu.tw', port=443): Failed to resolve 'cal.lib.nchu.edu.tw' ([Errno -3] Temporary failure in name resolution)\"))"
     },
     {
       "source": "自主學習活動",
