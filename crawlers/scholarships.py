@@ -1,10 +1,59 @@
-from .common import safe_source, fetch, make_record, clean, extract_dates, extractive_summary
+from .common import safe_source, fetch, make_record, clean, extract_dates
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 import re
 
 LIST_URL = "https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html"
 MAIN_URL = "https://www.osa.nchu.edu.tw/osa/laa/scholarship.html"
+
+def clean_title(value):
+    title = clean(value)
+    # The university appends an English translation to many Chinese announcement titles.
+    markers = [
+        r"Assistant Professor", r"Scholarships and Grants", r"Staff and Students",
+        r"National Chung Hsing", r"Financial and Economic Law",
+        r"Application dates?", r"For TAIWANESE", r"Marketing Scholar",
+        r"Memorial Scholarship Application", r"Scholarship Application Dates"
+    ]
+    positions = [m.start() for p in markers if (m := re.search(p, title, re.I))]
+    if positions:
+        title = title[:min(positions)].strip(" -:：,，")
+    # Catch bilingual titles whose English translation begins immediately after a Chinese closing bracket.
+    title = re.split(r"(?<=[)）])(?=[A-Z][a-z]{2,}(?:\s|$))", title, maxsplit=1)[0]
+    return clean(title).strip(" -:：,，")
+
+def classify(title, audience, criteria):
+    text = " ".join([title or "", audience or "", criteria or ""])
+    categories = []
+    if any(k in text for k in ["低收入戶", "中低收入戶", "清寒", "弱勢", "家庭突遭變故", "經濟弱勢", "助學金", "家境清寒"]):
+        categories.append("清寒／經濟弱勢")
+    if any(k in text for k in ["原住民", "身心障礙", "特殊境遇", "單親", "僑生", "新住民", "女性學生", "懷孕", "扶養未滿"]):
+        categories.append("特殊身分")
+    if any(k in text for k in ["成績", "操行", "排名", "前百分之", "不及格", "學業平均"]):
+        categories.append("成績要求")
+    departments = ["電機", "資訊工程", "資工", "生命科學", "農資", "管理", "法政", "獸醫",
+                   "食品", "行銷", "物理", "化學", "機械", "材料", "土木", "環工",
+                   "文學院", "理學院", "工學院", "電資學院", "生科院"]
+    if any(k in text for k in departments) or re.search(r"系(大學部|在學|學生)|學院(大學部|在學|學生)", text):
+        categories.append("系所／學院限定")
+    if any(k in text for k in ["企業", "公司", "基金會", "協會", "捐助", "捐贈", "紀念獎學金"]):
+        categories.append("企業／民間捐助")
+    if not categories:
+        categories.append("一般／其他")
+    return categories
+
+def short_summary(audience, criteria, deadline):
+    parts = []
+    if audience:
+        parts.append("對象：" + audience)
+    if deadline:
+        parts.append("截止：" + deadline)
+    if criteria:
+        brief = re.sub(r"\s+", " ", criteria).strip()
+        if len(brief) > 105:
+            brief = brief[:105].rstrip() + "…"
+        parts.append("條件：" + brief)
+    return "｜".join(parts)
 
 def assess(text):
     t = text or ""
@@ -44,28 +93,29 @@ def crawl_scholarship_table():
         cells = row.find_all(["td", "th"], recursive=False)
         if len(cells) < 4:
             continue
-        title = clean(cells[0].get_text(" ", strip=True))
+        raw_title = clean(cells[0].get_text(" ", strip=True))
+        title = clean_title(raw_title)
+        audience = clean(cells[1].get_text(" ", strip=True))
         criteria = clean(cells[2].get_text(" ", strip=True))
+        deadline = clean(cells[3].get_text(" ", strip=True))
         if not title or title in {"獎學金名稱", "獎助學金名稱"} or len(title) < 5:
             continue
         if title in seen:
             continue
-        # Ignore navigation/resource rows and keep only actual scholarship rows.
-        if not any(k in title for k in ["獎學金", "獎助", "助學金", "Scholarship", "scholarship"]):
+        if not any(k in title for k in ["獎學金", "獎助", "助學金", "獎助學金"]):
             continue
         seen.add(title)
         row_links = []
         for a in row.select("a[href]"):
             href = urljoin(final_url, a.get("href", ""))
-            label = clean(a.get_text(" ", strip=True)) or clean(a.get("title", ""))
+            label = clean_title(a.get_text(" ", strip=True)) or clean(a.get("title", "")) or "相關文件"
             if href.startswith(("http://", "https://")):
-                row_links.append({"title": label or "相關文件", "url": href})
+                row_links.append({"title": label, "url": href})
         detail = next((x for x in row_links if "nsn=" in x["url"].lower()), None)
         if detail is None:
             detail = next((x for x in row_links if "更多詳細資訊" in x["title"] or "詳細資訊" in x["title"]), None)
         docs = [x for x in row_links if re.search(r"\.(pdf|docx?|xlsx?|pptx?)(?:$|[?#])", x["url"], re.I)]
-        audience = clean(cells[1].get_text(" ", strip=True))
-        deadline = clean(cells[3].get_text(" ", strip=True))
+        categories = classify(title, audience, criteria)
         content = "\n".join([
             "獎學金名稱：" + title,
             "適用對象：" + audience,
@@ -75,10 +125,15 @@ def crawl_scholarship_table():
         source_url = detail["url"] if detail else LIST_URL
         rec = make_record("獎學金", title, source_url, content)
         rec.update({
+            "title": title,
+            "source_title": raw_title,
             "full_text": content,
             "list_text": content,
-            "summary": extractive_summary(content),
+            "summary": short_summary(audience, criteria, deadline),
             "dates_found": extract_dates(content),
+            "target_level": audience,
+            "categories": categories,
+            "primary_category": categories[0],
             "official_listing_url": LIST_URL,
             "detail_url": detail["url"] if detail else "",
             "attachments": docs,
