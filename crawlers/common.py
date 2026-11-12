@@ -47,7 +47,7 @@ def extractive_summary(text, limit=5):
     return " ".join(sentences[i] for i in chosen)[:1200]
 
 def extract_pdf_text(url):
-    if not re.search(r"\\.pdf($|\\?)", url, re.I):
+    if not re.search(r"\.pdf($|\?)", url, re.I):
         return ""
     try:
         from pypdf import PdfReader
