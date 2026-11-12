@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-11-12T10:38:50.054612+00:00",
+  "run_at": "2026-11-12T11:21:51.816478+00:00",
   "events": [
     {
       "source": "圖書館活動",
@@ -18,6 +18,36 @@
       "status": "ok",
       "count": 42,
       "error": null
+    },
+    {
+      "source": "學校最新公告",
+      "status": "ok",
+      "count": 10,
+      "error": null
+    },
+    {
+      "source": "生涯發展與實習",
+      "status": "ok",
+      "count": 10,
+      "error": null
+    },
+    {
+      "source": "國際交流與交換",
+      "status": "ok",
+      "count": 2,
+      "error": null
+    },
+    {
+      "source": "宿舍公告",
+      "status": "ok",
+      "count": 10,
+      "error": null
+    },
+    {
+      "source": "電機系公告",
+      "status": "ok",
+      "count": 10,
+      "error": null
     }
   ],
   "scholarships": [
@@ -27,5 +57,10 @@
       "count": 82,
       "error": null
     }
-  ]
+  ],
+  "transit": {
+    "status": "error",
+    "routes": 0,
+    "error": "官方 9015 時刻表頁面格式改變或暫無班次，保留上次成功資料。"
+  }
 }
