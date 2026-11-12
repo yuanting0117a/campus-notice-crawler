@@ -25,9 +25,9 @@ def assess(text):
 
 def run():
     def crawl():
-        records = crawl_listing("獎學金", LIST_URL, max_details=250)
+        records = crawl_listing("獎學金", LIST_URL, max_details=120)
         if not records:
-            records = crawl_listing("獎學金", MAIN_URL, max_details=100)
+            records = crawl_listing("獎學金", MAIN_URL, max_details=120)
         for rec in records:
             rec.update(assess(rec.get("full_text", "")))
             rec["official_listing_url"] = LIST_URL
