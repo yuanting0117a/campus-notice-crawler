@@ -4,6 +4,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from crawlers.events import run as run_events
 from crawlers.scholarships import run as run_scholarships
+from crawlers.transit import run as run_transit
 
 ROOT = Path(__file__).parent
 DATA = ROOT / "data"
@@ -45,6 +46,23 @@ def write_dataset(filename, fresh):
 def main():
     events = write_dataset("activities.json", run_events())
     scholarships = write_dataset("scholarships.json", [run_scholarships()])
+    # Keep transit timetable separate so it can be displayed independently.
+    transit_path = DATA / "transit_9015.json"
+    previous_transit = {}
+    try:
+        previous_transit = json.loads(transit_path.read_text(encoding="utf-8"))
+    except Exception:
+        pass
+    try:
+        transit = run_transit()
+        transit["status"] = "ok"
+        transit_path.write_text(json.dumps(transit, ensure_ascii=False, indent=2), encoding="utf-8")
+    except Exception as exc:
+        transit = previous_transit
+        transit["status"] = "stale_previous_data" if transit else "error"
+        transit["last_error"] = str(exc)
+        if transit:
+            transit_path.write_text(json.dumps(transit, ensure_ascii=False, indent=2), encoding="utf-8")
     # Split scholarship records into two size-balanced JSON files for GitHub's 100 MB limit.
     scholarship_source = scholarships["sources"][0]
     records = scholarship_source.get("records", [])
@@ -77,6 +95,7 @@ def main():
         "run_at": datetime.now(timezone.utc).isoformat(),
         "events": [{"source":s["source"],"status":s["status"],"count":s["count"],"error":s.get("error")} for s in events["sources"]],
         "scholarships": [{"source":s["source"],"status":s["status"],"count":s["count"],"error":s.get("error")} for s in scholarships["sources"]],
+        "transit": {"status": transit.get("status", "error"), "routes": len(transit.get("routes", [])), "error": transit.get("last_error")},
     }
     (DATA / "run_status.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps(report, ensure_ascii=False, indent=2))
