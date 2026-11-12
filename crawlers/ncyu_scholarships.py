@@ -50,7 +50,8 @@ def is_application_link(link):
     if "adm.ncyu.edu.tw" in href and any(word in label for word in ["申請", "獎學金", "助學金"]):
         return True
     if ("website.ncyu.edu.tw" not in href and "ServerFile/Get" not in href
-            and any(word in label for word in ["線上申請", "申請表單", "填寫申請", "申請系統"])):
+            and any(word in label for word in ["獎學金申請", "助學金申請", "獎助學金申請",
+                                                "申請表單", "填寫獎學金", "填寫助學金"])):
         return True
     return False
 
