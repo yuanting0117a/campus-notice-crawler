@@ -21,7 +21,8 @@ def deadline_from_text(text):
     date_pattern = r"(?:(?:民國)?(?:1\d{2}|20\d{2})\s*[年./-]\s*)?\d{1,2}\s*[月./-]\s*\d{1,2}\s*日?"
     patterns = [
         rf"(?:收件截止日|截止日期|截止日|申請截止日|申請截止|受理至|收件至|申請至|截止至|截至)\s*[：:，,]?\s*({date_pattern})",
-        rf"(?:自|從).{0,50}?(?:至|到)\s*({date_pattern})",
+        rf"(?:自|從).{{0,50}}?(?:至|到)\s*({date_pattern})",
+        rf"(?:至|到)\s*({date_pattern})(?:止|截止|為止)?",
         rf"(?:於|在)\s*({date_pattern})\s*(?:前|截止|止)",
     ]
     candidates = []
