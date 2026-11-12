@@ -10,5 +10,5 @@ SOURCES = [
 def run():
     results = []
     for name, url in SOURCES:
-        results.append(safe_source(name, lambda n=name, u=url: crawl_listing(n, u, max_details=80)))
+        results.append(safe_source(name, lambda n=name, u=url: crawl_listing(n, u, max_details=25)))
     return results
