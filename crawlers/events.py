@@ -19,7 +19,7 @@ def crawl_lectures():
         if len(cells) < 4:
             continue
         title = clean(cells[0].get_text(" ", strip=True))
-        if not title or title.lower() in {"活動名稱", "event"}:
+        if not title or title.lower() in {"活動名稱", "event"} or ("活動名稱" in title and "event" in title.lower()):
             continue
         links = []
         for a in row.select("a[href]"):
