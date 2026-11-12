@@ -6,6 +6,11 @@ SOURCES = [
     ("圖書館活動", "https://cal.lib.nchu.edu.tw/"),
     ("自主學習活動", "https://selfstudy.nchu.edu.tw/"),
     ("研習暨演講活動", "https://psfcost.nchu.edu.tw/registration/index/actlist.jsp"),
+    ("學校最新公告", "https://www.nchu.edu.tw/news/id/index"),
+    ("生涯發展與實習", "https://www.osa.nchu.edu.tw/osa/cdc/sys/modules/tadnews/index.php"),
+    ("國際交流與交換", "https://oia.nchu.edu.tw/index.php/zh/"),
+    ("宿舍公告", "https://www.osa.nchu.edu.tw/osa/dorm/sys/"),
+    ("電機系公告", "https://www.ee.nchu.edu.tw/wb_announcement01.asp?cno=0&pageno=1&url=11"),
 ]
 
 def crawl_lectures():
@@ -86,5 +91,6 @@ def run():
         elif name == "圖書館活動":
             results.append(safe_source(name, crawl_library_events))
         else:
-            results.append(safe_source(name, lambda n=name, u=url: crawl_listing(n, u, max_details=25)))
+            # Keep each additional official source bounded to avoid long Actions runs.
+            results.append(safe_source(name, lambda n=name, u=url: crawl_listing(n, u, max_details=10)))
     return results
