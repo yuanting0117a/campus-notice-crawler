@@ -24,7 +24,8 @@ def is_pdf_link(link):
     url = link.get("url", "")
     return bool(re.search(r"\.pdf(?:$|[?#])", title, re.I)
                 or re.search(r"\.pdf(?:$|[?#])", url, re.I)
-                or ("pdf" in title.lower() and url))
+                or re.search(r"(previewpdf|ajaxdownloadfile|downloadfile|pdf)", url, re.I)
+                or any(k in title for k in ("申請書", "辦法", "簡章", "附件", "作業要點")))
 
 
 def parse_deadline(text):
