@@ -12,7 +12,6 @@ SOURCES = [
     ("宿舍公告", "https://www.osa.nchu.edu.tw/osa/dorm/sys/"),
     ("電機系公告", "https://www.ee.nchu.edu.tw/wb_announcement01.asp?cno=0&pageno=1&url=11"),
     ("教務處選課與學籍", "https://oaa.nchu.edu.tw/course-news"),
-    ("研究競賽與獎補助", "https://research.nchu.edu.tw/"),
 ]
 
 def crawl_lectures():
