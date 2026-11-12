@@ -1,35 +1,39 @@
 # 興大校園情報站與爬蟲
 
-自動整理國立中興大學校園活動與獎學金公告，並提供手機也能使用的查詢網站。
+自動整理國立中興大學學生可能用得到的公告、獎助學金、職涯／實習、國際交流、宿舍與系所資訊，並提供 9015／9015A 公車官方時刻表。
 
 ## 網站
-
-部署完成後網址：
 https://yuanting0117a.github.io/campus-notice-crawler/
 
 ## 蒐集來源
+### 校園資訊
+- 中興大學校級最新公告：https://www.nchu.edu.tw/news/id/index
+- 學務處獎助學金：https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html
+- 生涯發展中心、實習與就業：https://www.osa.nchu.edu.tw/osa/cdc/sys/modules/tadnews/index.php
+- 國際事務處、交換與海外活動：https://oia.nchu.edu.tw/index.php/zh/
+- 宿舍公告：https://www.osa.nchu.edu.tw/osa/dorm/sys/
+- 電機系公告：https://www.ee.nchu.edu.tw/wb_announcement01.asp?cno=0&pageno=1&url=11
+- 圖書館活動：https://cal.lib.nchu.edu.tw/
+- 自主學習活動：https://selfstudy.nchu.edu.tw/
+- 研習暨演講活動：https://psfcost.nchu.edu.tw/registration/index/actlist.jsp
 
-### 校園活動
-- [中興大學圖書館活動](https://cal.lib.nchu.edu.tw/)
-- [中興大學自主學習系統](https://selfstudy.nchu.edu.tw/)
-- [研習暨演講活動報名系統](https://psfcost.nchu.edu.tw/registration/)
-
-惠蓀講座已移除：該頁面是講者報名資訊，不屬於要蒐集的校園活動公告。
-
-### 獎學金
-- [中興大學學務處獎學金公告](https://www.osa.nchu.edu.tw/osa/laa/scholarship.html)
-- [獎學金列表](https://www.osa.nchu.edu.tw/osa/laa/sys/modules/osa_scholarship/index.html)
+### 交通
+- 9015／9015A 官方時刻表：https://www.taiwanbus.tw/eBUSPage/
+- 台中客運公告：https://www.tcbus.com.tw/
+- 台中市公車即時動態：https://citybus.taichung.gov.tw/
 
 ## 功能
-- 活動與獎學金分頁、關鍵字搜尋。
-- 獎學金資格標示；低收入戶必要條件、優先條件與待確認條件分開處理。
-- 保留官方公告、報名與附件連結及可取得的原文。
-- GitHub Actions 定期更新資料並部署網站。
+- 校園新消息：校級公告、學生活動、實習、交換、宿舍與電機系公告。
+- 我的獎學金：依使用者自行設定的學制、年級、科系及其他條件進行初步比對；個人條件只存在瀏覽器本機，不上傳。
+- 9015／9015A：讀取官方時刻表，保留路線、方向、發車時間、行駛日、客運業者與備註。
+- 保留官方來源、詳細頁、報名連結與附件。
+- GitHub Actions 每小時更新資料並部署網站；來源讀取失敗時盡可能保留前次成功資料。
 
 ## 資料檔案
-- `data/activities.json`：校園活動。
-- `data/scholarships.json`：獎學金。
+- `data/activities.json`：校園公告與活動。
+- `data/scholarships_1.json`、`data/scholarships_2.json`：獎學金資料分片。
+- `data/transit_9015.json`：9015／9015A 官方時刻表。
 - `data/run_status.json`：最近一次爬取狀態。
 
-## 注意事項
-資料擷取可能受學校網站改版或存取限制影響；畫面顯示的資格判斷是依公告文字整理，正式申請前請以承辦單位最新簡章為準。
+## 注意
+資格比對是依公告文字進行初步整理；未明確的條件會標示待確認。申請資格、班次與異動仍以學校及客運業者最新公告為準。
