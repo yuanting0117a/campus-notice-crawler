@@ -1,5 +1,6 @@
 from __future__ import annotations
 import re, time, json
+from io import BytesIO
 from datetime import datetime, timezone
 from urllib.parse import urljoin, urlparse
 import requests
@@ -36,6 +37,27 @@ def links_from(soup, base):
             out.append({"title": title, "url": href})
     return out
 
+def extractive_summary(text, limit=5):
+    sentences = [clean(x) for x in re.split(r"(?<=[。！？；])", text or "") if clean(x)]
+    if len(sentences) <= limit:
+        return " ".join(sentences)[:1200]
+    keywords = ["日期", "時間", "地點", "報名", "截止", "名額", "對象", "資格", "費用", "學分", "講者", "申請", "文件", "清寒", "成績", "限"]
+    ranked = sorted(enumerate(sentences), key=lambda p: (sum(k in p[1] for k in keywords), -p[0]), reverse=True)
+    chosen = sorted(i for i, _ in ranked[:limit])
+    return " ".join(sentences[i] for i in chosen)[:1200]
+
+def extract_pdf_text(url):
+    if not re.search(r"\\.pdf($|\\?)", url, re.I):
+        return ""
+    try:
+        from pypdf import PdfReader
+        response = SESSION.get(url, timeout=TIMEOUT)
+        response.raise_for_status()
+        reader = PdfReader(BytesIO(response.content))
+        return clean(" ".join(page.extract_text() or "" for page in reader.pages))
+    except Exception:
+        return ""
+
 def extract_dates(text):
     patterns = [
         r"(?:民國)?\s*(?:1\d{2}|20\d{2})[年./-]\s*\d{1,2}[月./-]\s*\d{1,2}日?",
@@ -67,7 +89,7 @@ def make_record(source, title, url, text, extra=None):
     text = clean(text)
     rec = {
         "source": source, "title": clean(title) or "(未辨識標題)", "url": url,
-        "full_text": text, "summary": text[:900], "summary_type": "原文前段摘錄（非AI改寫）",
+        "full_text": text, "summary": extractive_summary(text), "summary_type": "規則式重點摘錄（保留完整原文供核對）",
         "dates_found": extract_dates(text), "audience_hints": classify_audience(text),
         "registration_links": [], "attachments": [], "important_notes": [k for k in ["限額", "額滿", "需事先報名", "報名截止", "僅限", "限本校", "費用", "免費", "需繳交", "需檢附", "候補", "審核", "取消"] if k in text], "last_checked": datetime.now(timezone.utc).isoformat(),
     }
@@ -116,7 +138,7 @@ def crawl_listing(source, url, max_details=50, title_selector=None):
         detail = extract_detail(rec["url"], rec["title"])
         if detail["fetch_status"] == "ok":
             rec["full_text"] = detail["full_text"] or rec["full_text"]
-            rec["summary"] = rec["full_text"][:900]
+            rec["summary"] = extractive_summary(rec["full_text"])
             rec["dates_found"] = list(dict.fromkeys(rec["dates_found"] + detail["dates_found"]))
             rec["registration_links"] = list({x["url"]:x for x in rec["registration_links"] + [
                 l for l in detail["links"] if any(k in l["title"].lower() for k in ["報名","register","申請","填寫"])
@@ -124,6 +146,12 @@ def crawl_listing(source, url, max_details=50, title_selector=None):
             rec["attachments"] = list({x["url"]:x for x in rec["attachments"] + [
                 l for l in detail["links"] if re.search(r"\.(pdf|docx?|xlsx?)($|\?)", l["url"], re.I)
             ]}.values())
+            rec["attachment_texts"] = []
+            for attachment in rec["attachments"][:5]:
+                if attachment["url"].lower().split("?")[0].endswith(".pdf"):
+                    extracted = extract_pdf_text(attachment["url"])
+                    if extracted:
+                        rec["attachment_texts"].append({"name": attachment["title"], "url": attachment["url"], "text": extracted})
             rec["detail_fetch_status"] = "ok"
         else:
             rec["detail_fetch_status"] = "error"
