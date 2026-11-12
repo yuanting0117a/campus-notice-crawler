@@ -1,6 +1,6 @@
 from __future__ import annotations
 from datetime import datetime, timedelta
-from urllib.parse import urlencode
+from urllib.parse import urlencode, urljoin
 from bs4 import BeautifulSoup
 import re
 from .common import SESSION
@@ -68,18 +68,46 @@ def crawl_route_notices():
     notices = []
     for a in soup.select("a[href]"):
         title = " ".join(a.get_text(" ", strip=True).split())
-        href = a.get("href", "")
-        if not title or not re.search(r"9015\s*A?|A\s*線", title, re.I):
+        image_alt = " ".join((img.get("alt", "") for img in a.select("img"))).strip()
+        href = urljoin(BUS_HOME, a.get("href", ""))
+        combined = " ".join([title, image_alt, href])
+        if not re.search(r"9015", combined, re.I):
             continue
-        url = href if href.startswith("http") else BUS_HOME.rstrip("/") + "/" + href.lstrip("/")
-        notices.append({"title": title, "url": url})
-    return notices[:20]
+        notice = {"title": title or image_alt or "9015 路線公告", "url": href, "images": []}
+        try:
+            page_response = SESSION.get(href, timeout=20)
+            page_response.raise_for_status()
+            page = BeautifulSoup(page_response.text, "lxml")
+            for img in page.select("img[src]"):
+                src = urljoin(href, img.get("src", ""))
+                alt = " ".join(img.get("alt", "").split())
+                if re.search(r"\.(png|jpe?g|webp)(?:$|[?#])", src, re.I):
+                    notice["images"].append({"url": src, "alt": alt or "客運官方時刻表圖片"})
+            notice["text"] = " ".join(page.get_text(" ", strip=True).split())[:1200]
+        except Exception as exc:
+            notice["fetch_error"] = str(exc)
+        notices.append(notice)
+    return notices[:10]
 
 def run():
-    data = crawl_timetable()
+    data = {
+        "source": "臺灣公路客運即時動態資訊網（官方時刻表）",
+        "source_url": "https://www.taiwanbus.tw/eBUSPage/",
+        "operator_url": BUS_HOME,
+        "updated_at": datetime.now().astimezone().isoformat(),
+        "routes": [],
+        "notices": [],
+        "notice": "班次可能因日期、例假日及業者調度調整；出發前請以官方即時資訊為準。"
+    }
+    try:
+        timetable = crawl_timetable()
+        data.update(timetable)
+        data["timetable_status"] = "ok"
+    except Exception as exc:
+        data["timetable_status"] = "error"
+        data["timetable_error"] = str(exc)
     try:
         data["notices"] = crawl_route_notices()
     except Exception as exc:
-        data["notices"] = []
         data["notice_fetch_error"] = str(exc)
     return data
