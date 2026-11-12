@@ -83,6 +83,8 @@ def run():
             results.append(safe_source(name, diagnose_selfstudy))
         elif name == "研習暨演講活動":
             results.append(safe_source(name, crawl_lectures))
+        elif name == "圖書館活動":
+            results.append(safe_source(name, crawl_library_events))
         else:
-            results.append(safe_source(name, crawl_library_events)) if name == "圖書館活動" else results.append(safe_source(name, lambda n=name, u=url: crawl_listing(n, u, max_details=25)))
+            results.append(safe_source(name, lambda n=name, u=url: crawl_listing(n, u, max_details=25)))
     return results
