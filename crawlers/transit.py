@@ -111,4 +111,15 @@ def run():
         data["notices"] = crawl_route_notices()
     except Exception as exc:
         data["notice_fetch_error"] = str(exc)
+    # The operator's first image on a 9015 notice is the official 9015/9015A timetable.
+    # If the third-party timetable endpoint changes format, treat that current image as a valid fallback.
+    has_official_9015_image = any(
+        "9015" in (notice.get("title", "") or "")
+        and any("/newsfile/" in image.get("url", "") for image in notice.get("images", []))
+        for notice in data["notices"]
+    )
+    if data["timetable_status"] == "error" and has_official_9015_image:
+        data["timetable_status"] = "image_only"
+        data["timetable_note"] = "已改用台中客運最新公告中的 9015／9015A 原始時刻表圖片。"
+        data.pop("timetable_error", None)
     return data
