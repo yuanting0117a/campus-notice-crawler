@@ -57,6 +57,7 @@ jobs:
           mkdir -p dist/data
           cp site/index.html dist/index.html
           cp data/activities.json data/scholarships_1.json data/scholarships_2.json data/run_status.json dist/data/
+          if [ -f data/transit_9015.json ]; then cp data/transit_9015.json dist/data/; fi
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
       - name: Upload Pages artifact
