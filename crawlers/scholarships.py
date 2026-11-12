@@ -63,33 +63,63 @@ def short_summary(audience, criteria, deadline):
     return "｜".join(parts)
 
 def assess(text):
-    t = text or ""
-    mandatory_patterns = [
-        r"(須|需|應|限|僅限|必須).{0,30}(低收入戶|中低收入戶)",
-        r"(低收入戶|中低收入戶).{0,30}(證明|資格).{0,20}(必備|檢附|限)",
-        r"限(低收入戶|中低收入戶)",
-    ]
-    preference_patterns = [
-        r"(優先|加分|酌予優先).{0,25}(低收入戶|中低收入戶)",
-        r"(低收入戶|中低收入戶).{0,25}(優先|加分)"
-    ]
-    if re.search(r"A類[\s\S]{0,2500}B\s*類", t):
+    t = clean(text or "")
+    # Separate application tracks must not be collapsed into one blanket exclusion.
+    if re.search(r"A\s*類[\s\S]{0,3000}B\s*類", t):
         return {
             "eligibility_status": "needs_verification",
-            "eligibility_reason": "此獎助金分 A、B 類：A 類不以低收入戶／中低收入戶身分為必要條件，但仍有家庭收入、財產、成績等門檻；B 類要求低收入戶／中低收入戶身分。",
+            "eligibility_reason": "此獎助金分 A、B 類，兩類資格不同，需分別核對；不能因其中一類要求低收入戶就排除全部類別。",
             "low_income_condition": "separate_paths",
             "eligibility_paths": [
-                {"path": "A類", "status": "needs_verification", "reason": "不要求低收入戶身分；需再核對家庭年收入、利息、財產、成績及其他限制。"},
-                {"path": "B類", "status": "ineligible", "reason": "要求低收入戶或中低收入戶身分。"}
+                {"path": "A類", "status": "needs_verification", "reason": "需核對 A 類完整資格及家庭收入、財產、成績等門檻。"},
+                {"path": "B類", "status": "needs_verification", "reason": "需核對 B 類是否要求低收入戶／中低收入戶身分。"}
             ]
         }
-    if any(re.search(p, t) for p in mandatory_patterns):
-        return {"eligibility_status": "ineligible", "eligibility_reason": "公告文字顯示低收入戶／中低收入戶為必要條件；依使用者提供的資格資訊標示不符合。", "low_income_condition": "mandatory"}
-    if any(re.search(p, t) for p in preference_patterns):
-        return {"eligibility_status": "needs_verification", "eligibility_reason": "低收入戶似為優先條件，不應直接視為必要資格；仍需核對完整辦法。", "low_income_condition": "preference"}
-    if any(k in t for k in ["低收入戶", "中低收入戶", "清寒", "經濟弱勢"]):
-        return {"eligibility_status": "needs_verification", "eligibility_reason": "出現經濟條件字樣，但無法僅憑列表判斷是必要或優先條件。", "low_income_condition": "unclear"}
-    return {"eligibility_status": "needs_verification", "eligibility_reason": "尚須核對年級、系所、成績、文件及其他個別條件。", "low_income_condition": "not_seen"}
+
+    mentions_low = bool(re.search(r"低收入戶|中低收入戶", t))
+    alternative_evidence = bool(re.search(
+        r"(?:如|例如|包含|包括|得檢附|或|及|以及|家庭遭遇變故|特殊境遇|經濟不利|弱勢學生).{0,45}(?:低收入戶|中低收入戶|特殊境遇|家庭遭遇變故|弱勢學生|經濟不利)"
+        r"|(?:低收入戶|中低收入戶).{0,45}(?:特殊境遇|家庭遭遇變故|弱勢學生|經濟不利|或其他)",
+        t
+    ))
+    explicit_mandatory = bool(re.search(
+        r"(?:僅限|限|須具備|需具備|必須具備|須持有|需持有|必須持有|須為|需為|必須為)"
+        r".{0,18}(?:低收入戶|中低收入戶)"
+        r"|(?:低收入戶|中低收入戶).{0,18}(?:為必要資格|資格為必要|證明為必備|限申請)",
+        t
+    ))
+    explicit_preference = bool(re.search(
+        r"(?:低收入戶|中低收入戶).{0,25}(?:優先|加分|酌予優先)"
+        r"|(?:優先|加分|酌予優先).{0,25}(?:低收入戶|中低收入戶)",
+        t
+    ))
+
+    if explicit_mandatory and not alternative_evidence:
+        return {
+            "eligibility_status": "needs_verification",
+            "eligibility_reason": "公告明確列出低收入戶／中低收入戶必要資格；仍應核對是否另有其他申請類別。",
+            "low_income_condition": "mandatory"
+        }
+    if explicit_preference:
+        return {
+            "eligibility_status": "needs_verification",
+            "eligibility_reason": "低收入戶／中低收入戶看起來屬優先或加分條件，不應直接視為必要資格。",
+            "low_income_condition": "preference"
+        }
+    if mentions_low or any(k in t for k in ["清寒", "經濟弱勢", "經濟不利", "家庭遭遇變故", "弱勢學生"]):
+        reason = "公告將低收入戶等列為可能的證明方式或經濟條件之一，未能確認它是唯一必要資格；需核對其他替代條件。"
+        if alternative_evidence:
+            reason = "公告提及低收入戶／中低收入戶，但同時列有其他經濟不利身分或家庭變故證明；不能直接排除沒有低收入戶資格者。"
+        return {
+            "eligibility_status": "needs_verification",
+            "eligibility_reason": reason,
+            "low_income_condition": "unclear"
+        }
+    return {
+        "eligibility_status": "needs_verification",
+        "eligibility_reason": "尚須核對年級、系所、成績、文件及其他個別條件。",
+        "low_income_condition": "not_seen"
+    }
 
 
 def extract_dimensions(audience, criteria):
