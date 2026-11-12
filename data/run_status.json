@@ -1,16 +1,10 @@
 {
-  "run_at": "2026-11-12T09:07:27.527191+00:00",
+  "run_at": "2026-11-12T09:32:08.693082+00:00",
   "events": [
-    {
-      "source": "惠蓀講座",
-      "status": "ok",
-      "count": 8,
-      "error": null
-    },
     {
       "source": "圖書館活動",
       "status": "ok",
-      "count": 3,
+      "count": 1,
       "error": null
     },
     {
@@ -30,7 +24,7 @@
     {
       "source": "獎學金",
       "status": "ok",
-      "count": 210,
+      "count": 81,
       "error": null
     }
   ]
