@@ -11,10 +11,10 @@ from .scholarships import assess, extract_dimensions, deadline_fields
 LIST_PAGES = [
     ("高師大獎助學金一覽表", "https://sso.nknu.edu.tw/OSA/Scholarship/ScholarshipS.aspx"),
     ("高師大學生就學助學", "https://sso.nknu.edu.tw/Services/Web/Default.aspx?cMenuId=561&cWebIdx=596"),
-    ("高師大校園行政公告", "https://news.nknu.edu.tw/nknu_news/lastNews.aspx?catid=SCHOOLADMIN&place=nknu"),
-    ("高師大校園活動公告", "https://news.nknu.edu.tw/nknu_news/lastNews.aspx?catid=CAMPUS&place=nknu"),
+    ("高師大校園行政公告", "https://news.nknu.edu.tw/nknu_News/lastNewsList.aspx?cat=SCHOOLADMIN"),
+    ("高師大校園活動公告", "https://news.nknu.edu.tw/nknu_News/lastNewsList.aspx?cat=CAMPUS"),
 ]
-KEYWORDS = ("獎學金", "獎助學金", "助學金", "就學補助", "急難慰助", "生活助學", "獎勵金")
+KEYWORDS = ("獎學金", "獎助學金", "助學金", "就學補助", "急難慰助", "生活助學", "獎勵金", "補助")
 EXCLUDE = ("獲獎名單", "得獎名單", "錄取名單", "核定名單", "成果名單")
 MAX_DETAILS = 80
 
@@ -53,10 +53,12 @@ def discover_links(soup, page_url):
         href = urljoin(page_url, a.get("href", ""))
         if not title or not href.startswith(("http://", "https://")):
             continue
-        parent = a.find_parent(["tr", "li", "article", "div"])
+        parent = a.find_parent(["tr", "li", "article"])
         row_text = clean(parent.get_text(" ", strip=True)) if parent else title
         combined = title + " " + row_text
         if not any(k in combined for k in KEYWORDS):
+            continue
+        if "補助" in combined and not any(k in combined for k in ("學生", "學士", "碩士", "博士", "在學", "本校")):
             continue
         if any(k in combined for k in EXCLUDE):
             continue
@@ -73,12 +75,20 @@ def crawl_nknu_scholarships():
     warnings = []
     for label, url in LIST_PAGES:
         try:
-            html, final_url = fetch(url)
-            soup = BeautifulSoup(html, "lxml")
-            links = discover_links(soup, final_url)
-            for link in links:
-                discovered.setdefault(link["url"], {**link, "listing_source": label})
-            print(f"[NKNU] {label}: found {len(links)} candidate links")
+            page_url = url
+            page_seen = set()
+            page_count = 0
+            while page_url and page_url not in page_seen and page_count < 5:
+                page_seen.add(page_url)
+                html, final_url = fetch(page_url)
+                soup = BeautifulSoup(html, "lxml")
+                links = discover_links(soup, final_url)
+                for link in links:
+                    discovered.setdefault(link["url"], {**link, "listing_source": label})
+                next_link = next((a for a in soup.select("a[href]") if any(k in clean(a.get_text(" ", strip=True)) for k in ("下一頁", "下頁", "Next", "›", "»"))), None)
+                page_count += 1
+                page_url = urljoin(final_url, next_link.get("href", "")) if next_link else ""
+            print(f"[NKNU] {label}: scanned {page_count} page(s), candidates accumulated {len(discovered)}")
         except Exception as exc:
             warnings.append(f"{label}讀取失敗：{exc}")
 
