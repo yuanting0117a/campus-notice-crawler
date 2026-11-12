@@ -134,6 +134,13 @@ def crawl_listing(source, url, max_details=50, title_selector=None):
                 continue
             if any(x in href.lower() for x in ["login", "logout", "javascript:", "mailto:"]):
                 continue
+            # Generic navigation fallbacks must not be mistaken for announcements.
+            # PDFs and privacy/consent/policy pages are resources, not event listings.
+            if re.search(r"\\.pdf(?:$|[?#])", href, re.I):
+                continue
+            if any(k in (link["title"] + " " + href).lower()
+                   for k in ["隱私", "個資", "同意書", "privacy", "consent", "policy"]):
+                continue
             seen.add(href)
             records.append(make_record(source, link["title"], href, link["title"], {"links": []}))
             if len(records) >= max_details:
