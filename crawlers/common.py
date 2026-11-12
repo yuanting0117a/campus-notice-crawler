@@ -14,6 +14,16 @@ TIMEOUT = 12
 def fetch(url):
     r = SESSION.get(url, timeout=TIMEOUT)
     r.raise_for_status()
+    content_type = (r.headers.get("Content-Type") or "").lower()
+    # Never decode binary documents (PDF, legacy Office, DOCX/XLSX ZIP containers) as HTML.
+    signature = r.content[:8]
+    if ("application/pdf" in content_type or
+        "application/msword" in content_type or
+        "application/vnd" in content_type or
+        signature.startswith(b"%PDF-") or
+        signature.startswith(b"PK\\x03\\x04") or
+        signature.startswith(bytes.fromhex("D0CF11E0A1B11AE1"))):
+        raise ValueError("Binary attachment is not an HTML page")
     r.encoding = r.apparent_encoding or r.encoding
     return r.text, r.url
 
@@ -75,13 +85,10 @@ def classify_audience(text):
 
 def extract_detail(url, title=""):
     try:
-        # Never decode a PDF response as HTML: doing so puts compressed binary bytes
-        # into full_text and produces replacement characters / mojibake on the site.
-        if re.search(r"\.pdf(?:$|[?#])", url, re.I):
-            text = extract_pdf_text(url)
-            return {"title": title, "url": url, "full_text": text,
-                    "links": [], "dates_found": extract_dates(text),
-                    "fetch_status": "ok" if text else "unsupported_pdf"}
+        # Attachments are retained as links; never parse their binary bytes as page text.
+        if re.search(r"\\.(pdf|docx?|xlsx?|pptx?|zip|jpg|jpeg|png)(?:$|[?#])", url, re.I):
+            return {"title": title, "url": url, "full_text": "",
+                    "links": [], "dates_found": [], "fetch_status": "binary_attachment"}
         html, final_url = fetch(url)
         soup = BeautifulSoup(html, "lxml")
         text = page_text(soup)
@@ -116,13 +123,28 @@ def crawl_listing(source, url, max_details=50, title_selector=None):
     # Capture rows/cards first, retaining the whole row's original text.
     for node in soup.select("tr, article, .item, .event, .activity, .news, .card, .list-group-item, .event-item, .activity-item"):
         text = clean(node.get_text(" ", strip=True))
-        a = node.find("a", href=True)
-        if not a or len(text) < 12:
+        anchors = node.select("a[href]")
+        if not anchors or len(text) < 12:
+            continue
+        # Prefer an announcement/detail page over a downloadable application form.
+        detail_anchors = [a for a in anchors if not re.search(
+            r"\\.(pdf|docx?|xlsx?|pptx?|zip|jpg|jpeg|png)($|[?#])",
+            absolute(final_url, a.get("href")), re.I)]
+        a = next((x for x in detail_anchors if "nsn=" in x.get("href", "").lower()
+                  or "actid=" in x.get("href", "").lower()), None)
+        if a is None and detail_anchors:
+            a = detail_anchors[0]
+        if a is None:
             continue
         href = absolute(final_url, a.get("href"))
-        title = clean(a.get_text(" ", strip=True)) or clean(a.get("title", ""))
+        # Keep the announcement heading from the first meaningful link, even when
+        # the chosen destination is a separate "more details" link.
+        title_anchor = next((x for x in anchors if clean(x.get_text(" ", strip=True))
+                             and not re.search(r"\\.(pdf|docx?|xlsx?|pptx?|zip|jpg|jpeg|png)($|[?#])",
+                                               absolute(final_url, x.get("href")), re.I)), a)
+        title = clean(title_anchor.get_text(" ", strip=True)) or clean(title_anchor.get("title", ""))
         # Ignore document/resource rows that are not actual activity announcements.
-        if re.search(r"\.pdf(?:$|[?#])", href, re.I):
+        if re.search(r"\\.(pdf|docx?|xlsx?|pptx?|zip|jpg|jpeg|png)(?:$|[?#])", href, re.I):
             continue
         if any(k in (title + " " + text + " " + href).lower()
                for k in ["隱私", "個資", "同意書", "privacy", "consent", "policy"]):
