@@ -38,7 +38,8 @@ jobs:
           git add data/
           if ! git diff --cached --quiet; then
             git commit -m "Update campus notices and scholarships"
-            git push
+            git pull --rebase origin main
+            git push origin HEAD:main
           else
             echo "No data changes."
           fi
