@@ -149,10 +149,11 @@ def make_record(source, title, url, text, extra=None):
     }
     extra = extra or {}
     for link in extra.get("links", []):
-        label = link["title"].lower()
         href = link["url"]
-        if any(k in label for k in ["報名", "register", "申請", "下載", "簡章", "辦法", "表單"]):
-            (rec["attachments"] if re.search(r"\.(pdf|docx?|xlsx?)($|\?)", href, re.I) else rec["registration_links"]).append(link)
+        if re.search(r"\.(pdf|docx?|xlsx?|pptx?)(?:$|[?#])", href, re.I):
+            rec["attachments"].append(link)
+        elif is_registration_link(link):
+            rec["registration_links"].append(link)
     rec.update({k:v for k,v in extra.items() if k != "links"})
     return rec
 
