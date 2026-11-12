@@ -3,6 +3,8 @@ name: NCHU Campus Notice Crawler and Website
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - "data/**"
   workflow_dispatch:
   schedule:
     - cron: "17 * * * *"
@@ -26,6 +28,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Sync latest main before crawling
+        run: git pull --rebase origin main
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -42,7 +46,6 @@ jobs:
           git add data/
           if ! git diff --cached --quiet; then
             git commit -m "Update campus notices and scholarships"
-            git pull --rebase origin main
             git push origin HEAD:main
           else
             echo "No data changes."
@@ -51,7 +54,7 @@ jobs:
         run: |
           mkdir -p dist/data
           cp site/index.html dist/index.html
-          cp data/activities.json data/scholarships.json data/run_status.json dist/data/
+          cp data/activities.json data/scholarships_1.json data/scholarships_2.json data/run_status.json dist/data/
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
       - name: Upload Pages artifact
