@@ -94,5 +94,5 @@ def run():
             results.append(safe_source(name, crawl_library_events))
         else:
             # Keep each additional official source bounded to avoid long Actions runs.
-            results.append(safe_source(name, lambda n=name, u=url: crawl_listing(n, u, max_details=10)))
+            results.append(safe_source(name, lambda n=name, u=url: crawl_listing(n, u, max_details=5)))
     return results
