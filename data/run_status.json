@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-11-12T12:09:01.152022+00:00",
+  "run_at": "2026-11-12T12:11:04.145544+00:00",
   "events": [
     {
       "source": "圖書館活動",
@@ -64,7 +64,8 @@
       "error": null,
       "warnings": [],
       "detail_pages_fetched": null,
-      "internal_categories_crawled": null
+      "internal_categories_crawled": null,
+      "attachment_count": null
     },
     {
       "source": "嘉義大學獎助學金",
@@ -75,13 +76,14 @@
         "校外獎助學金第 2 頁分頁回傳系統錯誤，僅保留已成功取得的公告"
       ],
       "detail_pages_fetched": 19,
-      "internal_categories_crawled": 11
+      "internal_categories_crawled": 11,
+      "attachment_count": 23
     }
   ],
   "transit": {
-    "status": "error",
+    "status": "image_only",
     "routes": 0,
     "notice_count": 1,
-    "error": "官方 9015 時刻表頁面格式改變或暫無班次，保留上次成功資料。"
+    "error": null
   }
 }

@@ -2,7 +2,7 @@
   "source": "臺灣公路客運即時動態資訊網（官方時刻表）",
   "source_url": "https://www.taiwanbus.tw/eBUSPage/",
   "operator_url": "https://www.tcbus.com.tw/",
-  "updated_at": "2026-11-12T12:08:58.649151+00:00",
+  "updated_at": "2026-11-12T12:10:59.585304+00:00",
   "routes": [],
   "notices": [
     {
@@ -18,7 +18,7 @@
     }
   ],
   "notice": "班次可能因日期、例假日及業者調度調整；出發前請以官方即時資訊為準。",
-  "timetable_status": "error",
-  "timetable_error": "官方 9015 時刻表頁面格式改變或暫無班次，保留上次成功資料。",
+  "timetable_status": "image_only",
+  "timetable_note": "已改用台中客運最新公告中的 9015／9015A 原始時刻表圖片。",
   "status": "ok"
 }
