@@ -16,6 +16,17 @@ INTERNAL_CATEGORIES = {
     "精進校務經營生活服務助學金"
 }
 
+# Additional official NCYU college/department scholarship boards.
+# Only the first/latest listing page is scanned; each announcement's detail page is fetched.
+DEPARTMENT_LISTS = {
+    "管理學院": "https://website.ncyu.edu.tw/gramgt/Subject?nodeId=35097",
+    "農藝學系": "https://website.ncyu.edu.tw/agri/Subject?nodeId=15136",
+    "體育與健康休閒學系": "https://website.ncyu.edu.tw/dpe/Subject?nodeId=9477",
+    "生物機電工程學系": "https://website.ncyu.edu.tw/bioeng/Subject?nodeId=65120",
+    "園藝學系": "https://website.ncyu.edu.tw/hortsci/Subject?nodeId=15113",
+    "木質材料與設計學系": "https://website.ncyu.edu.tw/fps/Subject?nodeId=12515",
+}
+
 def deadline_from_text(text):
     text = clean(text or "")
     date_pattern = r"(?:(?:民國)?(?:1\d{2}|20\d{2})\s*[年./-]\s*)?\d{1,2}\s*[月./-]\s*\d{1,2}\s*日?"
@@ -143,10 +154,23 @@ def crawl_ncyu_scholarships():
         except Exception as exc:
             print(f"[NCYU] category fetch failed: {label}: {exc}")
 
+    # Expand coverage to official college/department scholarship boards.
+    department_pages_fetched = 0
+    for unit_name, unit_url in DEPARTMENT_LISTS.items():
+        try:
+            unit_html, unit_final = fetch(unit_url)
+            unit_soup = BeautifulSoup(unit_html, "lxml")
+            before_count = len(records)
+            add_page_records(unit_soup, unit_final, "嘉義大學院系獎助學金", "ncyu", records, seen, detail_state)
+            department_pages_fetched += 1
+            print(f"[NCYU] department board {unit_name}: +{len(records) - before_count} records")
+        except Exception as exc:
+            warnings.append(f"院系獎助學金頁面讀取失敗：{unit_name}：{exc}")
+
     if not records:
         raise RuntimeError("嘉義大學獎助學金列表未擷取到資料")
     attachment_count = sum(len(record.get("attachments", [])) for record in records)
-    print(f"[NCYU] captured {len(records)} records; fetched {detail_state['count']} detail pages; internal categories {len(category_urls)}; attachments {attachment_count}")
+    print(f"[NCYU] captured {len(records)} records; fetched {detail_state['count']} detail pages; internal categories {len(category_urls)}; department boards {department_pages_fetched}/{len(DEPARTMENT_LISTS)}; attachments {attachment_count}")
     if warnings:
         print("[NCYU] WARNINGS: " + " | ".join(warnings))
     return records, warnings, detail_state["count"], len(category_urls)
@@ -165,6 +189,7 @@ def run():
             "warnings": warnings,
             "detail_pages_fetched": detail_count,
             "internal_categories_crawled": category_count,
+            "department_boards_crawled": len(DEPARTMENT_LISTS),
             "attachment_count": sum(len(record.get("attachments", [])) for record in records),
         }
     except Exception as exc:
