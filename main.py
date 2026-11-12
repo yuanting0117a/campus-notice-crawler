@@ -45,6 +45,34 @@ def write_dataset(filename, fresh):
 def main():
     events = write_dataset("activities.json", run_events())
     scholarships = write_dataset("scholarships.json", [run_scholarships()])
+    # Split scholarship records into two size-balanced JSON files for GitHub's 100 MB limit.
+    scholarship_source = scholarships["sources"][0]
+    records = scholarship_source.get("records", [])
+    buckets = [[], []]
+    sizes = [0, 0]
+    for record in records:
+        payload_size = len(json.dumps(record, ensure_ascii=False, separators=(",", ":")).encode("utf-8"))
+        target = 0 if sizes[0] <= sizes[1] else 1
+        buckets[target].append(record)
+        sizes[target] += payload_size
+    for index, bucket in enumerate(buckets, start=1):
+        shard_source = dict(scholarship_source)
+        shard_source["records"] = bucket
+        shard_source["count"] = len(bucket)
+        shard = {
+            "schema_version": 1,
+            "updated_at": scholarships["updated_at"],
+            "timezone": scholarships["timezone"],
+            "policy": scholarships["policy"],
+            "sources": [shard_source],
+        }
+        shard_path = DATA / f"scholarships_{index}.json"
+        shard_path.write_text(json.dumps(shard, ensure_ascii=False, indent=2), encoding="utf-8")
+        actual_size = shard_path.stat().st_size
+        if actual_size >= 90 * 1024 * 1024:
+            raise RuntimeError(f"{shard_path.name} is too large ({actual_size} bytes); refusing to publish.")
+    # The old combined file is no longer used by the website.
+    (DATA / "scholarships.json").unlink(missing_ok=True)
     report = {
         "run_at": datetime.now(timezone.utc).isoformat(),
         "events": [{"source":s["source"],"status":s["status"],"count":s["count"],"error":s.get("error")} for s in events["sources"]],
@@ -52,6 +80,7 @@ def main():
     }
     (DATA / "run_status.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps(report, ensure_ascii=False, indent=2))
+    print("Scholarship shards:", [(p.name, p.stat().st_size) for p in sorted(DATA.glob("scholarships_*.json"))])
 
 if __name__ == "__main__":
     main()
