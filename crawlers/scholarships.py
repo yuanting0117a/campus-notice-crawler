@@ -43,7 +43,16 @@ def run():
             rec.update(assess(rec.get("full_text", "")))
             rec["official_listing_url"] = LIST_URL
             rec["application_documents"] = [x for x in rec.get("attachments", [])]
+            # Keep the public JSON compact: PDF extraction can otherwise create enormous files.
+            max_chars = 18000
+            rec["full_text"] = (rec.get("full_text", "") or "")[:max_chars]
             rec["eligibility_original_text"] = rec.get("full_text", "")
+            rec["summary"] = (rec.get("summary", "") or "")[:1800]
+            rec["list_text"] = (rec.get("list_text", "") or "")[:4000]
+            rec["attachment_texts"] = [
+                dict(item, text=(item.get("text", "") or "")[:6000])
+                for item in (rec.get("attachment_texts", []) or [])[:2]
+            ]
         # Keep all records, including clearly ineligible ones.
         return records
     return safe_source("獎學金", crawl)
