@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-11-12T13:16:11.798215+00:00",
+  "run_at": "2026-11-12T13:18:52.840347+00:00",
   "events": [
     {
       "source": "圖書館活動",
@@ -80,6 +80,17 @@
       "internal_categories_crawled": 11,
       "department_boards_crawled": 6,
       "attachment_count": 28
+    },
+    {
+      "source": "高師大獎助學金",
+      "status": "ok",
+      "count": 9,
+      "error": null,
+      "warnings": [],
+      "detail_pages_fetched": null,
+      "internal_categories_crawled": null,
+      "department_boards_crawled": null,
+      "attachment_count": 0
     }
   ],
   "transit": {
