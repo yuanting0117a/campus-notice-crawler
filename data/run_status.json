@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-11-12T12:49:51.659122+00:00",
+  "run_at": "2026-11-12T12:56:30.367181+00:00",
   "events": [
     {
       "source": "圖書館活動",
@@ -39,7 +39,7 @@
     },
     {
       "source": "宿舍公告",
-      "status": "stale_previous_data",
+      "status": "ok",
       "count": 5,
       "error": null
     },
