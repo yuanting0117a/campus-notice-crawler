@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-11-12T11:54:19.908911+00:00",
+  "run_at": "2026-11-12T11:56:14.789902+00:00",
   "events": [
     {
       "source": "圖書館活動",
@@ -65,9 +65,9 @@
     },
     {
       "source": "嘉義大學獎助學金",
-      "status": "error",
-      "count": 0,
-      "error": "name 'datetime' is not defined"
+      "status": "ok",
+      "count": 62,
+      "error": null
     }
   ],
   "transit": {
