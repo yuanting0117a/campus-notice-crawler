@@ -35,7 +35,7 @@ def crawl_lectures():
         if key in seen:
             continue
         seen.add(key)
-        content = "\\n".join([
+        content = "\n".join([
             "活動時間：" + activity_time,
             "報名期間：" + registration_time,
             "名額資訊：" + participants,
