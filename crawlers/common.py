@@ -75,6 +75,13 @@ def classify_audience(text):
 
 def extract_detail(url, title=""):
     try:
+        # Never decode a PDF response as HTML: doing so puts compressed binary bytes
+        # into full_text and produces replacement characters / mojibake on the site.
+        if re.search(r"\\.pdf(?:$|[?#])", url, re.I):
+            text = extract_pdf_text(url)
+            return {"title": title, "url": url, "full_text": text,
+                    "links": [], "dates_found": extract_dates(text),
+                    "fetch_status": "ok" if text else "unsupported_pdf"}
         html, final_url = fetch(url)
         soup = BeautifulSoup(html, "lxml")
         text = page_text(soup)
