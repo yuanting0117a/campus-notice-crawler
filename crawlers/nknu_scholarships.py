@@ -75,19 +75,27 @@ def crawl_nknu_scholarships():
     warnings = []
     for label, url in LIST_PAGES:
         try:
-            page_url = url
+            page_queue = [url]
             page_seen = set()
             page_count = 0
-            while page_url and page_url not in page_seen and page_count < 5:
+            while page_queue and page_count < 5:
+                page_url = page_queue.pop(0)
+                if not page_url or page_url in page_seen:
+                    continue
                 page_seen.add(page_url)
                 html, final_url = fetch(page_url)
                 soup = BeautifulSoup(html, "lxml")
                 links = discover_links(soup, final_url)
                 for link in links:
                     discovered.setdefault(link["url"], {**link, "listing_source": label})
-                next_link = next((a for a in soup.select("a[href]") if any(k in clean(a.get_text(" ", strip=True)) for k in ("下一頁", "下頁", "Next", "›", "»"))), None)
+                # The NKNU news board uses numbered pagination links rather than a
+                # consistently labelled "Next" control.
+                for anchor in soup.select("a[href]"):
+                    label_text = clean(anchor.get_text(" ", strip=True))
+                    target = urljoin(final_url, anchor.get("href", ""))
+                    if (re.fullmatch(r"\\d+", label_text) or label_text in ("下一頁", "下頁", "Next", "›", "»")) and target not in page_seen and target not in page_queue:
+                        page_queue.append(target)
                 page_count += 1
-                page_url = urljoin(final_url, next_link.get("href", "")) if next_link else ""
             print(f"[NKNU] {label}: scanned {page_count} page(s), candidates accumulated {len(discovered)}")
         except Exception as exc:
             warnings.append(f"{label}讀取失敗：{exc}")
