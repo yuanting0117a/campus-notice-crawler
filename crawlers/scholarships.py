@@ -147,12 +147,11 @@ def deadline_fields(raw_deadline, full_text=""):
     if match:
         year_text = match.group(1)
         month, day = int(match.group(2)), int(match.group(3))
-        if year_text:
-            year = int(year_text)
-            if year < 1911:
-                year += 1911
-            if 1 <= month <= 12 and 1 <= day <= 31:
-                date_value = f"{year:04d}-{month:02d}-{day:02d}"
+        year = int(year_text) if year_text else datetime.now().year
+        if year < 1911:
+            year += 1911
+        if 1 <= month <= 12 and 1 <= day <= 31:
+            date_value = f"{year:04d}-{month:02d}-{day:02d}"
     if not date_value:
         match = re.search(r"(20\d{2})[-/.](\d{1,2})[-/.](\d{1,2})", search_text)
         if match:
