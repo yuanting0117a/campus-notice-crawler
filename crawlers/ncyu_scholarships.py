@@ -2,7 +2,7 @@ from __future__ import annotations
 import re
 from urllib.parse import urljoin
 from bs4 import BeautifulSoup
-from .common import safe_source, fetch, clean, make_record, extract_detail, extractive_summary
+from .common import safe_source, fetch, clean, make_record, extract_detail, extractive_summary, is_registration_link
 from .scholarships import classify, extract_dimensions, assess, deadline_fields
 
 LIST_URL = "https://website.ncyu.edu.tw/life/Subject?nodeId=55082"
@@ -17,9 +17,30 @@ INTERNAL_CATEGORIES = {
 }
 
 def deadline_from_text(text):
-    match = re.search(r"(?:截止|申請至|受理至|收件至|申請日期自即日起至)[：:，,\s]*(.{0,35}?(?:日|號))", text or "")
-    raw = clean(match.group(0)) if match else ""
-    return deadline_fields(raw, raw)[0], raw
+    text = clean(text or "")
+    date_pattern = r"(?:(?:民國)?(?:1\d{2}|20\d{2})\s*[年./-]\s*)?\d{1,2}\s*[月./-]\s*\d{1,2}\s*日?"
+    patterns = [
+        rf"(?:收件截止日|截止日期|截止日|申請截止日|申請截止|受理至|收件至|申請至|截止至|截至)\s*[：:，,]?\s*({date_pattern})",
+        rf"(?:自|從).{0,50}?(?:至|到)\s*({date_pattern})",
+        rf"(?:於|在)\s*({date_pattern})\s*(?:前|截止|止)",
+    ]
+    candidates = []
+    for pattern in patterns:
+        candidates.extend(re.finditer(pattern, text))
+    if not candidates:
+        return "", ""
+    match = max(candidates, key=lambda item: item.start(1))
+    date_raw = re.sub(r"\s+", "", match.group(1))
+    deadline_date = deadline_fields(date_raw, date_raw)[0]
+    return deadline_date, clean(match.group(0))
+
+
+def is_document_link(link):
+    label = clean(link.get("title", ""))
+    href = link.get("url", "") or ""
+    extension = r"\.(pdf|docx?|xlsx?|pptx?|odt|ods|odp|zip)"
+    return bool(re.search(extension + r"(?:\b|$|[?#])", label, re.I)
+                or re.search(extension + r"(?:$|[?#])", href, re.I))
 
 def add_page_records(soup, page_url, source, scope, records, seen, detail_state):
     for a in soup.select('a[href*="/Subject/Detail/"]'):
@@ -37,6 +58,7 @@ def add_page_records(soup, page_url, source, scope, records, seen, detail_state)
         seen.add(href)
         detail_text = ""
         attachments = []
+        registration_links = []
         detail_status = "not_fetched"
         if detail_state["count"] < MAX_DETAIL_PAGES:
             detail = extract_detail(href, title)
@@ -44,8 +66,11 @@ def add_page_records(soup, page_url, source, scope, records, seen, detail_state)
             if detail_status == "ok":
                 detail_text = detail.get("full_text", "")
                 for link in detail.get("links", []):
-                    if re.search(r"\.(pdf|docx?|xlsx?|pptx?)(?:$|[?#])", link.get("url", ""), re.I):
+                    if is_document_link(link):
                         attachments.append(link)
+                    elif (is_registration_link(link)
+                          or ("adm.ncyu.edu.tw" in link.get("url", "") and "申請" in link.get("title", ""))):
+                        registration_links.append(link)
                 detail_state["count"] += 1
         full_text = "\n".join(x for x in [title, detail_text] if x)
         grades, departments = extract_dimensions(full_text, "")
@@ -59,7 +84,7 @@ def add_page_records(soup, page_url, source, scope, records, seen, detail_state)
             "deadline_date": deadline_date, "deadline_text": deadline_text,
             "official_listing_url": LIST_URL, "detail_fetch_status": detail_status,
             "attachments": attachments, "application_documents": attachments,
-            "registration_links": [],
+            "registration_links": registration_links,
         })
         rec.update(assess(full_text))
         records.append(rec)
@@ -108,7 +133,8 @@ def crawl_ncyu_scholarships():
 
     if not records:
         raise RuntimeError("嘉義大學獎助學金列表未擷取到資料")
-    print(f"[NCYU] captured {len(records)} records; fetched {detail_state['count']} detail pages; internal categories {len(category_urls)}")
+    attachment_count = sum(len(record.get("attachments", [])) for record in records)
+    print(f"[NCYU] captured {len(records)} records; fetched {detail_state['count']} detail pages; internal categories {len(category_urls)}; attachments {attachment_count}")
     if warnings:
         print("[NCYU] WARNINGS: " + " | ".join(warnings))
     return records, warnings, detail_state["count"], len(category_urls)
@@ -127,6 +153,7 @@ def run():
             "warnings": warnings,
             "detail_pages_fetched": detail_count,
             "internal_categories_crawled": category_count,
+            "attachment_count": sum(len(record.get("attachments", [])) for record in records),
         }
     except Exception as exc:
         return {"source": "嘉義大學獎助學金", "status": "error", "checked_at": started,
