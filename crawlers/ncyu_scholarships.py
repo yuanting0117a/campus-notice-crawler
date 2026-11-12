@@ -2,7 +2,7 @@ from __future__ import annotations
 import re
 from urllib.parse import urljoin
 from bs4 import BeautifulSoup
-from .common import safe_source, fetch, clean, make_record, extract_detail, extractive_summary, is_registration_link
+from .common import safe_source, fetch, clean, make_record, extract_detail, extractive_summary
 from .scholarships import classify, extract_dimensions, assess, deadline_fields
 
 LIST_URL = "https://website.ncyu.edu.tw/life/Subject?nodeId=55082"
@@ -43,6 +43,17 @@ def is_document_link(link):
     return bool(re.search(extension + r"(?:\b|$|[?#])", label, re.I)
                 or re.search(extension + r"(?:$|[?#])", href, re.I))
 
+
+def is_application_link(link):
+    label = clean(link.get("title", ""))
+    href = link.get("url", "") or ""
+    if "adm.ncyu.edu.tw" in href and any(word in label for word in ["申請", "獎學金", "助學金"]):
+        return True
+    if ("website.ncyu.edu.tw" not in href and "ServerFile/Get" not in href
+            and any(word in label for word in ["線上申請", "申請表單", "填寫申請", "申請系統"])):
+        return True
+    return False
+
 def add_page_records(soup, page_url, source, scope, records, seen, detail_state):
     for a in soup.select('a[href*="/Subject/Detail/"]'):
         title = clean(a.get_text(" ", strip=True))
@@ -69,8 +80,7 @@ def add_page_records(soup, page_url, source, scope, records, seen, detail_state)
                 for link in detail.get("links", []):
                     if is_document_link(link):
                         attachments.append(link)
-                    elif (is_registration_link(link)
-                          or ("adm.ncyu.edu.tw" in link.get("url", "") and "申請" in link.get("title", ""))):
+                    elif is_application_link(link):
                         registration_links.append(link)
                 detail_state["count"] += 1
         full_text = "\n".join(x for x in [title, detail_text] if x)
