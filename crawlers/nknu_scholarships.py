@@ -93,7 +93,7 @@ def crawl_nknu_scholarships():
                 for anchor in soup.select("a[href]"):
                     label_text = clean(anchor.get_text(" ", strip=True))
                     target = urljoin(final_url, anchor.get("href", ""))
-                    if (re.fullmatch(r"\d+", label_text) or label_text in ("下一頁", "下頁", "Next", "›", "»")) and target not in page_seen and target not in page_queue:
+                    if (target.startswith(("http://", "https://")) and (re.fullmatch(r"\d+", label_text) or label_text in ("下一頁", "下頁", "Next", "›", "»")) and target not in page_seen and target not in page_queue):
                         page_queue.append(target)
                 page_count += 1
             print(f"[NKNU] {label}: scanned {page_count} page(s), candidates accumulated {len(discovered)}")
