@@ -2,7 +2,6 @@ from .common import crawl_listing, safe_source, fetch
 from bs4 import BeautifulSoup
 
 SOURCES = [
-    ("惠蓀講座", "https://oaa.nchu.edu.tw/zh-tw/ge-speech/page-detail.2751"),
     ("圖書館活動", "https://cal.lib.nchu.edu.tw/"),
     ("自主學習活動", "https://selfstudy.nchu.edu.tw/"),
     ("研習暨演講活動", "https://psfcost.nchu.edu.tw/registration/"),
