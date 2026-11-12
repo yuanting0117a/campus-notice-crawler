@@ -81,12 +81,12 @@ def crawl_route_notices():
             for img in page.select("img[src]"):
                 src = urljoin(href, img.get("src", ""))
                 alt = " ".join(img.get("alt", "").split())
-                if re.search(r"\.(png|jpe?g|webp)(?:$|[?#])", src, re.I):
+                if re.search(r"/newsfile/[^/]+-\\d+\\.(png|jpe?g|webp)(?:$|[?#])", src, re.I):
                     notice["images"].append({"url": src, "alt": alt or "客運官方時刻表圖片"})
             notice["text"] = " ".join(page.get_text(" ", strip=True).split())[:1200]
         except Exception as exc:
             notice["fetch_error"] = str(exc)
-        notices.append(notice)
+        notice["images"] = notice["images"][:1]\n        notices.append(notice)
     return notices[:10]
 
 def run():
