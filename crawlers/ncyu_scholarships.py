@@ -7,7 +7,7 @@ from .scholarships import classify, extract_dimensions, assess, deadline_fields
 
 LIST_URL = "https://website.ncyu.edu.tw/life/Subject?nodeId=55082"
 MAX_LIST_PAGES = 5
-MAX_DETAIL_PAGES = 24
+MAX_DETAIL_PAGES = 80
 INTERNAL_CATEGORIES = {
     "余傳韜校長紀念獎助學金", "扶弱就學助學金", "清寒學生獎學金",
     "志翔清寒獎學金", "常德清寒學生獎學金", "廖金鳳老師紀念獎學金",
@@ -26,6 +26,13 @@ def add_page_records(soup, page_url, source, scope, records, seen, detail_state)
         title = clean(a.get_text(" ", strip=True))
         href = urljoin(page_url, a.get("href", ""))
         if not title or href in seen or not any(k in title for k in ["獎學金", "獎助", "助學金"]):
+            continue
+        # Skip award-result lists; they are not open applications.
+        if re.search(r"(錄取名單|獲獎名單|得獎名單|獲選名單|核定名單|得獎學生名單)", title):
+            continue
+        # Older academic-year notices are no longer current application opportunities.
+        old_year = re.search(r"(11[0-4])學年度", title)
+        if old_year:
             continue
         seen.add(href)
         detail_text = ""
@@ -60,15 +67,23 @@ def add_page_records(soup, page_url, source, scope, records, seen, detail_state)
 def crawl_ncyu_scholarships():
     records, seen = [], set()
     detail_state = {"count": 0}
+    warnings = []
 
     # 校外獎助學金：公告依最新日期排序，先抓最近五頁，避免每小時掃描數百筆歷史公告。
     page_url = LIST_URL
-    for _ in range(MAX_LIST_PAGES):
+    for page_number in range(1, MAX_LIST_PAGES + 1):
         html, final_url = fetch(page_url)
         soup = BeautifulSoup(html, "lxml")
+        page_text = soup.get_text(" ", strip=True)
+        if "系統錯誤" in page_text or "造成錯誤的原因" in page_text:
+            warnings.append(f"校外獎助學金第 {page_number} 頁分頁回傳系統錯誤，僅保留已成功取得的公告")
+            break
         add_page_records(soup, final_url, "嘉義大學校外獎助學金", "external", records, seen, detail_state)
         next_link = next((a for a in soup.select("a[href]") if "下一頁" in clean(a.get_text(" ", strip=True))), None)
         if not next_link:
+            break
+        if page_number == MAX_LIST_PAGES:
+            warnings.append(f"校外獎助學金僅掃描前 {MAX_LIST_PAGES} 頁，未涵蓋官方全部歷史公告")
             break
         next_url = urljoin(final_url, next_link.get("href", ""))
         if not next_url or next_url == page_url:
@@ -94,7 +109,25 @@ def crawl_ncyu_scholarships():
     if not records:
         raise RuntimeError("嘉義大學獎助學金列表未擷取到資料")
     print(f"[NCYU] captured {len(records)} records; fetched {detail_state['count']} detail pages; internal categories {len(category_urls)}")
-    return records
+    if warnings:
+        print("[NCYU] WARNINGS: " + " | ".join(warnings))
+    return records, warnings, detail_state["count"], len(category_urls)
 
 def run():
-    return safe_source("嘉義大學獎助學金", crawl_ncyu_scholarships)
+    from datetime import datetime, timezone
+    started = datetime.now(timezone.utc).isoformat()
+    try:
+        records, warnings, detail_count, category_count = crawl_ncyu_scholarships()
+        return {
+            "source": "嘉義大學獎助學金",
+            "status": "partial" if warnings else ("ok" if records else "empty"),
+            "checked_at": started,
+            "count": len(records),
+            "records": records,
+            "warnings": warnings,
+            "detail_pages_fetched": detail_count,
+            "internal_categories_crawled": category_count,
+        }
+    except Exception as exc:
+        return {"source": "嘉義大學獎助學金", "status": "error", "checked_at": started,
+                "count": 0, "records": [], "error": str(exc)}
