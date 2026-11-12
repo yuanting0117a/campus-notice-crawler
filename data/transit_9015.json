@@ -1,4 +1,24 @@
 {
-  "status": "error",
-  "last_error": "官方 9015 時刻表頁面格式改變或暫無班次，保留上次成功資料。"
+  "source": "臺灣公路客運即時動態資訊網（官方時刻表）",
+  "source_url": "https://www.taiwanbus.tw/eBUSPage/",
+  "operator_url": "https://www.tcbus.com.tw/",
+  "updated_at": "2026-11-12T11:25:02.582784+00:00",
+  "routes": [],
+  "notices": [
+    {
+      "title": "9015、9016線11/13-11/30發車時刻",
+      "url": "https://www.tcbus.com.tw/newsfile/shownews.php?newsno=1395",
+      "images": [
+        {
+          "url": "https://www.tcbus.com.tw/newsfile/1395-1.png",
+          "alt": "9015／9015A 官方時刻表"
+        }
+      ],
+      "text": "Taichung Bus 台中客運 最新消息 Site map >最新消息 敬 告 乘 客 9015、9016線11/13-11/30發車時刻 台中客運服務專線：0800-800-126 台中汽車客運股份有限公司 115年11月10日 敬啟 版權所有©台中汽車客運股份有限公司 2012@tcbus.com.tw All Rights Reserved 台中客運客服中心免付費電話:0800-800-126"
+    }
+  ],
+  "notice": "班次可能因日期、例假日及業者調度調整；出發前請以官方即時資訊為準。",
+  "timetable_status": "error",
+  "timetable_error": "官方 9015 時刻表頁面格式改變或暫無班次，保留上次成功資料。",
+  "status": "ok"
 }
