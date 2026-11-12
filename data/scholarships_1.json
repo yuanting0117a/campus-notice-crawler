@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-12T10:22:53.058603+00:00",
+  "updated_at": "2026-11-12T10:38:11.788706+00:00",
   "timezone": "Asia/Taipei",
   "policy": "不去重；來源失敗時保留上次成功資料；原文優先於摘要。",
   "sources": [
     {
       "source": "獎學金",
       "status": "ok",
-      "checked_at": "2026-11-12T10:22:51.382569+00:00",
+      "checked_at": "2026-11-12T10:38:10.258182+00:00",
       "count": 39,
       "records": [
         {
@@ -35,7 +35,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:22:53.027473+00:00",
+          "last_checked": "2026-11-12T10:38:11.765761+00:00",
           "source_title": "115學年度周惠慈副教授奬助學金申請公告(收件期間:11月2日至11月20日17時止)Assistant Professor Chou Hui-Tzu Memorial Scholarship Application dates : 11/2~ 11/20(For TAIWANESE students ONLY)",
           "list_text": "獎學金名稱：115學年度周惠慈副教授奬助學金申請公告\n適用對象：大學部\n獎助對象與條件：1.本國籍之本校生命科學系大學部在學學生 2.單親家庭子女或家境清寒 3.該學期獲獎前無休、退、轉學者 更多詳細資訊請參 https://www.osa.nchu.edu.tw/osa/laa/sys/modules/tadnews/index.php?nsn=2092\n申請期限：2026-11-20",
           "target_level": "大學部",
@@ -96,7 +96,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T10:22:53.029985+00:00",
+          "last_checked": "2026-11-12T10:38:11.767834+00:00",
           "source_title": "115學年度第1學期國立中興大學勤學獎助學金收件期間:11月2日至11月20日17時National Chung Hsing University Financial and Economic Law Student Scholarship Application Dates: 11/2 ~ 11/20 (For TAIWANESE students ONLY)",
           "list_text": "獎學金名稱：115學年度第1學期國立中興大學勤學獎助學金\n適用對象：大學部與研究所\n獎助對象與條件：A類(未具有低收入戶或中低收入戶資格)： 一、凡家庭總年收入低於90萬元、利息所得低於5千元、家庭財產總額 (不含存款)低於300萬元與車輛1台之家境清寒者。若因高利率存 款致利息年所得逾5千元或已無存款者，得檢附相關證明由學校 審核認定。 二、家庭成員含申請學生、父母、同居住之祖父母、未婚之兄弟姊妹、 已婚且共同居住之兄弟姊妹；已婚之學生則計列父母與配偶；非 監護或非同居住(已成年學生)之父母、已歿、失聯、服刑等則不計 列，但須附相關證明。 三、申請學生須具有中華民國國籍。 四、研究所前學期學業成績平均80分（含）以上，大學部則為班上前 百分之五十以內，操行成績平均85分（含）以上；新生用前畢業 學校或同等學歷平均成績申請，不計操行成績。 五、已領其他獎助學金2萬元(含)以上者，不得申請。 六、每學年享有就學優待超過2萬元者，不得申請。 B 類： 一、低收入戶學生及中低收入戶學生。 二、研究所前學期學業成績平均80分（含）以上，大學部則為班上前百分之 五十以內，操行成績平均85分（含）以上。 三、已領其他獎助學金2萬元(含)以上者，不得申請。 更多詳細資訊請參 https://www.osa.nchu.edu.tw/osa/laa/sys/modules/tadnews/index.php?nsn=2086\n申請期限：2026-11-20",
           "target_level": "大學部與研究所",
@@ -169,7 +169,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T10:22:53.031393+00:00",
+          "last_checked": "2026-11-12T10:38:11.768923+00:00",
           "source_title": "114學年度接受各界捐助獎助學金申請公告(收件時間：114年11月3日至11月21日17時止)Scholarships and Grants Sponsored by Various Donors Application dates : 11/3~11/21",
           "list_text": "獎學金名稱：114學年度接受各界捐助獎助學金申請公告\n適用對象：大學部與研究所\n獎助對象與條件：各界捐助獎助學金獎項公告及申請表，請詳見連結網址：https://www.osa.nchu.edu.tw/osa/laa/sys/modules/tadnews/index.php?nsn=1542 ＊各界捐助獎助學金以申請一項為限，重複者刪除。申請書可至下述系所或生輔組網頁下載。 ＊每個獎學金利息到期日不同，故獲獎後匯款日期依到期日而定，能接受者再申請。 ＊下列各項獎學金名額是依銀行預估利息暫定的，最終得獎名額以定存到期後實得利息而定。 ＊收件時間：114年11月3日至 11月21日17時止。請注意：至各系申請者，以各系公告為準。 ＊下列獎學金如無特別規定，新生(轉學生)用前(畢業)學校最後一學年成績申請。 ＊本獎學金由接受各界捐助獎助學金管理委員會審核，該委員會審核會議預計113年12月底召開。 ＊若符合資格申請者超過獲獎名額，將以未領其他獎助學金、家境清寒、學業成績或其他原則優先獲獎。 各界捐助獎助學金各獎項辦法查詢\n申請期限：2025-11-21",
           "target_level": "大學部與研究所",
@@ -227,7 +227,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T10:22:53.032218+00:00",
+          "last_checked": "2026-11-12T10:38:11.769564+00:00",
           "source_title": "114學年度第1學期國立中興大學勤學獎助學金收件期間:11月3日至11月21日17時National Chung Hsing University Financial and Economic Law Student Scholarship Application Dates: 11/03 ~ 11/21 (For TAIWANESE students ONLY)",
           "list_text": "獎學金名稱：114學年度第1學期國立中興大學勤學獎助學金\n適用對象：大學部與研究所\n獎助對象與條件：大學部：前學期學業成績班上前百分之五十以內；操行成績平均85分以上（含85分）且無不良紀錄。 研究所：前學期學業成績平均80分以上（含80分）；操行成績平均85分以上（含85分）且無不良紀錄。 家庭年收入低於70萬元、利息所得低於5千元且家庭財產總額(不含存款)低於300萬元和車輛1台以內者。若因高利率存款致利息年所得逾新台幣5千元或已無存款者，得檢附相關證明由學校審核認定。 延修生或因修習雙主修、輔系而延長就學、已領其他獎助學金2萬元(含)以上者及每學年享有就學優待達2萬元以上者不得申請。 須具有中華民國國籍 (僑生另依清寒僑生獎助辦法向學安室提出申請)。 新生用前畢業學校或同等學歷成績單申請。\n申請期限：2025-11-21",
           "target_level": "大學部與研究所",
@@ -286,7 +286,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:22:53.033258+00:00",
+          "last_checked": "2026-11-12T10:38:11.770359+00:00",
           "source_title": "114學年度第2學期林劉金珠女士勤學獎學金收件3月23日至3月27日17時",
           "list_text": "獎學金名稱：114學年度第2學期林劉金珠女士勤學獎學金收件3月23日至3月27日17時\n適用對象：大學部與研究所\n獎助對象與條件：1.具國立中興大學學籍學生身分者（惟屬推廣教育之各班級選讀生，不列入申請範圍）。 2.各院系學生前學期學業總平均成績70分以上及操行成績80分以上者。 3.家中收入因故銳減或家境清寒者（家庭年收入70萬元以下）或政府登記之低收入戶。 4.未受公費待遇及未領(申請)其他獎學金者。\n申請期限：2026-03-27",
           "target_level": "大學部與研究所",
@@ -341,7 +341,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:22:53.033965+00:00",
+          "last_checked": "2026-11-12T10:38:11.770973+00:00",
           "source_title": "114學年度第2學期李自發先生與李戴蘭花女士紀念獎助學金收件期間：5月18日至5月22日17時",
           "list_text": "獎學金名稱：114學年度第2學期李自發先生與李戴蘭花女士紀念獎助學金\n適用對象：大學部\n獎助對象與條件：一、本國籍之本校大學部家境清寒或遭逢重大事故在學學生，且該學期獲獎前無休、退學者。 二、非農資學院學生一名，農資學院學生二名(含植物病理學系學生一名)。\n申請期限：2026-05-22",
           "target_level": "大學部",
@@ -397,7 +397,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T10:22:53.034768+00:00",
+          "last_checked": "2026-11-12T10:38:11.771621+00:00",
           "source_title": "114學年度第2學期國立中興大學勤學獎助學金收件期間:5月18日至5月22日17時National Chung Hsing University Financial and Economic Law Student Scholarship Application Dates: 5/18 ~ 5/22 (For TAIWANESE students ONLY)",
           "list_text": "獎學金名稱：114學年度第2學期國立中興大學勤學獎助學金\n適用對象：大學部與研究所\n獎助對象與條件：大學部：前學期學業成績班上前百分之五十以內；操行成績平均85分以上且無不良紀錄(新生免計操行)。 研究所：前學期學業成績平均80分以上；操行成績平均85分以上且無不良紀錄(新生免計操行)。 家庭年收入低於90萬元、利息所得低於5千元且家庭財產總額(不含存款)低於300萬元和車輛1台以內者。若因高利率存款致利息年所得逾新台幣5千元或已無存款者，得檢附相關證明由學校審核認定。 延修生或因修習雙主修、輔系而延長就學、已領其他獎助學金2萬元以上者及每學年享有就學優待達2萬元以上者不得申請。 須具有中華民國國籍 (僑生另依清寒僑生獎助辦法向學安室提出申請)。 新生用前畢業學校或同等學歷成績單申請。\n申請期限：2026-05-22",
           "target_level": "大學部與研究所",
@@ -452,7 +452,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:22:53.035778+00:00",
+          "last_checked": "2026-11-12T10:38:11.772424+00:00",
           "source_title": "114學年度國立中興大學易希道教授紀念獎助學金收件期間:5月18日至5月22日17時",
           "list_text": "獎學金名稱：114學年度國立中興大學易希道教授紀念獎助學金\n適用對象：大學部與研究所\n獎助對象與條件：一、本國籍生命科學院在學學生(不含在職專班學生)。 二、前學期成績單總平均七十五分以上。\n申請期限：2026-05-22",
           "target_level": "大學部與研究所",
@@ -499,7 +499,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:22:53.036429+00:00",
+          "last_checked": "2026-11-12T10:38:11.772940+00:00",
           "source_title": "114學年度第2學期南加州校友會獎學金收件時間：6月10日至7月15日17時",
           "list_text": "獎學金名稱：114學年度第2學期南加州校友會獎學金\n適用對象：大學部\n獎助對象與條件：1.本校大學部二年級至四年級學生。 2.成績優良，具有原創性研發潛力者及經濟上需協助者\n申請期限：2026-03-05",
           "target_level": "大學部",
@@ -548,7 +548,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:22:53.037337+00:00",
+          "last_checked": "2026-11-12T10:38:11.773661+00:00",
           "source_title": "115學年度達達國際企業股份有限公司（Lagoon）弱勢獎學金收件期間：9月22日至9月30日17時 Lagoon International Enterprise Co., Ltd. Disadvantaged Scholarship Application dates : 9/22~9/30(For TAIWANESE students ONLY)",
           "list_text": "獎學金名稱：115學年度達達國際企業股份有限公司（Lagoon）弱勢獎學金\n適用對象：大學部\n獎助對象與條件：一、本校本國籍大學部在學學生(含大一新生；不含公費生)且有低收入戶、中低收入戶或特殊境遇家庭子女證明。 二、未領取政府各類學雜費減免優待補助、政府各項獎助學金(學校學雜費減免者，不在此限)及軍公教子女教育補助費者。 更多詳細資訊請參 https://www.osa.nchu.edu.tw/osa/laa/sys/modules/tadnews/index.php?nsn=3965\n申請期限：2026-09-30",
           "target_level": "大學部",
@@ -611,7 +611,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:22:53.038378+00:00",
+          "last_checked": "2026-11-12T10:38:11.774507+00:00",
           "source_title": "115學年度第1學期林劉金珠女士勤學獎學金收件9月21日至10月21日17時 Ms. Lin Liu Jinzhu Diligence Scholarship Application dates :9/21 ~10/21",
           "list_text": "獎學金名稱：115學年度第1學期林劉金珠女士勤學獎學金收件9月21日至10月21日17時 Ms. Lin Liu Jinzhu Diligence\n適用對象：大學部與研究所\n獎助對象與條件：1.具國立中興大學學籍學生身分者（惟屬推廣教育之各班級選讀生，不列入申請範圍）。 2.各院系學生前學期學業總平均成績70分以上及操行成績80分以上者。 3.家中收入因故銳減或家境清寒者（家庭年收入70萬元以下）或政府登記之低收入戶。 4.未受公費待遇及未領(申請)其他獎學金者。 更多詳細資訊請參 https://www.osa.nchu.edu.tw/osa/laa/sys/modules/tadnews/index.php?nsn=2091\n申請期限：2026-10-21",
           "target_level": "大學部與研究所",
@@ -666,7 +666,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:22:53.039330+00:00",
+          "last_checked": "2026-11-12T10:38:11.775368+00:00",
           "source_title": "新竹市清寒優秀學生獎學金Hsinchu City Scholarship for Outstanding Students from Low-Income Families",
           "list_text": "獎學金名稱：新竹市清寒優秀學生獎學金Hsinchu City Scholarship for Outstanding Students from Low-Income Families\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-18",
           "target_level": "大學部與研究所",
@@ -707,7 +707,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:22:53.039590+00:00",
+          "last_checked": "2026-11-12T10:38:11.775591+00:00",
           "source_title": "財團法人金維繫基金會獎學金Jin Wei-Si Foundation Scholarship",
           "list_text": "獎學金名稱：財團法人金維繫基金會獎學金Jin Wei-Si Foundation Scholarship\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-18",
           "target_level": "大學部與研究所",
@@ -748,7 +748,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:22:53.040138+00:00",
+          "last_checked": "2026-11-12T10:38:11.776040+00:00",
           "source_title": "屏東縣清寒學生獎學金Pingtung County scholarship for finanaial hardship",
           "list_text": "獎學金名稱：屏東縣清寒學生獎學金Pingtung County scholarship for finanaial hardship\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-18",
           "target_level": "大學部與研究所",
@@ -801,7 +801,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:22:53.040799+00:00",
+          "last_checked": "2026-11-12T10:38:11.776589+00:00",
           "source_title": "財團法人新光鋼添澄慈善基金會獎學金HSIN KUANG Charity Foundation Scholarship",
           "list_text": "獎學金名稱：財團法人新光鋼添澄慈善基金會獎學金HSIN KUANG Charity Foundation Scholarship\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-18",
           "target_level": "大學部與研究所",
@@ -854,7 +854,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:22:53.041367+00:00",
+          "last_checked": "2026-11-12T10:38:11.777048+00:00",
           "source_title": "財團法人台灣金融服務業總會教育獎學金Taiwan Financial Services Roundtable Education Scholarship for Financial Hardship",
           "list_text": "獎學金名稱：財團法人台灣金融服務業總會教育獎學金Taiwan Financial Services Roundtable Education Scholarship for Financial Hardship\n適用對象：大學部\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-18",
           "target_level": "大學部",
@@ -895,7 +895,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:22:53.041902+00:00",
+          "last_checked": "2026-11-12T10:38:11.777491+00:00",
           "source_title": "高雄市清寒優秀學生獎學金KaoHsiung City Government Scholarship for Financial Hardship",
           "list_text": "獎學金名稱：高雄市清寒優秀學生獎學金KaoHsiung City Government Scholarship for Financial Hardship\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-18",
           "target_level": "大學部與研究所",
@@ -936,7 +936,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:22:53.042510+00:00",
+          "last_checked": "2026-11-12T10:38:11.777963+00:00",
           "source_title": "財團法人台中商業銀行文教基金會獎學金Taichung Commercial Bank Foundation for Education and Culture scholarship",
           "list_text": "獎學金名稱：財團法人台中商業銀行文教基金會獎學金Taichung Commercial Bank Foundation for Education and Culture scholarship\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-18",
           "target_level": "大學部與研究所",
@@ -977,7 +977,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:22:53.043054+00:00",
+          "last_checked": "2026-11-12T10:38:11.778413+00:00",
           "source_title": "雲林縣清寒優秀學生獎學金 Yunlin County scholarship for finanaial hardship",
           "list_text": "獎學金名稱：雲林縣清寒優秀學生獎學金 Yunlin County scholarship for finanaial hardship\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-18",
           "target_level": "大學部與研究所",
@@ -1018,7 +1018,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:22:53.043912+00:00",
+          "last_checked": "2026-11-12T10:38:11.778890+00:00",
           "source_title": "彰化縣自強優秀學生獎學金Changhua County Outstanding Student Scholarship",
           "list_text": "獎學金名稱：彰化縣自強優秀學生獎學金Changhua County Outstanding Student Scholarship\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-18",
           "target_level": "大學部與研究所",
@@ -1059,7 +1059,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:22:53.044723+00:00",
+          "last_checked": "2026-11-12T10:38:11.779434+00:00",
           "source_title": "財對法人建大文化教育基錄會優秀自強學生獎學金Changhua County Kenda Outstanding Student Scholarship",
           "list_text": "獎學金名稱：財對法人建大文化教育基錄會優秀自強學生獎學金Changhua County Kenda Outstanding Student Scholarship\n適用對象：大學部\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-18",
           "target_level": "大學部",
@@ -1100,7 +1100,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:22:53.045117+00:00",
+          "last_checked": "2026-11-12T10:38:11.779643+00:00",
           "source_title": "大和何溪明優秀清寒獎學金DA-HO INSTITUTION Scholarship for financial hardship",
           "list_text": "獎學金名稱：大和何溪明優秀清寒獎學金DA-HO INSTITUTION Scholarship for financial hardship\n適用對象：大學部\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-18",
           "target_level": "大學部",
@@ -1141,7 +1141,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:22:53.046143+00:00",
+          "last_checked": "2026-11-12T10:38:11.780113+00:00",
           "source_title": "財團法人建準慈善基金會「科技入才培育獎助學金」Chien Kuo Charity Foundation Technology Talent Development Scholarship",
           "list_text": "獎學金名稱：財團法人建準慈善基金會「科技入才培育獎助學金」Chien Kuo Charity Foundation Technology Talent Development Scholarship\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-18",
           "target_level": "大學部與研究所",
@@ -1183,7 +1183,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:22:53.046822+00:00",
+          "last_checked": "2026-11-12T10:38:11.780597+00:00",
           "source_title": "財團法人法治推廣服務基金會獎學金Legal promotion services Foundation Scholarship for Department of Law",
           "list_text": "獎學金名稱：財團法人法治推廣服務基金會獎學金Legal promotion services Foundation Scholarship for Department of Law\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-18",
           "target_level": "大學部與研究所",
@@ -1228,7 +1228,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:22:53.047453+00:00",
+          "last_checked": "2026-11-12T10:38:11.781078+00:00",
           "source_title": "大瓏企業（股）公司清寒獎學金Dalung Enterprise Co., Ltd. Financial Aid Scholarship for Economically Disadvantaged Students",
           "list_text": "獎學金名稱：大瓏企業（股）公司清寒獎學金Dalung Enterprise Co., Ltd. Financial Aid Scholarship for Economically Disadvantaged Students\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-18",
           "target_level": "大學部與研究所",
@@ -1282,7 +1282,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:22:53.048382+00:00",
+          "last_checked": "2026-11-12T10:38:11.781798+00:00",
           "source_title": "財團法人張榮發基金會清寒學生助學金CHANG YUNG-FA FOUNDATION Scholarship for financial hardship",
           "list_text": "獎學金名稱：財團法人張榮發基金會清寒學生助學金CHANG YUNG-FA FOUNDATION Scholarship for financial hardship\n適用對象：大學部\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-18",
           "target_level": "大學部",
@@ -1332,7 +1332,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:22:53.048951+00:00",
+          "last_checked": "2026-11-12T10:38:11.782237+00:00",
           "source_title": "財團法人白曉燕文教基金會警察子女獎助學金The Bai Xiaoyan Educational Foundation Police Children Scholarship",
           "list_text": "獎學金名稱：財團法人白曉燕文教基金會警察子女獎助學金The Bai Xiaoyan Educational Foundation Police Children Scholarship\n適用對象：大學部\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-18",
           "target_level": "大學部",
@@ -1372,7 +1372,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:22:53.049609+00:00",
+          "last_checked": "2026-11-12T10:38:11.782744+00:00",
           "source_title": "第十三屆日月光環保學術碩、博士論文獎助獎學金 13th ASE Environmental Protection Academic Master's and Doctoral Thesis Award Scholarship",
           "list_text": "獎學金名稱：第十三屆日月光環保學術碩、博士論文獎助獎學金 13th ASE Environmental Protection Academic Master's and Doctoral Thesis Award Scholarship\n適用對象：研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-23",
           "target_level": "研究所",
@@ -1413,7 +1413,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:22:53.050145+00:00",
+          "last_checked": "2026-11-12T10:38:11.783165+00:00",
           "source_title": "國際崇她桃園社「崇她獎獎學金」Zonta Club of Taoyuan International – Zonta",
           "list_text": "獎學金名稱：國際崇她桃園社「崇她獎獎學金」Zonta Club of Taoyuan International – Zonta\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-23",
           "target_level": "大學部與研究所",
@@ -1454,7 +1454,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:22:53.050832+00:00",
+          "last_checked": "2026-11-12T10:38:11.783648+00:00",
           "source_title": "財團法人波錠文教基金會獎學金Pording foundation scholarship",
           "list_text": "獎學金名稱：財團法人波錠文教基金會獎學金Pording foundation scholarship\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-09-30",
           "target_level": "大學部與研究所",
@@ -1495,7 +1495,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:22:53.051762+00:00",
+          "last_checked": "2026-11-12T10:38:11.784064+00:00",
           "source_title": "華科事業群慈善基金會115年聽障學生獎學金Huake Business Group Charitable Foundation 2026 Scholarship for Hearing-Impaired Students",
           "list_text": "獎學金名稱：華科事業群慈善基金會115年聽障學生獎學金Huake Business Group Charitable Foundation 2026 Scholarship for Hearing-Impaired Students\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-10-01",
           "target_level": "大學部與研究所",
@@ -1536,7 +1536,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:22:53.052558+00:00",
+          "last_checked": "2026-11-12T10:38:11.784655+00:00",
           "source_title": "財團法人陳振武防盲教育基金會視障學生獎學金Chen Zhenwu Foundation for Blind Education Scholarship for Visually Impaired Students",
           "list_text": "獎學金名稱：財團法人陳振武防盲教育基金會視障學生獎學金Chen Zhenwu Foundation for Blind Education Scholarship for Visually Impaired Students\n適用對象：大學部\n獎助對象與條件：請查看官方公告\n申請期限：2026-10-06",
           "target_level": "大學部",
@@ -1577,7 +1577,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:22:53.053341+00:00",
+          "last_checked": "2026-11-12T10:38:11.785191+00:00",
           "source_title": "財團法人慈暉文教基金會「大學以上優秀清寒學生獎助學金」Tzu Hui Cultural and Educational Foundation “Scholarship and Grant Program for Outstanding Economically Disadvantaged University and Graduate Students”",
           "list_text": "獎學金名稱：財團法人慈暉文教基金會「大學以上優秀清寒學生獎助學金」Tzu Hui Cultural and Educational Foundation “Scholarship and Grant Program for Outstanding Economically Disadvantaged University and Graduate Students”\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-10-06",
           "target_level": "大學部與研究所",
@@ -1619,7 +1619,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:22:53.054269+00:00",
+          "last_checked": "2026-11-12T10:38:11.785667+00:00",
           "source_title": "中華郵政股份有限公司產學合作獎助學金The Chunghwa Post Co., Ltd. Industry-Academia Collaboration Scholarship",
           "list_text": "獎學金名稱：中華郵政股份有限公司產學合作獎助學金The Chunghwa Post Co., Ltd. Industry-Academia Collaboration Scholarship\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-10-12",
           "target_level": "大學部與研究所",
@@ -1661,7 +1661,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:22:53.055352+00:00",
+          "last_checked": "2026-11-12T10:38:11.786236+00:00",
           "source_title": "財團法人嘉義西區扶輪社教育事務基金會第22屆獎學金Chiayi West District Rotary Club Educational Affairs Foundation Scholarship",
           "list_text": "獎學金名稱：財團法人嘉義西區扶輪社教育事務基金會第22屆獎學金Chiayi West District Rotary Club Educational Affairs Foundation Scholarship\n適用對象：大學部\n獎助對象與條件：請查看官方公告\n申請期限：2026-10-15",
           "target_level": "大學部",
@@ -1702,7 +1702,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:22:53.056208+00:00",
+          "last_checked": "2026-11-12T10:38:11.786866+00:00",
           "source_title": "財團法人永昌慈善基金會清寒獎學金The Yongchang Charity Foundation Scholarship for Underprivileged Students",
           "list_text": "獎學金名稱：財團法人永昌慈善基金會清寒獎學金The Yongchang Charity Foundation Scholarship for Underprivileged Students\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-10-20",
           "target_level": "大學部與研究所",
@@ -1744,7 +1744,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:22:53.056879+00:00",
+          "last_checked": "2026-11-12T10:38:11.787358+00:00",
           "source_title": "台南一中校友總會「母校畢業生目前就讀大學系所之獎助學金」Tainan First Senior High School Alumni Association “Outstanding Scholarship for University Students Who Are Graduates of Our Alma Mater”",
           "list_text": "獎學金名稱：台南一中校友總會「母校畢業生目前就讀大學系所之獎助學金」Tainan First Senior High School Alumni Association “Outstanding Scholarship for University Students Who Are Graduates of Our Alma Mater”\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-10-28",
           "target_level": "大學部與研究所",
@@ -1785,7 +1785,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:22:53.057562+00:00",
+          "last_checked": "2026-11-12T10:38:11.787872+00:00",
           "source_title": "台灣農場經營協會「大專青年獎學金」Taiwan Farm Management Association “College Student Scholarship”",
           "list_text": "獎學金名稱：台灣農場經營協會「大專青年獎學金」Taiwan Farm Management Association “College Student Scholarship”\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-11-03",
           "target_level": "大學部與研究所",
@@ -1826,7 +1826,7 @@
             }
           ],
           "important_notes": [],
-          "last_checked": "2026-11-12T10:22:53.058202+00:00",
+          "last_checked": "2026-11-12T10:38:11.788397+00:00",
           "source_title": "台北市東莞同鄉會獎學金Taipei City Dongguan Association Scholarship",
           "list_text": "獎學金名稱：台北市東莞同鄉會獎學金Taipei City Dongguan Association Scholarship\n適用對象：大學部與研究所\n獎助對象與條件：請查看官方公告\n申請期限：2026-11-03",
           "target_level": "大學部與研究所",
