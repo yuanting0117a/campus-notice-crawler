@@ -1,10 +1,10 @@
 {
-  "run_at": "2026-11-12T10:38:11.796763+00:00",
+  "run_at": "2026-11-12T10:38:50.054612+00:00",
   "events": [
     {
       "source": "圖書館活動",
-      "status": "ok",
-      "count": 2,
+      "status": "empty",
+      "count": 0,
       "error": null
     },
     {
