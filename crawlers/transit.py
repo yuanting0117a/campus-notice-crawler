@@ -68,7 +68,7 @@ def crawl_route_notices():
     notices = []
     for a in soup.select("a[href]"):
         title = " ".join(a.get_text(" ", strip=True).split())
-        image_alt = " ".join((img.get("alt", "") for img in a.select("img"))).strip()
+        image_alt = " ".join(img.get("alt", "") for img in a.select("img")).strip()
         href = urljoin(BUS_HOME, a.get("href", ""))
         combined = " ".join([title, image_alt, href])
         if not re.search(r"9015", combined, re.I):
@@ -81,12 +81,13 @@ def crawl_route_notices():
             for img in page.select("img[src]"):
                 src = urljoin(href, img.get("src", ""))
                 alt = " ".join(img.get("alt", "").split())
-                if re.search(r"/newsfile/[^/]+-\\d+\\.(png|jpe?g|webp)(?:$|[?#])", src, re.I):
-                    notice["images"].append({"url": src, "alt": alt or "客運官方時刻表圖片"})
+                if re.search(r"/newsfile/[^/]+-\d+\.(png|jpe?g|webp)(?:$|[?#])", src, re.I):
+                    notice["images"].append({"url": src, "alt": alt or "9015／9015A 官方時刻表"})
             notice["text"] = " ".join(page.get_text(" ", strip=True).split())[:1200]
         except Exception as exc:
             notice["fetch_error"] = str(exc)
-        notice["images"] = notice["images"][:1]\n        notices.append(notice)
+        notice["images"] = notice["images"][:1]
+        notices.append(notice)
     return notices[:10]
 
 def run():
