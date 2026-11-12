@@ -1,27 +1,27 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-12T12:13:54.565314+00:00",
+  "updated_at": "2026-11-12T12:15:42.966540+00:00",
   "timezone": "Asia/Taipei",
   "policy": "不去重；來源失敗時保留上次成功資料；原文優先於摘要。",
   "sources": [
     {
       "source": "圖書館活動",
       "status": "empty",
-      "checked_at": "2026-11-12T12:13:06.545778+00:00",
+      "checked_at": "2026-11-12T12:14:53.109911+00:00",
       "count": 0,
       "records": []
     },
     {
       "source": "自主學習活動",
       "status": "empty",
-      "checked_at": "2026-11-12T12:13:09.643103+00:00",
+      "checked_at": "2026-11-12T12:14:56.871227+00:00",
       "count": 0,
       "records": []
     },
     {
       "source": "研習暨演講活動",
       "status": "ok",
-      "checked_at": "2026-11-12T12:13:10.857272+00:00",
+      "checked_at": "2026-11-12T12:14:58.183920+00:00",
       "count": 42,
       "records": [
         {
@@ -50,7 +50,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.509126+00:00",
+          "last_checked": "2026-11-12T12:14:59.629156+00:00",
           "list_text": "活動時間：2026/09/14 12:10 至 2026/11/23 13:10\n報名期間：2026/08/24 09:00 至 2026/09/02 17:00\n名額資訊：人數上限： 16 已報名人數： 10 待審核人數： 1",
           "event_time": "2026/09/14 12:10 至 2026/11/23 13:10",
           "registration_time": "2026/08/24 09:00 至 2026/09/02 17:00",
@@ -80,7 +80,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.509272+00:00",
+          "last_checked": "2026-11-12T12:14:59.629355+00:00",
           "list_text": "活動時間：2026/10/15 09:00 至 2026/12/24 17:00\n報名期間：2026/08/06 09:00 至 2026/12/24 17:00\n名額資訊：人數上限： 300 已報名人數： 29 待審核人數： 0",
           "event_time": "2026/10/15 09:00 至 2026/12/24 17:00",
           "registration_time": "2026/08/06 09:00 至 2026/12/24 17:00",
@@ -111,7 +111,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.509389+00:00",
+          "last_checked": "2026-11-12T12:14:59.629534+00:00",
           "list_text": "活動時間：2026/11/13 08:30 至 2026/11/13 17:00\n報名期間：2026/10/27 10:00 至 2026/11/09 17:00\n名額資訊：人數上限： 25 已報名人數： 25 待審核人數： 0",
           "event_time": "2026/11/13 08:30 至 2026/11/13 17:00",
           "registration_time": "2026/10/27 10:00 至 2026/11/09 17:00",
@@ -140,7 +140,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.509511+00:00",
+          "last_checked": "2026-11-12T12:14:59.629718+00:00",
           "list_text": "活動時間：2026/11/13 13:30 至 2026/11/13 15:00\n報名期間：2026/09/29 00:00 至 2026/11/13 00:00\n名額資訊：人數上限： 20 已報名人數： 3 待審核人數： 0",
           "event_time": "2026/11/13 13:30 至 2026/11/13 15:00",
           "registration_time": "2026/09/29 00:00 至 2026/11/13 00:00",
@@ -171,7 +171,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.509625+00:00",
+          "last_checked": "2026-11-12T12:14:59.629896+00:00",
           "list_text": "活動時間：2026/11/13 15:00 至 2026/11/13 16:00\n報名期間：2026/10/01 08:00 至 2026/11/09 17:00\n名額資訊：人數上限： 40 已報名人數： 7 待審核人數： 0",
           "event_time": "2026/11/13 15:00 至 2026/11/13 16:00",
           "registration_time": "2026/10/01 08:00 至 2026/11/09 17:00",
@@ -202,7 +202,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.509734+00:00",
+          "last_checked": "2026-11-12T12:14:59.630090+00:00",
           "list_text": "活動時間：2026/11/14 09:00 至 2026/11/14 17:00\n報名期間：2026/08/18 00:00 至 2026/11/08 00:00\n名額資訊：人數上限： 100 已報名人數： 100 待審核人數： 17",
           "event_time": "2026/11/14 09:00 至 2026/11/14 17:00",
           "registration_time": "2026/08/18 00:00 至 2026/11/08 00:00",
@@ -233,7 +233,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.509842+00:00",
+          "last_checked": "2026-11-12T12:14:59.630265+00:00",
           "list_text": "活動時間：2026/11/16 00:00 至 2026/11/16 00:00\n報名期間：2026/10/16 00:00 至 2026/11/15 00:00\n名額資訊：人數上限： 20 已報名人數： 12 待審核人數： 0",
           "event_time": "2026/11/16 00:00 至 2026/11/16 00:00",
           "registration_time": "2026/10/16 00:00 至 2026/11/15 00:00",
@@ -264,7 +264,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.509950+00:00",
+          "last_checked": "2026-11-12T12:14:59.630432+00:00",
           "list_text": "活動時間：2026/11/16 09:00 至 2026/11/16 10:00\n報名期間：2026/10/01 08:00 至 2026/11/13 12:00\n名額資訊：人數上限： 40 已報名人數： 8 待審核人數： 0",
           "event_time": "2026/11/16 09:00 至 2026/11/16 10:00",
           "registration_time": "2026/10/01 08:00 至 2026/11/13 12:00",
@@ -295,7 +295,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.510053+00:00",
+          "last_checked": "2026-11-12T12:14:59.630597+00:00",
           "list_text": "活動時間：2026/11/16 10:00 至 2026/11/16 16:00\n報名期間：2026/10/28 00:00 至 2026/11/12 13:00\n名額資訊：人數上限： 100 已報名人數： 78 待審核人數： 0",
           "event_time": "2026/11/16 10:00 至 2026/11/16 16:00",
           "registration_time": "2026/10/28 00:00 至 2026/11/12 13:00",
@@ -323,7 +323,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.510170+00:00",
+          "last_checked": "2026-11-12T12:14:59.630763+00:00",
           "list_text": "活動時間：2026/11/17 15:10 至 2026/11/17 16:30\n報名期間：2026/11/17 15:10 至 2026/11/17 16:30\n名額資訊：人數上限： 100 已報名人數： 0 待審核人數： 0",
           "event_time": "2026/11/17 15:10 至 2026/11/17 16:30",
           "registration_time": "2026/11/17 15:10 至 2026/11/17 16:30",
@@ -354,7 +354,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.510276+00:00",
+          "last_checked": "2026-11-12T12:14:59.630932+00:00",
           "list_text": "活動時間：2026/11/17 17:30 至 2026/11/17 20:00\n報名期間：2026/11/10 08:59 至 2026/11/16 16:00\n名額資訊：人數上限： 20 已報名人數： 18 待審核人數： 0",
           "event_time": "2026/11/17 17:30 至 2026/11/17 20:00",
           "registration_time": "2026/11/10 08:59 至 2026/11/16 16:00",
@@ -383,7 +383,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.510382+00:00",
+          "last_checked": "2026-11-12T12:14:59.631117+00:00",
           "list_text": "活動時間：2026/11/17 18:30 至 2026/11/17 20:00\n報名期間：2026/10/31 14:30 至 2026/11/17 20:00\n名額資訊：人數上限： 150 已報名人數： 0 待審核人數： 0",
           "event_time": "2026/11/17 18:30 至 2026/11/17 20:00",
           "registration_time": "2026/10/31 14:30 至 2026/11/17 20:00",
@@ -414,7 +414,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.510482+00:00",
+          "last_checked": "2026-11-12T12:14:59.631284+00:00",
           "list_text": "活動時間：2026/11/18 14:00 至 2026/11/18 16:00\n報名期間：2026/10/01 08:00 至 2026/11/16 17:00\n名額資訊：人數上限： 80 已報名人數： 16 待審核人數： 1",
           "event_time": "2026/11/18 14:00 至 2026/11/18 16:00",
           "registration_time": "2026/10/01 08:00 至 2026/11/16 17:00",
@@ -445,7 +445,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.510582+00:00",
+          "last_checked": "2026-11-12T12:14:59.631450+00:00",
           "list_text": "活動時間：2026/11/19 10:10 至 2026/11/19 12:00\n報名期間：2026/10/05 00:00 至 2026/11/12 00:00\n名額資訊：人數上限： 150 已報名人數： 143 待審核人數： 0",
           "event_time": "2026/11/19 10:10 至 2026/11/19 12:00",
           "registration_time": "2026/10/05 00:00 至 2026/11/12 00:00",
@@ -476,7 +476,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.510681+00:00",
+          "last_checked": "2026-11-12T12:14:59.631629+00:00",
           "list_text": "活動時間：2026/11/19 13:10 至 2026/11/19 16:10\n報名期間：2026/10/16 10:00 至 2026/11/17 10:00\n名額資訊：人數上限： 100 已報名人數： 100 待審核人數： 0",
           "event_time": "2026/11/19 13:10 至 2026/11/19 16:10",
           "registration_time": "2026/10/16 10:00 至 2026/11/17 10:00",
@@ -507,7 +507,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.510788+00:00",
+          "last_checked": "2026-11-12T12:14:59.631803+00:00",
           "list_text": "活動時間：2026/11/20 10:00 至 2026/11/20 12:00\n報名期間：2026/09/01 00:00 至 2026/11/19 15:00\n名額資訊：人數上限： 15 已報名人數： 12 待審核人數： 1",
           "event_time": "2026/11/20 10:00 至 2026/11/20 12:00",
           "registration_time": "2026/09/01 00:00 至 2026/11/19 15:00",
@@ -538,7 +538,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.510889+00:00",
+          "last_checked": "2026-11-12T12:14:59.631973+00:00",
           "list_text": "活動時間：2026/11/23 13:10 至 2026/11/23 15:00\n報名期間：2026/10/01 00:00 至 2026/11/18 12:00\n名額資訊：人數上限： 24 已報名人數： 4 待審核人數： 0",
           "event_time": "2026/11/23 13:10 至 2026/11/23 15:00",
           "registration_time": "2026/10/01 00:00 至 2026/11/18 12:00",
@@ -569,7 +569,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.510992+00:00",
+          "last_checked": "2026-11-12T12:14:59.632168+00:00",
           "list_text": "活動時間：2026/11/23 15:00 至 2026/11/23 17:00\n報名期間：2026/10/19 00:00 至 2026/11/18 12:00\n名額資訊：人數上限： 20 已報名人數： 3 待審核人數： 0",
           "event_time": "2026/11/23 15:00 至 2026/11/23 17:00",
           "registration_time": "2026/10/19 00:00 至 2026/11/18 12:00",
@@ -600,7 +600,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.511109+00:00",
+          "last_checked": "2026-11-12T12:14:59.632343+00:00",
           "list_text": "活動時間：2026/11/23 18:30 至 2026/11/23 20:00\n報名期間：2026/09/07 00:00 至 2026/11/09 00:00\n名額資訊：人數上限： 20 已報名人數： 7 待審核人數： 0",
           "event_time": "2026/11/23 18:30 至 2026/11/23 20:00",
           "registration_time": "2026/09/07 00:00 至 2026/11/09 00:00",
@@ -631,7 +631,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.511219+00:00",
+          "last_checked": "2026-11-12T12:14:59.632511+00:00",
           "list_text": "活動時間：2026/11/24 12:10 至 2026/11/24 13:00\n報名期間：2026/10/29 00:00 至 2026/11/19 00:00\n名額資訊：人數上限： 60 已報名人數： 35 待審核人數： 3",
           "event_time": "2026/11/24 12:10 至 2026/11/24 13:00",
           "registration_time": "2026/10/29 00:00 至 2026/11/19 00:00",
@@ -662,7 +662,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.511321+00:00",
+          "last_checked": "2026-11-12T12:14:59.632673+00:00",
           "list_text": "活動時間：2026/11/24 17:30 至 2026/11/24 20:00\n報名期間：2026/11/10 09:05 至 2026/11/20 16:00\n名額資訊：人數上限： 20 已報名人數： 20 待審核人數： 0",
           "event_time": "2026/11/24 17:30 至 2026/11/24 20:00",
           "registration_time": "2026/11/10 09:05 至 2026/11/20 16:00",
@@ -693,7 +693,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.511426+00:00",
+          "last_checked": "2026-11-12T12:14:59.632836+00:00",
           "list_text": "活動時間：2026/11/25 10:10 至 2026/11/25 12:10\n報名期間：2026/09/04 00:00 至 2026/11/23 17:00\n名額資訊：人數上限： 30 已報名人數： 8 待審核人數： 0",
           "event_time": "2026/11/25 10:10 至 2026/11/25 12:10",
           "registration_time": "2026/09/04 00:00 至 2026/11/23 17:00",
@@ -724,7 +724,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.511531+00:00",
+          "last_checked": "2026-11-12T12:14:59.633026+00:00",
           "list_text": "活動時間：2026/11/26 09:00 至 2026/11/26 11:00\n報名期間：2026/09/20 08:00 至 2026/11/20 12:00\n名額資訊：人數上限： 80 已報名人數： 11 待審核人數： 0",
           "event_time": "2026/11/26 09:00 至 2026/11/26 11:00",
           "registration_time": "2026/09/20 08:00 至 2026/11/20 12:00",
@@ -755,7 +755,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.511636+00:00",
+          "last_checked": "2026-11-12T12:14:59.633196+00:00",
           "list_text": "活動時間：2026/11/26 12:10 至 2026/11/26 14:10\n報名期間：2026/09/04 00:00 至 2026/11/24 17:00\n名額資訊：人數上限： 15 已報名人數： 8 待審核人數： 0",
           "event_time": "2026/11/26 12:10 至 2026/11/26 14:10",
           "registration_time": "2026/09/04 00:00 至 2026/11/24 17:00",
@@ -784,7 +784,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.511741+00:00",
+          "last_checked": "2026-11-12T12:14:59.633360+00:00",
           "list_text": "活動時間：2026/11/26 14:00 至 2026/11/26 16:00\n報名期間：2026/10/08 00:00 至 2026/11/26 14:00\n名額資訊：人數上限： 200 已報名人數： 5 待審核人數： 0",
           "event_time": "2026/11/26 14:00 至 2026/11/26 16:00",
           "registration_time": "2026/10/08 00:00 至 2026/11/26 14:00",
@@ -815,7 +815,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.511848+00:00",
+          "last_checked": "2026-11-12T12:14:59.633531+00:00",
           "list_text": "活動時間：2026/11/27 08:30 至 2026/11/27 17:00\n報名期間：2026/10/27 10:00 至 2026/11/23 10:00\n名額資訊：人數上限： 25 已報名人數： 25 待審核人數： 0",
           "event_time": "2026/11/27 08:30 至 2026/11/27 17:00",
           "registration_time": "2026/10/27 10:00 至 2026/11/23 10:00",
@@ -844,7 +844,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.511952+00:00",
+          "last_checked": "2026-11-12T12:14:59.633693+00:00",
           "list_text": "活動時間：2026/11/27 13:30 至 2026/11/27 15:00\n報名期間：2026/09/29 00:00 至 2026/11/27 00:00\n名額資訊：人數上限： 20 已報名人數： 2 待審核人數： 0",
           "event_time": "2026/11/27 13:30 至 2026/11/27 15:00",
           "registration_time": "2026/09/29 00:00 至 2026/11/27 00:00",
@@ -872,7 +872,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.512057+00:00",
+          "last_checked": "2026-11-12T12:14:59.633858+00:00",
           "list_text": "活動時間：2026/11/27 15:10 至 2026/11/27 17:00\n報名期間：2026/11/27 15:10 至 2026/11/27 17:00\n名額資訊：人數上限： 140 已報名人數： 0 待審核人數： 0",
           "event_time": "2026/11/27 15:10 至 2026/11/27 17:00",
           "registration_time": "2026/11/27 15:10 至 2026/11/27 17:00",
@@ -901,7 +901,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.512206+00:00",
+          "last_checked": "2026-11-12T12:14:59.634035+00:00",
           "list_text": "活動時間：2026/12/01 09:00 至 2026/12/01 16:00\n報名期間：2026/11/02 08:00 至 2026/12/01 16:00\n名額資訊：人數上限： 400 已報名人數： 0 待審核人數： 0",
           "event_time": "2026/12/01 09:00 至 2026/12/01 16:00",
           "registration_time": "2026/11/02 08:00 至 2026/12/01 16:00",
@@ -932,7 +932,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.512325+00:00",
+          "last_checked": "2026-11-12T12:14:59.634202+00:00",
           "list_text": "活動時間：2026/12/01 17:30 至 2026/12/01 20:00\n報名期間：2026/11/10 09:08 至 2026/11/30 16:00\n名額資訊：人數上限： 20 已報名人數： 19 待審核人數： 0",
           "event_time": "2026/12/01 17:30 至 2026/12/01 20:00",
           "registration_time": "2026/11/10 09:08 至 2026/11/30 16:00",
@@ -963,7 +963,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.512435+00:00",
+          "last_checked": "2026-11-12T12:14:59.634373+00:00",
           "list_text": "活動時間：2026/12/02 09:00 至 2026/12/02 12:00\n報名期間：2026/10/29 08:00 至 2026/11/30 12:00\n名額資訊：人數上限： 500 已報名人數： 0 待審核人數： 48",
           "event_time": "2026/12/02 09:00 至 2026/12/02 12:00",
           "registration_time": "2026/10/29 08:00 至 2026/11/30 12:00",
@@ -992,7 +992,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.512538+00:00",
+          "last_checked": "2026-11-12T12:14:59.634539+00:00",
           "list_text": "活動時間：2026/12/04 15:00 至 2026/12/04 17:00\n報名期間：2026/09/29 00:00 至 2026/12/04 00:00\n名額資訊：人數上限： 20 已報名人數： 4 待審核人數： 0",
           "event_time": "2026/12/04 15:00 至 2026/12/04 17:00",
           "registration_time": "2026/09/29 00:00 至 2026/12/04 00:00",
@@ -1020,42 +1020,11 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.512642+00:00",
+          "last_checked": "2026-11-12T12:14:59.634706+00:00",
           "list_text": "活動時間：2026/12/04 15:10 至 2026/12/04 17:00\n報名期間：2026/12/04 15:10 至 2026/12/04 17:00\n名額資訊：人數上限： 140 已報名人數： 0 待審核人數： 0",
           "event_time": "2026/12/04 15:10 至 2026/12/04 17:00",
           "registration_time": "2026/12/04 15:10 至 2026/12/04 17:00",
           "participant_info": "人數上限： 140 已報名人數： 0 待審核人數： 0"
-        },
-        {
-          "source": "研習暨演講活動",
-          "title": "【興健康講堂】Love Smart 愛得更聰明",
-          "url": "https://psfcost.nchu.edu.tw/registration/index/actlist.jsp",
-          "full_text": "活動時間：2026/12/08 09:00 至 2026/12/08 11:00\n報名期間：2026/10/08 08:00 至 2026/12/03 17:00\n名額資訊：人數上限： 40 已報名人數： 0 待審核人數： 0",
-          "summary": "活動時間：2026/12/08 09:00 至 2026/12/08 11:00\n報名期間：2026/10/08 08:00 至 2026/12/03 17:00\n名額資訊：人數上限： 40 已報名人數： 0 待審核人數： 0",
-          "summary_type": "規則式重點摘錄（保留完整原文供核對）",
-          "dates_found": [
-            "2026/12/08",
-            " 2026/12/08",
-            "2026/10/08",
-            " 2026/12/03",
-            "2026/12/03"
-          ],
-          "audience_hints": [],
-          "registration_links": [
-            {
-              "title": "活動列表",
-              "url": "https://psfcost.nchu.edu.tw/registration/index/actlist.jsp"
-            }
-          ],
-          "attachments": [],
-          "important_notes": [
-            "審核"
-          ],
-          "last_checked": "2026-11-12T12:13:12.512743+00:00",
-          "list_text": "活動時間：2026/12/08 09:00 至 2026/12/08 11:00\n報名期間：2026/10/08 08:00 至 2026/12/03 17:00\n名額資訊：人數上限： 40 已報名人數： 0 待審核人數： 0",
-          "event_time": "2026/12/08 09:00 至 2026/12/08 11:00",
-          "registration_time": "2026/10/08 08:00 至 2026/12/03 17:00",
-          "participant_info": "人數上限： 40 已報名人數： 0 待審核人數： 0"
         },
         {
           "source": "研習暨演講活動",
@@ -1082,11 +1051,42 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.512845+00:00",
+          "last_checked": "2026-11-12T12:14:59.634871+00:00",
           "list_text": "活動時間：2026/12/08 09:00 至 2026/12/08 12:00\n報名期間：2026/11/23 00:00 至 2026/12/07 10:00\n名額資訊：人數上限： 10 已報名人數： 0 待審核人數： 0",
           "event_time": "2026/12/08 09:00 至 2026/12/08 12:00",
           "registration_time": "2026/11/23 00:00 至 2026/12/07 10:00",
           "participant_info": "人數上限： 10 已報名人數： 0 待審核人數： 0"
+        },
+        {
+          "source": "研習暨演講活動",
+          "title": "【興健康講堂】Love Smart 愛得更聰明",
+          "url": "https://psfcost.nchu.edu.tw/registration/index/actlist.jsp",
+          "full_text": "活動時間：2026/12/08 09:00 至 2026/12/08 11:00\n報名期間：2026/10/08 08:00 至 2026/12/03 17:00\n名額資訊：人數上限： 40 已報名人數： 0 待審核人數： 0",
+          "summary": "活動時間：2026/12/08 09:00 至 2026/12/08 11:00\n報名期間：2026/10/08 08:00 至 2026/12/03 17:00\n名額資訊：人數上限： 40 已報名人數： 0 待審核人數： 0",
+          "summary_type": "規則式重點摘錄（保留完整原文供核對）",
+          "dates_found": [
+            "2026/12/08",
+            " 2026/12/08",
+            "2026/10/08",
+            " 2026/12/03",
+            "2026/12/03"
+          ],
+          "audience_hints": [],
+          "registration_links": [
+            {
+              "title": "活動列表",
+              "url": "https://psfcost.nchu.edu.tw/registration/index/actlist.jsp"
+            }
+          ],
+          "attachments": [],
+          "important_notes": [
+            "審核"
+          ],
+          "last_checked": "2026-11-12T12:14:59.635051+00:00",
+          "list_text": "活動時間：2026/12/08 09:00 至 2026/12/08 11:00\n報名期間：2026/10/08 08:00 至 2026/12/03 17:00\n名額資訊：人數上限： 40 已報名人數： 0 待審核人數： 0",
+          "event_time": "2026/12/08 09:00 至 2026/12/08 11:00",
+          "registration_time": "2026/10/08 08:00 至 2026/12/03 17:00",
+          "participant_info": "人數上限： 40 已報名人數： 0 待審核人數： 0"
         },
         {
           "source": "研習暨演講活動",
@@ -1113,7 +1113,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.512950+00:00",
+          "last_checked": "2026-11-12T12:14:59.635223+00:00",
           "list_text": "活動時間：2026/12/08 14:00 至 2026/12/08 15:00\n報名期間：2026/11/23 00:00 至 2026/12/07 10:00\n名額資訊：人數上限： 30 已報名人數： 0 待審核人數： 0",
           "event_time": "2026/12/08 14:00 至 2026/12/08 15:00",
           "registration_time": "2026/11/23 00:00 至 2026/12/07 10:00",
@@ -1144,7 +1144,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.513053+00:00",
+          "last_checked": "2026-11-12T12:14:59.635386+00:00",
           "list_text": "活動時間：2026/12/08 17:30 至 2026/12/08 20:00\n報名期間：2026/11/10 09:10 至 2026/12/07 16:00\n名額資訊：人數上限： 20 已報名人數： 19 待審核人數： 0",
           "event_time": "2026/12/08 17:30 至 2026/12/08 20:00",
           "registration_time": "2026/11/10 09:10 至 2026/12/07 16:00",
@@ -1175,7 +1175,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.513181+00:00",
+          "last_checked": "2026-11-12T12:14:59.635548+00:00",
           "list_text": "活動時間：2026/12/11 10:00 至 2026/12/11 11:30\n報名期間：2026/11/01 00:00 至 2026/12/09 00:00\n名額資訊：人數上限： 150 已報名人數： 5 待審核人數： 0",
           "event_time": "2026/12/11 10:00 至 2026/12/11 11:30",
           "registration_time": "2026/11/01 00:00 至 2026/12/09 00:00",
@@ -1206,7 +1206,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.513296+00:00",
+          "last_checked": "2026-11-12T12:14:59.635715+00:00",
           "list_text": "活動時間：2026/12/12 08:50 至 2026/12/12 16:30\n報名期間：2026/11/10 09:21 至 2026/12/04 16:00\n名額資訊：人數上限： 40 已報名人數： 40 待審核人數： 0",
           "event_time": "2026/12/12 08:50 至 2026/12/12 16:30",
           "registration_time": "2026/11/10 09:21 至 2026/12/04 16:00",
@@ -1234,7 +1234,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.513402+00:00",
+          "last_checked": "2026-11-12T12:14:59.635878+00:00",
           "list_text": "活動時間：2026/12/18 15:10 至 2026/12/18 16:30\n報名期間：2026/12/18 15:10 至 2026/12/18 16:30\n名額資訊：人數上限： 100 已報名人數： 0 待審核人數： 0",
           "event_time": "2026/12/18 15:10 至 2026/12/18 16:30",
           "registration_time": "2026/12/18 15:10 至 2026/12/18 16:30",
@@ -1265,7 +1265,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.513502+00:00",
+          "last_checked": "2026-11-12T12:14:59.636056+00:00",
           "list_text": "活動時間：2026/12/19 09:20 至 2026/12/19 15:30\n報名期間：2026/11/10 16:45 至 2026/12/10 12:00\n名額資訊：人數上限： 30 已報名人數： 24 待審核人數： 0",
           "event_time": "2026/12/19 09:20 至 2026/12/19 15:30",
           "registration_time": "2026/11/10 16:45 至 2026/12/10 12:00",
@@ -1296,7 +1296,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-12T12:13:12.513603+00:00",
+          "last_checked": "2026-11-12T12:14:59.636226+00:00",
           "list_text": "活動時間：2026/12/27 08:40 至 2026/12/27 17:00\n報名期間：2026/10/27 00:00 至 2026/12/19 00:00\n名額資訊：人數上限： 75 已報名人數： 0 待審核人數： 77",
           "event_time": "2026/12/27 08:40 至 2026/12/27 17:00",
           "registration_time": "2026/10/27 00:00 至 2026/12/19 00:00",
@@ -1307,7 +1307,7 @@
     {
       "source": "學校最新公告",
       "status": "ok",
-      "checked_at": "2026-11-12T12:13:12.513620+00:00",
+      "checked_at": "2026-11-12T12:14:59.636251+00:00",
       "count": 5,
       "records": [
         {
@@ -1348,7 +1348,7 @@
           ],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-12T12:13:15.026697+00:00",
+          "last_checked": "2026-11-12T12:15:02.338342+00:00",
           "linked_pages": [
             {
               "title": "交通資訊",
@@ -1421,7 +1421,7 @@
           ],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-12T12:13:15.026736+00:00",
+          "last_checked": "2026-11-12T12:15:02.338390+00:00",
           "linked_pages": [
             {
               "title": "交通資訊",
@@ -1480,7 +1480,7 @@
           ],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-12T12:13:15.026757+00:00",
+          "last_checked": "2026-11-12T12:15:02.338422+00:00",
           "linked_pages": [
             {
               "title": "交通資訊",
@@ -1527,7 +1527,7 @@
           ],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-12T12:13:15.026776+00:00",
+          "last_checked": "2026-11-12T12:15:02.338452+00:00",
           "linked_pages": [
             {
               "title": "交通資訊",
@@ -1563,7 +1563,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-12T12:13:15.026802+00:00",
+          "last_checked": "2026-11-12T12:15:02.338490+00:00",
           "linked_pages": [],
           "attachment_texts": [],
           "detail_fetch_status": "ok"
@@ -1573,7 +1573,7 @@
     {
       "source": "生涯發展與實習",
       "status": "ok",
-      "checked_at": "2026-11-12T12:13:23.339183+00:00",
+      "checked_at": "2026-11-12T12:15:11.033762+00:00",
       "count": 5,
       "records": [
         {
@@ -1597,7 +1597,7 @@
           ],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-12T12:13:24.675959+00:00",
+          "last_checked": "2026-11-12T12:15:12.349581+00:00",
           "linked_pages": [
             {
               "title": "聯絡資訊",
@@ -1636,7 +1636,7 @@
           ],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-12T12:13:24.675995+00:00",
+          "last_checked": "2026-11-12T12:15:12.349625+00:00",
           "linked_pages": [
             {
               "title": "聯絡資訊",
@@ -1666,7 +1666,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-12T12:13:24.676017+00:00",
+          "last_checked": "2026-11-12T12:15:12.349655+00:00",
           "linked_pages": [],
           "attachment_texts": [],
           "detail_fetch_status": "ok"
@@ -1692,7 +1692,7 @@
           ],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-12T12:13:24.676041+00:00",
+          "last_checked": "2026-11-12T12:15:12.349689+00:00",
           "linked_pages": [
             {
               "title": "聯絡資訊",
@@ -1731,7 +1731,7 @@
           ],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-12T12:13:24.676064+00:00",
+          "last_checked": "2026-11-12T12:15:12.349722+00:00",
           "linked_pages": [
             {
               "title": "聯絡資訊",
@@ -1754,7 +1754,7 @@
     {
       "source": "國際交流與交換",
       "status": "ok",
-      "checked_at": "2026-11-12T12:13:28.217840+00:00",
+      "checked_at": "2026-11-12T12:15:15.953046+00:00",
       "count": 2,
       "records": [
         {
@@ -1778,7 +1778,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-12T12:13:30.287120+00:00",
+          "last_checked": "2026-11-12T12:15:17.681271+00:00",
           "list_text": "重要訊息 公告-國際學生 興大學位生獎學金 2026-11-11 公告-徵才 【本處】國際志工 IVC 申請資訊 2026-11-12 公告-本地學生 【本處】我的中興時代🌍國際\"關\" ▶來活動 集5點 換好禮! (115-1) 2026-11-12 【本處】國際志工 IVC 申請資訊 2026-11-12 2027年臺德(NSTC-DAAD)青年暑期營計畫 （碩、博士生）線上申請至2027年1月15日止 2026-11-12 【歐盟中心】「歐盟聯合碩士學位」獎學金計畫 說明會 2026-11-11",
           "linked_pages": [
             {
@@ -1830,7 +1830,7 @@
           ],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-12T12:13:30.287890+00:00",
+          "last_checked": "2026-11-12T12:15:17.682360+00:00",
           "list_text": "最新消息 國際學生 【本處】【認識百工百業】斜槓職涯-生活花藝設計(迷你聖誕樹) 2026-11-09 【本處】【認識百工百業】探索文創產業：藍染-圍巾 2026-11-09 【本處】2026中興大學僑外生招生大使▶得獎名單/頒獎典禮/申請寒假文宣 2026-10-29 【本處】11月一對一職涯諮詢 2026-10-14 本地學生 【歐盟中心】「歐盟聯合碩士學位」獎學金計畫 說明會 2026-11-11 ​​​​​​【本處】114-2 赴海外研修生活徵件比賽結果公告 2026-10-26 轉知 【轉知】2026 AIESEC x HULT YOUth Week｜全台校園講座 - 打造就業市場想要的Gen Z Profile 2026-11-05 【轉知】 2027臺灣與阿拉伯聯合大公國青年交流計畫 2026-10-15",
           "linked_pages": [
             {
@@ -1854,7 +1854,7 @@
     {
       "source": "宿舍公告",
       "status": "ok",
-      "checked_at": "2026-11-12T12:13:32.599074+00:00",
+      "checked_at": "2026-11-12T12:15:20.139281+00:00",
       "count": 5,
       "records": [
         {
@@ -1878,7 +1878,7 @@
           ],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-12T12:13:33.414921+00:00",
+          "last_checked": "2026-11-12T12:15:20.970829+00:00",
           "linked_pages": [
             {
               "title": "聯絡資訊",
@@ -1917,7 +1917,7 @@
           ],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-12T12:13:33.414960+00:00",
+          "last_checked": "2026-11-12T12:15:20.970876+00:00",
           "linked_pages": [
             {
               "title": "聯絡資訊",
@@ -1939,7 +1939,7 @@
           "source": "宿舍公告",
           "title": "ENGLISH",
           "url": "https://www.osa.nchu.edu.tw/osa/en/dorm",
-          "full_text": "Office of Student Affairs Student Housing Service Division Home NCHU CONTACT SITEMAP 中文 SEARCH Home About us Members Service & Resource Regulations Safety News Introduction Members Student Appeal Lost and Found Campus Bullying Complaints Fraud Prevention Off-Campus Accommodation Emergency Contact Laws and Regulations Relative Websites Life News Members Services Student Group Insurance Emergency Relief Funds Regulations Forms Activities News Members Club Introduction Association Rules Student Associations SOP Venue/Site Rental Forms Career News About Us Members Regulations Housing News Members Dormitory Information Changing Rooms FAQ About Dormitory Regulations Forms Quiet Floors Gender-Friendly Dormitory Health News About Us Members Regulations and Directions Form Download Health Services School Health Emergency Service Medical Consultation Contract Hospital/Clinic Counseling Service Counseling Q&A Class Counseling Health Promotion Infectious Disease Prevention Tobacco Hazard Prevetion Physical examination for freshmen Nutrition News Pregnant Student Assistance Resource Room Introduction of Resource Room Understanding Students with Disabilities Welfare Resources Mentor Area Administration Services Regulation Forms Download Student Emergency Handling Process Mentor Operation Instruction System Operation Q&A Indigenous Indigenous Students Resource Center (NCHU) Indigenous Students Resource Center (Central Region) Gender Application for bed space for freshmen and Check-in precautions、Parking discount method Home Student Housing Service Division News News Loading... Navigation NCHU Contact Sitemap 中文 Search Division/Center Student Safety Student Life Extracurricular Activities Career Development Center Student Housing Service Health ＆ Counseling Center Indigenous Students Resource Center Contact Student Housing Service Division Addr： No. 329, Guoguang Rd., South Dist., Taichung City 40249 1nd Fl., South Building, Xing-Da 2nd Village Dormitory Tel： 04-22840552 Email： dormitory@nchu.edu.tw Fax： 04-22855291 Copyright © Office of Student Affairs, NCHU Manage IPR Privacy Policy TOP\\n國立中興大學學生事務處 住宿輔導組 最新消息 中興大學首頁 聯絡資訊 網站導覽 ENGLISH 站內搜尋 學務長室 Home 學務處首頁 Home 中區學務中心 Student Affairs Center 學務宗旨 Our Mission 學務長簡介 Vice President 副學務長簡介 Associate Vice President 歷任學務長 Former Vice President 人員介紹 Members 組織介紹 Organization 學務活動 Activities 法規彙編 Regulations 作業流程彙編 Operating Procedures 業務統計 Statistics 會議紀錄 Meeting Minutes 活動相簿 Photo Album 學生安全輔導室 Safety 最新消息 News 學安室簡介 Introduction 人員執掌 Members 兵役相關業務 Military 志願役預備軍官預備士官 Reserved Officer 學生兵役 Student Military 教育與宣導相關業務 Education & Promotion 全民國防教育 National Defense Education 防制學生藥物濫用 Drug Abuse 交通安全教育宣導 Traffic Safety 生活教育宣導 Life Education 法治暨品德教育 Legal and Moral 防制校園霸凌 Campus Bullying 賃居、申訴與遺失物 Housing, Appeal, Lost & Found 校外賃居 Off-campus Housing 學生申訴 Student Appeal 失物招領 Lost and Found 僑生業務 Overseas Chinese Student 入學作業相關資訊 Admission Information 僑生健康保險 Insurance 僑生Q ＆ A Q & A 校友資料更新 Alumni Information 法令規章 Regulations 校園突發事件處理 Campus Emergency 學生緊急事件處理 Emergency Handling 相關連結 Links 活動相簿 Photo Album 活動行事曆 Events Calendar 生活輔導組 Life 最新消息 News 人員執掌 Members 新生入學服務網 Freshman Information 助學資訊 Financial Aid 學雜費減免 Tuition Exemption 就學貸款 Student Loans 不利處境學生助學計畫 Assistance Plan 獎助學金 Scholarships 研究生獎助 Graduate Scholarships 生活助學金 Financial Aid for Living Expenses 學生團體保險 Group Insurance 學生獎懲 Merit and Penalty 學生請假 Leave Request 榮譽獎項 Honorary Awards 畢業典禮 Graduation Ceremony 法規表格 Regulations and Forms 會議紀錄 Meeting Minutes 活動相簿 Photo Album 活動行事曆 Events Calendar 課外活動組 Activities 最新消息 News 人員執掌 Members 社團介紹 Association Introduction 社團規章 Association Rules 社團活動SOP Association SOP 社團活動查詢 Activity Inquiry 場地租借 Venue Rental 營隊資訊 Camp Information 社團社會實踐 Student Clubs in Social Practice 表格下載 Forms 社團表單系統 Association System 社團護照查詢 Association Passport Inquiry 會議紀錄 Meeting Minutes 歷年活動 Past Activities 相關連結 Links 正興城灣盃 CHCW Cup 活動相簿 Photo Album 活動行事曆 Events Calendar 生涯發展中心 Career 最新消息 News 中心介紹 About Us 人員執掌 Members 活動報名 Activity Registration 職涯類型與職能 Career Competencies 職涯測評 Career Assessment 職能輔導活動 Career Activity 職涯諮詢 Career Counseling 職涯資源 Career Resources 企業導師 Corporate Mentor 留學園地 Study Abroad 我的中興時代系統 E-portfolio UCAN就業職能平台 UCAN Platform 校園企業徵才活動 Campus Recruitment 畢業生流向調查 Alumni Development Survey 法規表格 Regulations and Forms 活動相簿 Photo Album 活動行事曆 Events Calendar 住宿輔導組 Housing 最新消息 News 人員執掌 Members 宿舍簡介 Dormitory Introduction 住宿申請 Housing Application 換寢申請 Changing Rooms 宿舍常見問題Q&A Dormitory FAQ 法令規章 Regulations 會議紀錄 Meeting Minutes 表格下載 Forms 碩士床位新生抽籤 Graduate Dorm Room Lottery 宿舍修繕與施工 Repairs and Construction 寧靜樓層專區 Quiet Floor 性別友善宿舍專區 Gender-Friendly Dormitory 新宿舍運動專區 New Dormitory Plan 活動相簿 Photo Album 活動行事曆 Events Calendar 健康及諮商中心 Health 最新消息 News 中心介紹 About Us 人員執掌 Members 法令規章 Regulations 表格下載 Forms 活動報名 Activity Registration 活動相簿 Photo Album 活動行事曆 Events Calendar 身心健康服務 Health Services 校園急症服務 Emergency Service 醫療諮詢 Medical Consultation 特約醫院診所 Contract Hospital/Clinic 諮商輔導服務 Counseling Service 諮商輔導Q&A Counseling Q&A 班級輔導 Class Counseling 校園身心健康促進 Health Promotion 傳染性疾病防治 Disease Prevention 菸害防制宣導 Tobacco Hazard 新生健檢 Physical Examination 營養報報 Nutrition News 懷孕學生資源專區 Pregnant Student 資源教室 Resource Room 資源教室簡介 Introduction 認識身心障礙生 Understanding Students 福利資源 Welfare Resources 導師園地 Mentor Area 健諮中心行政服務 Services 導師輔導法規依據 Regulations 導師輔導資源參考 Resources 歷屆優良導師名單 Rewarded Mentors 表單下載 Forms 學生緊急事件處理流程 Emergency Handling 學生轉介服務 Student Referral 導生系統操作手冊 System Manual 導生系統操作Q&A System Q&A 原資中心 Indigenous 中興大學原資中心 Indigenous Students Resource Center (NCHU) 中區區域原資中心 Indigenous Students Resource Center (Central Region) 性別平等 Gender 最新消息 首頁 住輔組 最新消息 115學年度大一新生床位申請、入住注意事項、停車折抵方式Application for bed space for freshmen and Check-in precautions、Parking discount method 公告 T000520 Dorm 2026-07-30 5059 注意事項NOTE： 1.外籍生大一新生請聯繋國際事務處 Foreign first-year students please contact the OFFICE OF INTERNATIONAL AFFAIRS 2. 大一復學生 請於 8月19日(三)上午9:00 起，以書面方式向宿舍服務中心申請候補(請填具「候補床位申請表」送興大二村男宿服務中心/女宿服務中心)(可以 於服務中心上班時間親送、傳真或 E-MAIL 方式皆可 ) Starting from 9:00 onWednesday, August 19, freshmen returning students should apply for waitlisting in writing to the Dormitory Service Center (please fill out the \"Waitlist Bed Application Form\" and submit it to the Xingda Second Village Male Dormitory Service Center / Female Dormitory Service Center). (1) 115學年度大一新生床位申請相關資訊(公告版).pdf (2) 115學年度學生宿舍大一新生入住注意事項、停車折抵方式.pdf 網站指引 中興大學首頁 聯絡資訊 網站導覽 ENGLISH 站內搜尋 組室/中心 學生安全輔導室 生活輔導組 課外活動組 生涯發展中心 住宿輔導組 健康及諮商中心 原住民族學生資源中心 聯絡我們 國立中興大學 學生事務處 住宿輔導組 地址： 40249台中市南區國光路329號 興大二村南棟一樓 電話： 04-22840552 Email： dormitory@nchu.edu.tw 傳真： 04-22855291 Copyright © Office of Student Affairs, NCHU 網站系統後台 智慧財產權聲明 隱私權聲明 TOP",
+          "full_text": "Office of Student Affairs Student Housing Service Division Home NCHU CONTACT SITEMAP 中文 SEARCH Home About us Members Service & Resource Regulations Safety News Introduction Members Student Appeal Lost and Found Campus Bullying Complaints Fraud Prevention Off-Campus Accommodation Emergency Contact Laws and Regulations Relative Websites Life News Members Services Student Group Insurance Emergency Relief Funds Regulations Forms Activities News Members Club Introduction Association Rules Student Associations SOP Venue/Site Rental Forms Career News About Us Members Regulations Housing News Members Dormitory Information Changing Rooms FAQ About Dormitory Regulations Forms Quiet Floors Gender-Friendly Dormitory Health News About Us Members Regulations and Directions Form Download Health Services School Health Emergency Service Medical Consultation Contract Hospital/Clinic Counseling Service Counseling Q&A Class Counseling Health Promotion Infectious Disease Prevention Tobacco Hazard Prevetion Physical examination for freshmen Nutrition News Pregnant Student Assistance Resource Room Introduction of Resource Room Understanding Students with Disabilities Welfare Resources Mentor Area Administration Services Regulation Forms Download Student Emergency Handling Process Mentor Operation Instruction System Operation Q&A Indigenous Indigenous Students Resource Center (NCHU) Indigenous Students Resource Center (Central Region) Gender Application for bed space for freshmen and Check-in precautions、Parking discount method Home Student Housing Service Division News News Loading... Navigation NCHU Contact Sitemap 中文 Search Division/Center Student Safety Student Life Extracurricular Activities Career Development Center Student Housing Service Health ＆ Counseling Center Indigenous Students Resource Center Contact Student Housing Service Division Addr： No. 329, Guoguang Rd., South Dist., Taichung City 40249 1nd Fl., South Building, Xing-Da 2nd Village Dormitory Tel： 04-22840552 Email： dormitory@nchu.edu.tw Fax： 04-22855291 Copyright © Office of Student Affairs, NCHU Manage IPR Privacy Policy TOP\\n國立中興大學學生事務處 住宿輔導組 最新消息 中興大學首頁 聯絡資訊 網站導覽 ENGLISH 站內搜尋 學務長室 Home 學務處首頁 Home 中區學務中心 Student Affairs Center 學務宗旨 Our Mission 學務長簡介 Vice President 副學務長簡介 Associate Vice President 歷任學務長 Former Vice President 人員介紹 Members 組織介紹 Organization 學務活動 Activities 法規彙編 Regulations 作業流程彙編 Operating Procedures 業務統計 Statistics 會議紀錄 Meeting Minutes 活動相簿 Photo Album 學生安全輔導室 Safety 最新消息 News 學安室簡介 Introduction 人員執掌 Members 兵役相關業務 Military 志願役預備軍官預備士官 Reserved Officer 學生兵役 Student Military 教育與宣導相關業務 Education & Promotion 全民國防教育 National Defense Education 防制學生藥物濫用 Drug Abuse 交通安全教育宣導 Traffic Safety 生活教育宣導 Life Education 法治暨品德教育 Legal and Moral 防制校園霸凌 Campus Bullying 賃居、申訴與遺失物 Housing, Appeal, Lost & Found 校外賃居 Off-campus Housing 學生申訴 Student Appeal 失物招領 Lost and Found 僑生業務 Overseas Chinese Student 入學作業相關資訊 Admission Information 僑生健康保險 Insurance 僑生Q ＆ A Q & A 校友資料更新 Alumni Information 法令規章 Regulations 校園突發事件處理 Campus Emergency 學生緊急事件處理 Emergency Handling 相關連結 Links 活動相簿 Photo Album 活動行事曆 Events Calendar 生活輔導組 Life 最新消息 News 人員執掌 Members 新生入學服務網 Freshman Information 助學資訊 Financial Aid 學雜費減免 Tuition Exemption 就學貸款 Student Loans 不利處境學生助學計畫 Assistance Plan 獎助學金 Scholarships 研究生獎助 Graduate Scholarships 生活助學金 Financial Aid for Living Expenses 學生團體保險 Group Insurance 學生獎懲 Merit and Penalty 學生請假 Leave Request 榮譽獎項 Honorary Awards 畢業典禮 Graduation Ceremony 法規表格 Regulations and Forms 會議紀錄 Meeting Minutes 活動相簿 Photo Album 活動行事曆 Events Calendar 課外活動組 Activities 最新消息 News 人員執掌 Members 社團介紹 Association Introduction 社團規章 Association Rules 社團活動SOP Association SOP 社團活動查詢 Activity Inquiry 場地租借 Venue Rental 營隊資訊 Camp Information 社團社會實踐 Student Clubs in Social Practice 表格下載 Forms 社團表單系統 Association System 社團護照查詢 Association Passport Inquiry 會議紀錄 Meeting Minutes 歷年活動 Past Activities 相關連結 Links 正興城灣盃 CHCW Cup 活動相簿 Photo Album 活動行事曆 Events Calendar 生涯發展中心 Career 最新消息 News 中心介紹 About Us 人員執掌 Members 活動報名 Activity Registration 職涯類型與職能 Career Competencies 職涯測評 Career Assessment 職能輔導活動 Career Activity 職涯諮詢 Career Counseling 職涯資源 Career Resources 企業導師 Corporate Mentor 留學園地 Study Abroad 我的中興時代系統 E-portfolio UCAN就業職能平台 UCAN Platform 校園企業徵才活動 Campus Recruitment 畢業生流向調查 Alumni Development Survey 法規表格 Regulations and Forms 活動相簿 Photo Album 活動行事曆 Events Calendar 住宿輔導組 Housing 最新消息 News 人員執掌 Members 宿舍簡介 Dormitory Introduction 住宿申請 Housing Application 換寢申請 Changing Rooms 宿舍常見問題Q&A Dormitory FAQ 法令規章 Regulations 會議紀錄 Meeting Minutes 表格下載 Forms 碩士床位新生抽籤 Graduate Dorm Room Lottery 宿舍修繕與施工 Repairs and Construction 寧靜樓層專區 Quiet Floor 性別友善宿舍專區 Gender-Friendly Dormitory 新宿舍運動專區 New Dormitory Plan 活動相簿 Photo Album 活動行事曆 Events Calendar 健康及諮商中心 Health 最新消息 News 中心介紹 About Us 人員執掌 Members 法令規章 Regulations 表格下載 Forms 活動報名 Activity Registration 活動相簿 Photo Album 活動行事曆 Events Calendar 身心健康服務 Health Services 校園急症服務 Emergency Service 醫療諮詢 Medical Consultation 特約醫院診所 Contract Hospital/Clinic 諮商輔導服務 Counseling Service 諮商輔導Q&A Counseling Q&A 班級輔導 Class Counseling 校園身心健康促進 Health Promotion 傳染性疾病防治 Disease Prevention 菸害防制宣導 Tobacco Hazard 新生健檢 Physical Examination 營養報報 Nutrition News 懷孕學生資源專區 Pregnant Student 資源教室 Resource Room 資源教室簡介 Introduction 認識身心障礙生 Understanding Students 福利資源 Welfare Resources 導師園地 Mentor Area 健諮中心行政服務 Services 導師輔導法規依據 Regulations 導師輔導資源參考 Resources 歷屆優良導師名單 Rewarded Mentors 表單下載 Forms 學生緊急事件處理流程 Emergency Handling 學生轉介服務 Student Referral 導生系統操作手冊 System Manual 導生系統操作Q&A System Q&A 原資中心 Indigenous 中興大學原資中心 Indigenous Students Resource Center (NCHU) 中區區域原資中心 Indigenous Students Resource Center (Central Region) 性別平等 Gender 最新消息 首頁 住輔組 最新消息 115學年度大一新生床位申請、入住注意事項、停車折抵方式Application for bed space for freshmen and Check-in precautions、Parking discount method 公告 T000520 Dorm 2026-07-30 5060 注意事項NOTE： 1.外籍生大一新生請聯繋國際事務處 Foreign first-year students please contact the OFFICE OF INTERNATIONAL AFFAIRS 2. 大一復學生 請於 8月19日(三)上午9:00 起，以書面方式向宿舍服務中心申請候補(請填具「候補床位申請表」送興大二村男宿服務中心/女宿服務中心)(可以 於服務中心上班時間親送、傳真或 E-MAIL 方式皆可 ) Starting from 9:00 onWednesday, August 19, freshmen returning students should apply for waitlisting in writing to the Dormitory Service Center (please fill out the \"Waitlist Bed Application Form\" and submit it to the Xingda Second Village Male Dormitory Service Center / Female Dormitory Service Center). (1) 115學年度大一新生床位申請相關資訊(公告版).pdf (2) 115學年度學生宿舍大一新生入住注意事項、停車折抵方式.pdf 網站指引 中興大學首頁 聯絡資訊 網站導覽 ENGLISH 站內搜尋 組室/中心 學生安全輔導室 生活輔導組 課外活動組 生涯發展中心 住宿輔導組 健康及諮商中心 原住民族學生資源中心 聯絡我們 國立中興大學 學生事務處 住宿輔導組 地址： 40249台中市南區國光路329號 興大二村南棟一樓 電話： 04-22840552 Email： dormitory@nchu.edu.tw 傳真： 04-22855291 Copyright © Office of Student Affairs, NCHU 網站系統後台 智慧財產權聲明 隱私權聲明 TOP",
           "summary": "Office of Student Affairs Student Housing Service Division Home NCHU CONTACT SITEMAP 中文 SEARCH Home About us Members Service & Resource Regulations Safety News Introduction Members Student Appeal Lost and Found Campus Bullying Complaints Fraud Prevention Off-Campus Accommodation Emergency Contact Laws and Regulations Relative Websites Life News Members Services Student Group Insurance Emergency Relief Funds Regulations Forms Activities News Members Club Introduction Association Rules Student Associations SOP Venue/Site Rental Forms Career News About Us Members Regulations Housing News Members Dormitory Information Changing Rooms FAQ About Dormitory Regulations Forms Quiet Floors Gender-Friendly Dormitory Health News About Us Members Regulations and Directions Form Download Health Services School Health Emergency Service Medical Consultation Contract Hospital/Clinic Counseling Service Counseling Q&A Class Counseling Health Promotion Infectious Disease Prevention Tobacco Hazard Prevetion Physical examination for freshmen Nutrition News Pregnant Student Assistance Resource Room Introduction of Resource Room Understanding Students with Disabilities Welfare Resources Mentor Area Adminis",
           "summary_type": "規則式重點摘錄（保留完整原文供核對）",
           "dates_found": [
@@ -1950,12 +1950,12 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-12T12:13:33.414983+00:00",
+          "last_checked": "2026-11-12T12:15:20.970909+00:00",
           "linked_pages": [
             {
               "title": "Application for bed space for freshmen and Check-in precautions、Parking discount method",
               "url": "https://www.osa.nchu.edu.tw/osa/dorm/sys/modules/tadnews/index.php?nsn=2029",
-              "full_text": "國立中興大學學生事務處 住宿輔導組 最新消息 中興大學首頁 聯絡資訊 網站導覽 ENGLISH 站內搜尋 學務長室 Home 學務處首頁 Home 中區學務中心 Student Affairs Center 學務宗旨 Our Mission 學務長簡介 Vice President 副學務長簡介 Associate Vice President 歷任學務長 Former Vice President 人員介紹 Members 組織介紹 Organization 學務活動 Activities 法規彙編 Regulations 作業流程彙編 Operating Procedures 業務統計 Statistics 會議紀錄 Meeting Minutes 活動相簿 Photo Album 學生安全輔導室 Safety 最新消息 News 學安室簡介 Introduction 人員執掌 Members 兵役相關業務 Military 志願役預備軍官預備士官 Reserved Officer 學生兵役 Student Military 教育與宣導相關業務 Education & Promotion 全民國防教育 National Defense Education 防制學生藥物濫用 Drug Abuse 交通安全教育宣導 Traffic Safety 生活教育宣導 Life Education 法治暨品德教育 Legal and Moral 防制校園霸凌 Campus Bullying 賃居、申訴與遺失物 Housing, Appeal, Lost & Found 校外賃居 Off-campus Housing 學生申訴 Student Appeal 失物招領 Lost and Found 僑生業務 Overseas Chinese Student 入學作業相關資訊 Admission Information 僑生健康保險 Insurance 僑生Q ＆ A Q & A 校友資料更新 Alumni Information 法令規章 Regulations 校園突發事件處理 Campus Emergency 學生緊急事件處理 Emergency Handling 相關連結 Links 活動相簿 Photo Album 活動行事曆 Events Calendar 生活輔導組 Life 最新消息 News 人員執掌 Members 新生入學服務網 Freshman Information 助學資訊 Financial Aid 學雜費減免 Tuition Exemption 就學貸款 Student Loans 不利處境學生助學計畫 Assistance Plan 獎助學金 Scholarships 研究生獎助 Graduate Scholarships 生活助學金 Financial Aid for Living Expenses 學生團體保險 Group Insurance 學生獎懲 Merit and Penalty 學生請假 Leave Request 榮譽獎項 Honorary Awards 畢業典禮 Graduation Ceremony 法規表格 Regulations and Forms 會議紀錄 Meeting Minutes 活動相簿 Photo Album 活動行事曆 Events Calendar 課外活動組 Activities 最新消息 News 人員執掌 Members 社團介紹 Association Introduction 社團規章 Association Rules 社團活動SOP Association SOP 社團活動查詢 Activity Inquiry 場地租借 Venue Rental 營隊資訊 Camp Information 社團社會實踐 Student Clubs in Social Practice 表格下載 Forms 社團表單系統 Association System 社團護照查詢 Association Passport Inquiry 會議紀錄 Meeting Minutes 歷年活動 Past Activities 相關連結 Links 正興城灣盃 CHCW Cup 活動相簿 Photo Album 活動行事曆 Events Calendar 生涯發展中心 Career 最新消息 News 中心介紹 About Us 人員執掌 Members 活動報名 Activity Registration 職涯類型與職能 Career Competencies 職涯測評 Career Assessment 職能輔導活動 Career Activity 職涯諮詢 Career Counseling 職涯資源 Career Resources 企業導師 Corporate Mentor 留學園地 Study Abroad 我的中興時代系統 E-portfolio UCAN就業職能平台 UCAN Platform 校園企業徵才活動 Campus Recruitment 畢業生流向調查 Alumni Development Survey 法規表格 Regulations and Forms 活動相簿 Photo Album 活動行事曆 Events Calendar 住宿輔導組 Housing 最新消息 News 人員執掌 Members 宿舍簡介 Dormitory Introduction 住宿申請 Housing Application 換寢申請 Changing Rooms 宿舍常見問題Q&A Dormitory FAQ 法令規章 Regulations 會議紀錄 Meeting Minutes 表格下載 Forms 碩士床位新生抽籤 Graduate Dorm Room Lottery 宿舍修繕與施工 Repairs and Construction 寧靜樓層專區 Quiet Floor 性別友善宿舍專區 Gender-Friendly Dormitory 新宿舍運動專區 New Dormitory Plan 活動相簿 Photo Album 活動行事曆 Events Calendar 健康及諮商中心 Health 最新消息 News 中心介紹 About Us 人員執掌 Members 法令規章 Regulations 表格下載 Forms 活動報名 Activity Registration 活動相簿 Photo Album 活動行事曆 Events Calendar 身心健康服務 Health Services 校園急症服務 Emergency Service 醫療諮詢 Medical Consultation 特約醫院診所 Contract Hospital/Clinic 諮商輔導服務 Counseling Service 諮商輔導Q&A Counseling Q&A 班級輔導 Class Counseling 校園身心健康促進 Health Promotion 傳染性疾病防治 Disease Prevention 菸害防制宣導 Tobacco Hazard 新生健檢 Physical Examination 營養報報 Nutrition News 懷孕學生資源專區 Pregnant Student 資源教室 Resource Room 資源教室簡介 Introduction 認識身心障礙生 Understanding Students 福利資源 Welfare Resources 導師園地 Mentor Area 健諮中心行政服務 Services 導師輔導法規依據 Regulations 導師輔導資源參考 Resources 歷屆優良導師名單 Rewarded Mentors 表單下載 Forms 學生緊急事件處理流程 Emergency Handling 學生轉介服務 Student Referral 導生系統操作手冊 System Manual 導生系統操作Q&A System Q&A 原資中心 Indigenous 中興大學原資中心 Indigenous Students Resource Center (NCHU) 中區區域原資中心 Indigenous Students Resource Center (Central Region) 性別平等 Gender 最新消息 首頁 住輔組 最新消息 115學年度大一新生床位申請、入住注意事項、停車折抵方式Application for bed space for freshmen and Check-in precautions、Parking discount method 公告 T000520 Dorm 2026-07-30 5059 注意事項NOTE： 1.外籍生大一新生請聯繋國際事務處 Foreign first-year students please contact the OFFICE OF INTERNATIONAL AFFAIRS 2. 大一復學生 請於 8月19日(三)上午9:00 起，以書面方式向宿舍服務中心申請候補(請填具「候補床位申請表」送興大二村男宿服務中心/女宿服務中心)(可以 於服務中心上班時間親送、傳真或 E-MAIL 方式皆可 ) Starting from 9:00 onWednesday, August 19, freshmen returning students should apply for waitlisting in writing to the Dormitory Service Center (please fill out the \"Waitlist Bed Application Form\" and submit it to the Xingda Second Village Male Dormitory Service Center / Female Dormitory Service Center). (1) 115學年度大一新生床位申請相關資訊(公告版).pdf (2) 115學年度學生宿舍大一新生入住注意事項、停車折抵方式.pdf 網站指引 中興大學首頁 聯絡資訊 網站導覽 ENGLISH 站內搜尋 組室/中心 學生安全輔導室 生活輔導組 課外活動組 生涯發展中心 住宿輔導組 健康及諮商中心 原住民族學生資源中心 聯絡我們 國立中興大學 學生事務處 住宿輔導組 地址： 40249台中市南區國光路329號 興大二村南棟一樓 電話： 04-22840552 Email： dormitory@nchu.edu.tw 傳真： 04-22855291 Copyright © Office of Student Affairs, NCHU 網站系統後台 智慧財產權聲明 隱私權聲明 TOP",
+              "full_text": "國立中興大學學生事務處 住宿輔導組 最新消息 中興大學首頁 聯絡資訊 網站導覽 ENGLISH 站內搜尋 學務長室 Home 學務處首頁 Home 中區學務中心 Student Affairs Center 學務宗旨 Our Mission 學務長簡介 Vice President 副學務長簡介 Associate Vice President 歷任學務長 Former Vice President 人員介紹 Members 組織介紹 Organization 學務活動 Activities 法規彙編 Regulations 作業流程彙編 Operating Procedures 業務統計 Statistics 會議紀錄 Meeting Minutes 活動相簿 Photo Album 學生安全輔導室 Safety 最新消息 News 學安室簡介 Introduction 人員執掌 Members 兵役相關業務 Military 志願役預備軍官預備士官 Reserved Officer 學生兵役 Student Military 教育與宣導相關業務 Education & Promotion 全民國防教育 National Defense Education 防制學生藥物濫用 Drug Abuse 交通安全教育宣導 Traffic Safety 生活教育宣導 Life Education 法治暨品德教育 Legal and Moral 防制校園霸凌 Campus Bullying 賃居、申訴與遺失物 Housing, Appeal, Lost & Found 校外賃居 Off-campus Housing 學生申訴 Student Appeal 失物招領 Lost and Found 僑生業務 Overseas Chinese Student 入學作業相關資訊 Admission Information 僑生健康保險 Insurance 僑生Q ＆ A Q & A 校友資料更新 Alumni Information 法令規章 Regulations 校園突發事件處理 Campus Emergency 學生緊急事件處理 Emergency Handling 相關連結 Links 活動相簿 Photo Album 活動行事曆 Events Calendar 生活輔導組 Life 最新消息 News 人員執掌 Members 新生入學服務網 Freshman Information 助學資訊 Financial Aid 學雜費減免 Tuition Exemption 就學貸款 Student Loans 不利處境學生助學計畫 Assistance Plan 獎助學金 Scholarships 研究生獎助 Graduate Scholarships 生活助學金 Financial Aid for Living Expenses 學生團體保險 Group Insurance 學生獎懲 Merit and Penalty 學生請假 Leave Request 榮譽獎項 Honorary Awards 畢業典禮 Graduation Ceremony 法規表格 Regulations and Forms 會議紀錄 Meeting Minutes 活動相簿 Photo Album 活動行事曆 Events Calendar 課外活動組 Activities 最新消息 News 人員執掌 Members 社團介紹 Association Introduction 社團規章 Association Rules 社團活動SOP Association SOP 社團活動查詢 Activity Inquiry 場地租借 Venue Rental 營隊資訊 Camp Information 社團社會實踐 Student Clubs in Social Practice 表格下載 Forms 社團表單系統 Association System 社團護照查詢 Association Passport Inquiry 會議紀錄 Meeting Minutes 歷年活動 Past Activities 相關連結 Links 正興城灣盃 CHCW Cup 活動相簿 Photo Album 活動行事曆 Events Calendar 生涯發展中心 Career 最新消息 News 中心介紹 About Us 人員執掌 Members 活動報名 Activity Registration 職涯類型與職能 Career Competencies 職涯測評 Career Assessment 職能輔導活動 Career Activity 職涯諮詢 Career Counseling 職涯資源 Career Resources 企業導師 Corporate Mentor 留學園地 Study Abroad 我的中興時代系統 E-portfolio UCAN就業職能平台 UCAN Platform 校園企業徵才活動 Campus Recruitment 畢業生流向調查 Alumni Development Survey 法規表格 Regulations and Forms 活動相簿 Photo Album 活動行事曆 Events Calendar 住宿輔導組 Housing 最新消息 News 人員執掌 Members 宿舍簡介 Dormitory Introduction 住宿申請 Housing Application 換寢申請 Changing Rooms 宿舍常見問題Q&A Dormitory FAQ 法令規章 Regulations 會議紀錄 Meeting Minutes 表格下載 Forms 碩士床位新生抽籤 Graduate Dorm Room Lottery 宿舍修繕與施工 Repairs and Construction 寧靜樓層專區 Quiet Floor 性別友善宿舍專區 Gender-Friendly Dormitory 新宿舍運動專區 New Dormitory Plan 活動相簿 Photo Album 活動行事曆 Events Calendar 健康及諮商中心 Health 最新消息 News 中心介紹 About Us 人員執掌 Members 法令規章 Regulations 表格下載 Forms 活動報名 Activity Registration 活動相簿 Photo Album 活動行事曆 Events Calendar 身心健康服務 Health Services 校園急症服務 Emergency Service 醫療諮詢 Medical Consultation 特約醫院診所 Contract Hospital/Clinic 諮商輔導服務 Counseling Service 諮商輔導Q&A Counseling Q&A 班級輔導 Class Counseling 校園身心健康促進 Health Promotion 傳染性疾病防治 Disease Prevention 菸害防制宣導 Tobacco Hazard 新生健檢 Physical Examination 營養報報 Nutrition News 懷孕學生資源專區 Pregnant Student 資源教室 Resource Room 資源教室簡介 Introduction 認識身心障礙生 Understanding Students 福利資源 Welfare Resources 導師園地 Mentor Area 健諮中心行政服務 Services 導師輔導法規依據 Regulations 導師輔導資源參考 Resources 歷屆優良導師名單 Rewarded Mentors 表單下載 Forms 學生緊急事件處理流程 Emergency Handling 學生轉介服務 Student Referral 導生系統操作手冊 System Manual 導生系統操作Q&A System Q&A 原資中心 Indigenous 中興大學原資中心 Indigenous Students Resource Center (NCHU) 中區區域原資中心 Indigenous Students Resource Center (Central Region) 性別平等 Gender 最新消息 首頁 住輔組 最新消息 115學年度大一新生床位申請、入住注意事項、停車折抵方式Application for bed space for freshmen and Check-in precautions、Parking discount method 公告 T000520 Dorm 2026-07-30 5060 注意事項NOTE： 1.外籍生大一新生請聯繋國際事務處 Foreign first-year students please contact the OFFICE OF INTERNATIONAL AFFAIRS 2. 大一復學生 請於 8月19日(三)上午9:00 起，以書面方式向宿舍服務中心申請候補(請填具「候補床位申請表」送興大二村男宿服務中心/女宿服務中心)(可以 於服務中心上班時間親送、傳真或 E-MAIL 方式皆可 ) Starting from 9:00 onWednesday, August 19, freshmen returning students should apply for waitlisting in writing to the Dormitory Service Center (please fill out the \"Waitlist Bed Application Form\" and submit it to the Xingda Second Village Male Dormitory Service Center / Female Dormitory Service Center). (1) 115學年度大一新生床位申請相關資訊(公告版).pdf (2) 115學年度學生宿舍大一新生入住注意事項、停車折抵方式.pdf 網站指引 中興大學首頁 聯絡資訊 網站導覽 ENGLISH 站內搜尋 組室/中心 學生安全輔導室 生活輔導組 課外活動組 生涯發展中心 住宿輔導組 健康及諮商中心 原住民族學生資源中心 聯絡我們 國立中興大學 學生事務處 住宿輔導組 地址： 40249台中市南區國光路329號 興大二村南棟一樓 電話： 04-22840552 Email： dormitory@nchu.edu.tw 傳真： 04-22855291 Copyright © Office of Student Affairs, NCHU 網站系統後台 智慧財產權聲明 隱私權聲明 TOP",
               "dates_found": [
                 " 2026-07-30",
                 "2026-07-30"
@@ -1986,7 +1986,7 @@
           ],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-12T12:13:33.415006+00:00",
+          "last_checked": "2026-11-12T12:15:20.970943+00:00",
           "linked_pages": [
             {
               "title": "聯絡資訊",
@@ -2025,7 +2025,7 @@
           ],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-12T12:13:33.415028+00:00",
+          "last_checked": "2026-11-12T12:15:20.970975+00:00",
           "linked_pages": [
             {
               "title": "聯絡資訊",
@@ -2048,7 +2048,7 @@
     {
       "source": "電機系公告",
       "status": "ok",
-      "checked_at": "2026-11-12T12:13:37.018520+00:00",
+      "checked_at": "2026-11-12T12:15:24.660910+00:00",
       "count": 5,
       "records": [
         {
@@ -2063,7 +2063,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-12T12:13:38.424864+00:00",
+          "last_checked": "2026-11-12T12:15:26.523246+00:00",
           "linked_pages": [
             {
               "title": "獎學金",
@@ -2093,7 +2093,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-12T12:13:38.424908+00:00",
+          "last_checked": "2026-11-12T12:15:26.523305+00:00",
           "linked_pages": [
             {
               "title": "獎學金",
@@ -2123,7 +2123,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-12T12:13:38.424940+00:00",
+          "last_checked": "2026-11-12T12:15:26.523349+00:00",
           "linked_pages": [
             {
               "title": "獎學金",
@@ -2153,7 +2153,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-12T12:13:38.424966+00:00",
+          "last_checked": "2026-11-12T12:15:26.523387+00:00",
           "linked_pages": [
             {
               "title": "獎學金",
@@ -2185,7 +2185,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-12T12:13:38.424992+00:00",
+          "last_checked": "2026-11-12T12:15:26.523425+00:00",
           "linked_pages": [
             {
               "title": "獎學金",
@@ -2208,7 +2208,7 @@
     {
       "source": "教務處選課與學籍",
       "status": "ok",
-      "checked_at": "2026-11-12T12:13:44.654371+00:00",
+      "checked_at": "2026-11-12T12:15:33.169992+00:00",
       "count": 10,
       "records": [
         {
@@ -2225,7 +2225,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-12T12:13:46.868264+00:00",
+          "last_checked": "2026-11-12T12:15:35.221697+00:00",
           "list_text": "2026-11-03 【活動公告】115-1學分學程說明會",
           "linked_pages": [
             {
@@ -2254,7 +2254,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-12T12:13:46.868427+00:00",
+          "last_checked": "2026-11-12T12:15:35.221939+00:00",
           "list_text": "2026-10-19 【臺灣大專院校人工智慧學程聯盟】115-1學期TAICA課程停修申請至115年11月13日（星期五）下午5時止",
           "linked_pages": [
             {
@@ -2282,7 +2282,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-12T12:13:46.868564+00:00",
+          "last_checked": "2026-11-12T12:15:35.222177+00:00",
           "list_text": "2026-10-07 【臺灣國立大學系統】首屆跨校合作開設學分學程徵件 即日起受理申請",
           "linked_pages": [
             {
@@ -2309,7 +2309,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-12T12:13:46.868692+00:00",
+          "last_checked": "2026-11-12T12:15:35.222391+00:00",
           "list_text": "2026-09-10 敬請各教學單位檢視課程規畫表所列必修0學分課程，並依教育部來函配合修正。",
           "linked_pages": [
             {
@@ -2336,7 +2336,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-12T12:13:46.868816+00:00",
+          "last_checked": "2026-11-12T12:15:35.222597+00:00",
           "list_text": "2026-09-09 【臺灣國立大學系統】115-1學期跨校學分學程申請公告",
           "linked_pages": [
             {
@@ -2363,7 +2363,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-12T12:13:46.868932+00:00",
+          "last_checked": "2026-11-12T12:15:35.222795+00:00",
           "list_text": "2026-09-08 遠距教學課程實施宣導說明會"
         },
         {
@@ -2380,7 +2380,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-12T12:13:46.869051+00:00",
+          "last_checked": "2026-11-12T12:15:35.223013+00:00",
           "list_text": "2026-09-07 【調教室通知】因應綜合教學大樓1樓走廊裝修調教室通知~10/11"
         },
         {
@@ -2397,7 +2397,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-12T12:13:46.869188+00:00",
+          "last_checked": "2026-11-12T12:15:35.223232+00:00",
           "list_text": "2026-09-04 【 施工通知】 9月3日至11月27日綜合教學大樓1樓走廊裝修通知"
         },
         {
@@ -2414,7 +2414,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-12T12:13:46.869307+00:00",
+          "last_checked": "2026-11-12T12:15:35.223438+00:00",
           "list_text": "2026-05-04 【臺灣國立大學系統】115學年度跨校輔系、雙主修申請公告"
         },
         {
@@ -2432,7 +2432,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-12T12:13:46.869426+00:00",
+          "last_checked": "2026-11-12T12:15:35.223644+00:00",
           "list_text": "2025-06-09 （115.5.6更新完成）公告新版教學大綱－因應114學年度正式實施【學期16週】"
         }
       ]
