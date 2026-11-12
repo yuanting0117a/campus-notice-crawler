@@ -107,7 +107,7 @@ def crawl_listing(source, url, max_details=50, title_selector=None):
     soup = BeautifulSoup(html, "lxml")
     records, seen = [], set()
     # Capture rows/cards first, retaining the whole row's original text.
-    for node in soup.select("tr, article, .item, .event, .activity, .news, li"):
+    for node in soup.select("tr, article, .item, .event, .activity, .news, .card, .list-group-item, .event-item, .activity-item"):
         text = clean(node.get_text(" ", strip=True))
         a = node.find("a", href=True)
         if not a or len(text) < 12:
