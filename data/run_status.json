@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-11-12T11:26:59.660550+00:00",
+  "run_at": "2026-11-12T11:28:39.856611+00:00",
   "events": [
     {
       "source": "圖書館活動",
@@ -22,13 +22,13 @@
     {
       "source": "學校最新公告",
       "status": "ok",
-      "count": 10,
+      "count": 5,
       "error": null
     },
     {
       "source": "生涯發展與實習",
       "status": "ok",
-      "count": 10,
+      "count": 5,
       "error": null
     },
     {
@@ -40,13 +40,13 @@
     {
       "source": "宿舍公告",
       "status": "ok",
-      "count": 10,
+      "count": 5,
       "error": null
     },
     {
       "source": "電機系公告",
       "status": "ok",
-      "count": 10,
+      "count": 5,
       "error": null
     },
     {
