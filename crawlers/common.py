@@ -77,7 +77,7 @@ def extract_detail(url, title=""):
     try:
         # Never decode a PDF response as HTML: doing so puts compressed binary bytes
         # into full_text and produces replacement characters / mojibake on the site.
-        if re.search(r"\\.pdf(?:$|[?#])", url, re.I):
+        if re.search(r"\.pdf(?:$|[?#])", url, re.I):
             text = extract_pdf_text(url)
             return {"title": title, "url": url, "full_text": text,
                     "links": [], "dates_found": extract_dates(text),
@@ -120,10 +120,16 @@ def crawl_listing(source, url, max_details=50, title_selector=None):
         if not a or len(text) < 12:
             continue
         href = absolute(final_url, a.get("href"))
+        title = clean(a.get_text(" ", strip=True)) or clean(a.get("title", ""))
+        # Ignore document/resource rows that are not actual activity announcements.
+        if re.search(r"\.pdf(?:$|[?#])", href, re.I):
+            continue
+        if any(k in (title + " " + text + " " + href).lower()
+               for k in ["隱私", "個資", "同意書", "privacy", "consent", "policy"]):
+            continue
         if href in seen or urlparse(href).netloc != urlparse(final_url).netloc:
             continue
         seen.add(href)
-        title = clean(a.get_text(" ", strip=True)) or clean(a.get("title", ""))
         links = links_from(node, final_url)
         records.append(make_record(source, title, href, text, {"links": links, "list_text": text}))
     # Fallback: collect plausible detail links if page layout is not row-based.
@@ -136,7 +142,7 @@ def crawl_listing(source, url, max_details=50, title_selector=None):
                 continue
             # Generic navigation fallbacks must not be mistaken for announcements.
             # PDFs and privacy/consent/policy pages are resources, not event listings.
-            if re.search(r"\\.pdf(?:$|[?#])", href, re.I):
+            if re.search(r"\.pdf(?:$|[?#])", href, re.I):
                 continue
             if any(k in (link["title"] + " " + href).lower()
                    for k in ["隱私", "個資", "同意書", "privacy", "consent", "policy"]):
