@@ -90,6 +90,79 @@ def assess(text):
         return {"eligibility_status": "needs_verification", "eligibility_reason": "出現經濟條件字樣，但無法僅憑列表判斷是必要或優先條件。", "low_income_condition": "unclear"}
     return {"eligibility_status": "needs_verification", "eligibility_reason": "尚須核對年級、系所、成績、文件及其他個別條件。", "low_income_condition": "not_seen"}
 
+
+def extract_dimensions(audience, criteria):
+    text = " ".join([audience or "", criteria or ""])
+    grades = []
+    # Explicit undergraduate year ranges, e.g. 大二至大四.
+    range_match = re.search(r"大([一二三四1-4])(?:年級)?至大([一二三四1-4])(?:年級)?", text)
+    cn_num = {"一": 1, "二": 2, "三": 3, "四": 4}
+    if range_match:
+        start = cn_num.get(range_match.group(1), int(range_match.group(1)) if range_match.group(1).isdigit() else 1)
+        end = cn_num.get(range_match.group(2), int(range_match.group(2)) if range_match.group(2).isdigit() else 4)
+        grades.extend("大" + "一二三四"[i-1] for i in range(start, end + 1))
+    for n, cn in enumerate("一二三四", 1):
+        if re.search(r"(?:大" + cn + r"|大" + str(n) + r")(?:年級|年)?", text):
+            grades.append("大" + cn)
+    if any(k in text for k in ["碩士班", "碩士生", "碩一", "碩二"]):
+        grades.append("碩士班")
+    if any(k in text for k in ["博士班", "博士生", "博一", "博二", "博三"]):
+        grades.append("博士班")
+    if "研究所" in audience or "研究生" in audience:
+        grades.append("研究所")
+    if not grades:
+        if "大學部" in audience or "大學部" in text:
+            grades.append("大學部不限年級")
+        elif any(k in text for k in ["各年級", "不限年級", "不限年齡", "不限年"]):
+            grades.append("不限年級")
+        else:
+            grades.append("未註明")
+    grades = list(dict.fromkeys(grades))
+
+    department_names = [
+        "生命科學系", "行銷學系", "電機工程學系", "資訊工程學系", "機械工程學系",
+        "材料科學與工程學系", "土木工程學系", "環境工程學系", "化學工程學系",
+        "食品暨應用生物科技學系", "植物病理學系", "農藝學系", "園藝學系",
+        "森林學系", "獸醫學系", "動物科學系", "生物產業機電工程學系",
+        "應用數學系", "物理學系", "化學系", "昆蟲學系", "水土保持學系",
+        "生物科技學研究所", "國際農企業學士學位學程", "財務金融學系",
+        "會計學系", "企業管理學系", "法律學系", "外國語文學系",
+        "中國文學系", "歷史學系", "圖書資訊學研究所", "電機資訊學院",
+        "生命科學院", "農資學院", "工學院", "理學院", "管理學院", "法政學院"
+    ]
+    departments = [name for name in department_names if name in text]
+    if not departments:
+        if any(k in text for k in ["各院系", "各系所", "不限科系", "不限系所", "全校學生"]):
+            departments = ["不限系所"]
+        else:
+            departments = ["未註明"]
+    return grades, list(dict.fromkeys(departments))
+
+def deadline_fields(raw_deadline, full_text=""):
+    raw = clean(raw_deadline)
+    search_text = raw or clean(full_text)
+    date_value = ""
+    patterns = [
+        (r"(20\\d{2})[-/.年]\\s*(\\d{1,2})[-/.月]\\s*(\\d{1,2})日?", 0),
+        (r"(1\\d{2})年\\s*(\\d{1,2})月\\s*(\\d{1,2})日?", 1911),
+    ]
+    for pattern, offset in patterns:
+        match = re.search(pattern, search_text)
+        if match:
+            year = int(match.group(1)) + offset
+            month, day = int(match.group(2)), int(match.group(3))
+            if 1 <= month <= 12 and 1 <= day <= 31:
+                date_value = f"{year:04d}-{month:02d}-{day:02d}"
+                break
+    time_value = ""
+    time_match = re.search(r"(\\d{1,2})[:：](\\d{2})|(?<!\\d)(\\d{1,2})時(?:(\\d{1,2})分?)?", raw)
+    if time_match:
+        hour = int(time_match.group(1) or time_match.group(3))
+        minute = int(time_match.group(2) or time_match.group(4) or 0)
+        if 0 <= hour <= 23 and 0 <= minute <= 59:
+            time_value = f"{hour:02d}:{minute:02d}"
+    return date_value, time_value, raw
+
 def crawl_scholarship_table():
     html, final_url = fetch(LIST_URL)
     soup = BeautifulSoup(html, "lxml")
@@ -122,6 +195,7 @@ def crawl_scholarship_table():
             detail = next((x for x in row_links if "更多詳細資訊" in x["title"] or "詳細資訊" in x["title"]), None)
         docs = [x for x in row_links if re.search(r"\.(pdf|docx?|xlsx?|pptx?)(?:$|[?#])", x["url"], re.I)]
         categories = classify(title, audience, criteria)
+        eligible_grades, eligible_departments = extract_dimensions(audience, criteria)
         content = "\n".join([
             "獎學金名稱：" + title,
             "適用對象：" + audience,
@@ -138,6 +212,11 @@ def crawl_scholarship_table():
             "summary": short_summary(audience, criteria, deadline),
             "dates_found": extract_dates(content),
             "target_level": audience,
+            "eligible_grades": eligible_grades,
+            "eligible_departments": eligible_departments,
+            "deadline_date": deadline_fields(deadline, content)[0],
+            "deadline_time": deadline_fields(deadline, content)[1],
+            "deadline_text": deadline_fields(deadline, content)[2],
             "categories": categories,
             "primary_category": categories[0],
             "official_listing_url": LIST_URL,
