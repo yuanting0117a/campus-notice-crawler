@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-11-12T13:18:52.840347+00:00",
+  "run_at": "2026-11-12T13:20:55.980388+00:00",
   "events": [
     {
       "source": "圖書館活動",
@@ -90,7 +90,7 @@
       "detail_pages_fetched": null,
       "internal_categories_crawled": null,
       "department_boards_crawled": null,
-      "attachment_count": 0
+      "attachment_count": 3
     }
   ],
   "transit": {
