@@ -1,4 +1,4 @@
-from .common import safe_source, fetch, make_record, clean, extract_dates
+from .common import safe_source, fetch, make_record, clean, extract_dates, extract_detail, crawl_related_pages, is_registration_link, extractive_summary
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 import re
@@ -146,6 +146,28 @@ def crawl_scholarship_table():
             "application_documents": docs,
         })
         rec.update(assess(content))
+        # Follow the scholarship announcement and its information links, but not online application forms.
+        if detail:
+            detail_page = extract_detail(detail["url"], title)
+            if detail_page.get("fetch_status") == "ok":
+                linked_pages, linked_docs = crawl_related_pages(detail_page["links"], detail_page["url"])
+                detail_text = detail_page.get("full_text", "")
+                linked_text = "\\n".join(p["full_text"] for p in linked_pages if p["full_text"])
+                combined = "\\n".join(x for x in [content, detail_text, linked_text] if x)
+                rec["full_text"] = combined
+                rec["summary"] = extractive_summary(combined)
+                rec["linked_pages"] = linked_pages
+                rec["dates_found"] = list(dict.fromkeys(rec["dates_found"] + detail_page.get("dates_found", []) +
+                    [d for p in linked_pages for d in p.get("dates_found", [])]))
+                rec["registration_links"] = [x for x in detail_page.get("links", []) if is_registration_link(x)]
+                rec["attachments"] = list({x["url"]: x for x in docs + [
+                    x for x in detail_page.get("links", []) + linked_docs
+                    if re.search(r"\\.(pdf|docx?|xlsx?|pptx?)(?:$|[?#])", x.get("url", ""), re.I)
+                ]}.values())
+                rec["application_documents"] = rec["attachments"]
+                rec["detail_fetch_status"] = "ok"
+            else:
+                rec["detail_fetch_status"] = detail_page.get("fetch_status", "error")
         records.append(rec)
     return records
 
