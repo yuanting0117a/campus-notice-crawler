@@ -1,5 +1,37 @@
 {
-  "run_at": null,
-  "events": [],
-  "scholarships": []
+  "run_at": "2026-11-12T09:07:27.527191+00:00",
+  "events": [
+    {
+      "source": "惠蓀講座",
+      "status": "ok",
+      "count": 8,
+      "error": null
+    },
+    {
+      "source": "圖書館活動",
+      "status": "ok",
+      "count": 3,
+      "error": null
+    },
+    {
+      "source": "自主學習活動",
+      "status": "empty",
+      "count": 0,
+      "error": null
+    },
+    {
+      "source": "研習暨演講活動",
+      "status": "empty",
+      "count": 0,
+      "error": null
+    }
+  ],
+  "scholarships": [
+    {
+      "source": "獎學金",
+      "status": "ok",
+      "count": 210,
+      "error": null
+    }
+  ]
 }
