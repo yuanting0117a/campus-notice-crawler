@@ -102,7 +102,7 @@ def extract_dimensions(audience, criteria):
         end = cn_num.get(range_match.group(2), int(range_match.group(2)) if range_match.group(2).isdigit() else 4)
         grades.extend("大" + "一二三四"[i-1] for i in range(start, end + 1))
     for n, cn in enumerate("一二三四", 1):
-        if re.search(r"(?:大" + cn + r"|大" + str(n) + r")(?:年級|年)?", text):
+        if re.search(r"(?:大" + cn + r"|大" + str(n) + r"|" + cn + r"年級|" + str(n) + r"年級)", text):
             grades.append("大" + cn)
     if any(k in text for k in ["碩士班", "碩士生", "碩一", "碩二"]):
         grades.append("碩士班")
@@ -110,10 +110,11 @@ def extract_dimensions(audience, criteria):
         grades.append("博士班")
     if "研究所" in audience or "研究生" in audience:
         grades.append("研究所")
+    # Retain both degree levels when an award covers undergraduate and graduate students.
+    if ("大學部" in text or "大學生" in text) and not any(x in grades for x in ["大一", "大二", "大三", "大四"]):
+        grades.append("大學部不限年級")
     if not grades:
-        if "大學部" in audience or "大學部" in text:
-            grades.append("大學部不限年級")
-        elif any(k in text for k in ["各年級", "不限年級", "不限年齡", "不限年"]):
+        if any(k in text for k in ["各年級", "不限年級", "不限年齡", "不限年"]):
             grades.append("不限年級")
         else:
             grades.append("未註明")
