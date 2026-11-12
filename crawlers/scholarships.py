@@ -143,13 +143,14 @@ def deadline_fields(raw_deadline, full_text=""):
     search_text = raw or clean(full_text)
     date_value = ""
     patterns = [
-        (r"(20\\d{2})[-/.年]\\s*(\\d{1,2})[-/.月]\\s*(\\d{1,2})日?", 0),
-        (r"(1\\d{2})年\\s*(\\d{1,2})月\\s*(\\d{1,2})日?", 1911),
+        r"((?:1\\d{2}|20\\d{2}))[年./-]\\s*(\\d{1,2})[月./-]\\s*(\\d{1,2})日?",
     ]
-    for pattern, offset in patterns:
+    for pattern in patterns:
         match = re.search(pattern, search_text)
         if match:
-            year = int(match.group(1)) + offset
+            year = int(match.group(1))
+            if year < 1911:
+                year += 1911
             month, day = int(match.group(2)), int(match.group(3))
             if 1 <= month <= 12 and 1 <= day <= 31:
                 date_value = f"{year:04d}-{month:02d}-{day:02d}"
