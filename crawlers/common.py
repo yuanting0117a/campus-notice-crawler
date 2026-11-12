@@ -21,7 +21,7 @@ def fetch(url):
         "application/msword" in content_type or
         "application/vnd" in content_type or
         signature.startswith(b"%PDF-") or
-        signature.startswith(b"PK\\x03\\x04") or
+        signature.startswith(b"PK\x03\x04") or
         signature.startswith(bytes.fromhex("D0CF11E0A1B11AE1"))):
         raise ValueError("Binary attachment is not an HTML page")
     r.encoding = r.apparent_encoding or r.encoding
@@ -86,7 +86,7 @@ def classify_audience(text):
 def extract_detail(url, title=""):
     try:
         # Attachments are retained as links; never parse their binary bytes as page text.
-        if re.search(r"\\.(pdf|docx?|xlsx?|pptx?|zip|jpg|jpeg|png)(?:$|[?#])", url, re.I):
+        if re.search(r"\.(pdf|docx?|xlsx?|pptx?|zip|jpg|jpeg|png)(?:$|[?#])", url, re.I):
             return {"title": title, "url": url, "full_text": "",
                     "links": [], "dates_found": [], "fetch_status": "binary_attachment"}
         html, final_url = fetch(url)
@@ -128,7 +128,7 @@ def crawl_listing(source, url, max_details=50, title_selector=None):
             continue
         # Prefer an announcement/detail page over a downloadable application form.
         detail_anchors = [a for a in anchors if not re.search(
-            r"\\.(pdf|docx?|xlsx?|pptx?|zip|jpg|jpeg|png)($|[?#])",
+            r"\.(pdf|docx?|xlsx?|pptx?|zip|jpg|jpeg|png)($|[?#])",
             absolute(final_url, a.get("href")), re.I)]
         a = next((x for x in detail_anchors if "nsn=" in x.get("href", "").lower()
                   or "actid=" in x.get("href", "").lower()), None)
@@ -140,11 +140,11 @@ def crawl_listing(source, url, max_details=50, title_selector=None):
         # Keep the announcement heading from the first meaningful link, even when
         # the chosen destination is a separate "more details" link.
         title_anchor = next((x for x in anchors if clean(x.get_text(" ", strip=True))
-                             and not re.search(r"\\.(pdf|docx?|xlsx?|pptx?|zip|jpg|jpeg|png)($|[?#])",
+                             and not re.search(r"\.(pdf|docx?|xlsx?|pptx?|zip|jpg|jpeg|png)($|[?#])",
                                                absolute(final_url, x.get("href")), re.I)), a)
         title = clean(title_anchor.get_text(" ", strip=True)) or clean(title_anchor.get("title", ""))
         # Ignore document/resource rows that are not actual activity announcements.
-        if re.search(r"\\.(pdf|docx?|xlsx?|pptx?|zip|jpg|jpeg|png)(?:$|[?#])", href, re.I):
+        if re.search(r"\.(pdf|docx?|xlsx?|pptx?|zip|jpg|jpeg|png)(?:$|[?#])", href, re.I):
             continue
         if any(k in (title + " " + text + " " + href).lower()
                for k in ["隱私", "個資", "同意書", "privacy", "consent", "policy"]):
