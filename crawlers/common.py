@@ -1,0 +1,141 @@
+from __future__ import annotations
+import re, time, json
+from datetime import datetime, timezone
+from urllib.parse import urljoin, urlparse
+import requests
+from bs4 import BeautifulSoup
+
+HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; NCHUCampusNoticeCrawler/1.0; +https://github.com/yuanting0117a/campus-notice-crawler)"}
+SESSION = requests.Session()
+SESSION.headers.update(HEADERS)
+TIMEOUT = 25
+
+def fetch(url):
+    r = SESSION.get(url, timeout=TIMEOUT)
+    r.raise_for_status()
+    r.encoding = r.apparent_encoding or r.encoding
+    return r.text, r.url
+
+def clean(text):
+    return re.sub(r"\s+", " ", text or "").strip()
+
+def page_text(soup):
+    for node in soup(["script", "style", "noscript", "svg"]):
+        node.decompose()
+    return clean(soup.get_text(" ", strip=True))
+
+def absolute(base, href):
+    return urljoin(base, href) if href else ""
+
+def links_from(soup, base):
+    out = []
+    for a in soup.select("a[href]"):
+        href = absolute(base, a.get("href"))
+        title = clean(a.get_text(" ", strip=True)) or clean(a.get("title", ""))
+        if href.startswith(("http://", "https://")) and title:
+            out.append({"title": title, "url": href})
+    return out
+
+def extract_dates(text):
+    patterns = [
+        r"(?:民國)?\s*(?:1\d{2}|20\d{2})[年./-]\s*\d{1,2}[月./-]\s*\d{1,2}日?",
+        r"20\d{2}/\d{1,2}/\d{1,2}",
+        r"20\d{2}-\d{1,2}-\d{1,2}",
+    ]
+    found = []
+    for p in patterns:
+        found.extend(re.findall(p, text or ""))
+    return list(dict.fromkeys(found))
+
+def classify_audience(text):
+    keys = ["本校學生", "全校學生", "大學部", "研究生", "碩士班", "博士班", "教職員", "不限", "限本校"]
+    return [k for k in keys if k in (text or "")]
+
+def extract_detail(url, title=""):
+    try:
+        html, final_url = fetch(url)
+        soup = BeautifulSoup(html, "lxml")
+        text = page_text(soup)
+        return {"title": title or (soup.title.get_text(strip=True) if soup.title else ""),
+                "url": final_url, "full_text": text, "links": links_from(soup, final_url),
+                "dates_found": extract_dates(text), "fetch_status": "ok"}
+    except Exception as e:
+        return {"title": title, "url": url, "full_text": "", "links": [],
+                "dates_found": [], "fetch_status": "error", "error": str(e)}
+
+def make_record(source, title, url, text, extra=None):
+    text = clean(text)
+    rec = {
+        "source": source, "title": clean(title) or "(未辨識標題)", "url": url,
+        "full_text": text, "summary": text[:900],
+        "dates_found": extract_dates(text), "audience_hints": classify_audience(text),
+        "registration_links": [], "attachments": [], "last_checked": datetime.now(timezone.utc).isoformat(),
+    }
+    extra = extra or {}
+    for link in extra.get("links", []):
+        label = link["title"].lower()
+        href = link["url"]
+        if any(k in label for k in ["報名", "register", "申請", "下載", "簡章", "辦法", "表單"]):
+            (rec["attachments"] if re.search(r"\.(pdf|docx?|xlsx?)($|\?)", href, re.I) else rec["registration_links"]).append(link)
+    rec.update({k:v for k,v in extra.items() if k != "links"})
+    return rec
+
+def crawl_listing(source, url, max_details=50, title_selector=None):
+    html, final_url = fetch(url)
+    soup = BeautifulSoup(html, "lxml")
+    records, seen = [], set()
+    # Capture rows/cards first, retaining the whole row's original text.
+    for node in soup.select("tr, article, .item, .event, .activity, .news, li"):
+        text = clean(node.get_text(" ", strip=True))
+        a = node.find("a", href=True)
+        if not a or len(text) < 12:
+            continue
+        href = absolute(final_url, a.get("href"))
+        if href in seen or urlparse(href).netloc != urlparse(final_url).netloc:
+            continue
+        seen.add(href)
+        title = clean(a.get_text(" ", strip=True)) or clean(a.get("title", ""))
+        links = links_from(node, final_url)
+        records.append(make_record(source, title, href, text, {"links": links, "list_text": text}))
+    # Fallback: collect plausible detail links if page layout is not row-based.
+    if not records:
+        for link in links_from(soup, final_url):
+            href = link["url"]
+            if urlparse(href).netloc != urlparse(final_url).netloc or href in seen:
+                continue
+            if any(x in href.lower() for x in ["login", "logout", "javascript:", "mailto:"]):
+                continue
+            seen.add(href)
+            records.append(make_record(source, link["title"], href, link["title"], {"links": []}))
+            if len(records) >= max_details:
+                break
+    # Enrich a limited number of records with their detail pages.
+    for rec in records[:max_details]:
+        if rec["url"] == final_url:
+            continue
+        detail = extract_detail(rec["url"], rec["title"])
+        if detail["fetch_status"] == "ok":
+            rec["full_text"] = detail["full_text"] or rec["full_text"]
+            rec["summary"] = rec["full_text"][:900]
+            rec["dates_found"] = list(dict.fromkeys(rec["dates_found"] + detail["dates_found"]))
+            rec["registration_links"] = list({x["url"]:x for x in rec["registration_links"] + [
+                l for l in detail["links"] if any(k in l["title"].lower() for k in ["報名","register","申請","填寫"])
+            ]}.values())
+            rec["attachments"] = list({x["url"]:x for x in rec["attachments"] + [
+                l for l in detail["links"] if re.search(r"\.(pdf|docx?|xlsx?)($|\?)", l["url"], re.I)
+            ]}.values())
+            rec["detail_fetch_status"] = "ok"
+        else:
+            rec["detail_fetch_status"] = "error"
+            rec["detail_error"] = detail.get("error", "")
+    return records
+
+def safe_source(source, fn):
+    started = datetime.now(timezone.utc).isoformat()
+    try:
+        records = fn()
+        return {"source": source, "status": "ok" if records else "empty",
+                "checked_at": started, "count": len(records), "records": records}
+    except Exception as e:
+        return {"source": source, "status": "error", "checked_at": started,
+                "count": 0, "records": [], "error": str(e)}
