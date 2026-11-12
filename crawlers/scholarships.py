@@ -16,7 +16,7 @@ def assess(text):
     preference_patterns = [r"(優先|加分|酌予優先).{0,25}(低收入戶|中低收入戶)",
                            r"(低收入戶|中低收入戶).{0,25}(優先|加分)"]
     # Split A/B categories instead of incorrectly treating the whole award as low-income-only.
-    if re.search(r"A類[\\s\\S]{0,2500}B\\s*類", t):
+    if re.search(r"A類[\s\S]{0,2500}B\s*類", t):
         return {
             "eligibility_status":"needs_verification",
             "eligibility_reason":"此獎助金分 A、B 類：A 類不以低收入戶／中低收入戶身分為必要條件，但仍有家庭收入、財產、成績等門檻；B 類要求低收入戶／中低收入戶身分，依目前已知資料不符合 B 類。",
