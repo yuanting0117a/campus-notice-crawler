@@ -75,6 +75,9 @@ def add_page_records(soup, page_url, source, scope, records, seen, detail_state)
         # Skip award-result lists; they are not open applications.
         if re.search(r"(錄取名單|獲獎名單|得獎名單|獲選名單|核定名單|得獎學生名單)", title):
             continue
+        # Pure rule/establishment documents are reference material, not an open application notice.
+        if re.search(r"(獎助學金|獎學金).{0,20}(設置要點|辦法)$", title) and not re.search(r"(申請公告|受理申請|申請自|申請至)", title):
+            continue
         # Older academic-year notices are no longer current application opportunities.
         old_year = re.search(r"(11[0-4])學年度", title)
         if old_year:
@@ -173,13 +176,13 @@ def crawl_ncyu_scholarships():
     print(f"[NCYU] captured {len(records)} records; fetched {detail_state['count']} detail pages; internal categories {len(category_urls)}; department boards {department_pages_fetched}/{len(DEPARTMENT_LISTS)}; attachments {attachment_count}")
     if warnings:
         print("[NCYU] WARNINGS: " + " | ".join(warnings))
-    return records, warnings, detail_state["count"], len(category_urls)
+    return records, warnings, detail_state["count"], len(category_urls), department_pages_fetched
 
 def run():
     from datetime import datetime, timezone
     started = datetime.now(timezone.utc).isoformat()
     try:
-        records, warnings, detail_count, category_count = crawl_ncyu_scholarships()
+        records, warnings, detail_count, category_count, department_count = crawl_ncyu_scholarships()
         return {
             "source": "嘉義大學獎助學金",
             "status": "partial" if warnings else ("ok" if records else "empty"),
@@ -189,7 +192,7 @@ def run():
             "warnings": warnings,
             "detail_pages_fetched": detail_count,
             "internal_categories_crawled": category_count,
-            "department_boards_crawled": len(DEPARTMENT_LISTS),
+            "department_boards_crawled": department_count,
             "attachment_count": sum(len(record.get("attachments", [])) for record in records),
         }
     except Exception as exc:
