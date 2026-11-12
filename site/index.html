@@ -12,8 +12,9 @@
 <div id="status" class="meta">正在讀取最新資料…</div>
 <section id="profile" class="panel hidden">
 <div class="profile-head"><h2>我的申請條件</h2><span class="pill">只存在這台裝置</span></div>
-<p class="hint">就讀學校：國立中興大學。填一次就好；「不限科系／不限年級」的獎學金會自動納入，不確定的條件會標示待確認，不會隨便幫你排除。</p>
+<p class="hint">填寫就讀學校與個人條件；「不限科系／不限年級」的獎學金會自動納入，不確定的條件會標示待確認，不會隨便幫你排除。個人資料只存在這台裝置。</p>
 <div class="grid">
+<div class="field"><label for="school">就讀學校</label><select id="school"><option value="nchu">國立中興大學</option><option value="ncyu">國立嘉義大學</option><option value="other">其他學校</option></select></div>
 <div class="field"><label for="degree">就讀學制</label><select id="degree"><option value="">請選擇</option><option value="學士班">大學部</option><option value="碩士班">碩士班</option><option value="博士班">博士班</option></select></div>
 <div class="field"><label for="year">目前年級</label><select id="year"><option value="">尚未選擇</option><option value="大一">大一</option><option value="大二">大二</option><option value="大三">大三</option><option value="大四">大四</option><option value="碩一">碩士一年級</option><option value="碩二">碩士二年級</option><option value="博一">博士一年級</option><option value="博二">博士二年級</option><option value="博三">博士三年級</option></select></div>
 <div class="field"><label for="department">科系</label><select id="department"><option value="">請選擇</option><option>生命科學系</option><option>行銷學系</option><option>電機工程學系</option><option>資訊工程學系</option><option>機械工程學系</option><option>材料科學與工程學系</option><option>土木工程學系</option><option>環境工程學系</option><option>化學工程學系</option><option>食品暨應用生物科技學系</option><option>植物病理學系</option><option>農藝學系</option><option>園藝學系</option><option>森林學系</option><option>獸醫學系</option><option>動物科學系</option><option>生物產業機電工程學系</option><option>應用數學系</option><option>物理學系</option><option>化學系</option><option>昆蟲學系</option><option>水土保持學系</option><option>生物科技學研究所</option><option>國際農企業學士學位學程</option><option>財務金融學系</option><option>會計學系</option><option>企業管理學系</option><option>法律學系</option><option>外國語文學系</option><option>中國文學系</option><option>歷史學系</option><option>圖書資訊學研究所</option><option>其他／跨系</option></select></div>
@@ -27,15 +28,16 @@
 </main>
 <script>
 (function(){
-var tab="events",events=[],scholarships=[],transit=null,profile={degree:"",year:"",department:"",nationality:"",economic:""};
+var tab="events",events=[],scholarships=[],transit=null,profile={school:"nchu",degree:"",year:"",department:"",nationality:"",economic:""};
 var $=id=>document.getElementById(id);
 function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
 function flatten(data){return (data.sources||[]).flatMap(s=>s.records||[])}
-function getProfile(){try{profile=Object.assign(profile,JSON.parse(localStorage.getItem("nchuStudentProfile")||"{}"))}catch(e){};["degree","year","department","nationality","economic"].forEach(k=>$(k).value=profile[k]||"")}
-function saveProfile(){["degree","year","department","nationality","economic"].forEach(k=>profile[k]=$(k).value);localStorage.setItem("nchuStudentProfile",JSON.stringify(profile));$("profileSaved").textContent="已儲存；資格比對已更新。";render()}
-function clearProfile(){profile={degree:"",year:"",department:"",nationality:""};localStorage.removeItem("nchuStudentProfile");getProfile();$("profileSaved").textContent="已清除個人條件。";render()}
+function getProfile(){try{profile=Object.assign(profile,JSON.parse(localStorage.getItem("nchuStudentProfile")||"{}"))}catch(e){};profile.school=profile.school||"nchu";["school","degree","year","department","nationality","economic"].forEach(k=>$(k).value=profile[k]||"")}
+function saveProfile(){["school","degree","year","department","nationality","economic"].forEach(k=>profile[k]=$(k).value);localStorage.setItem("nchuStudentProfile",JSON.stringify(profile));$("profileSaved").textContent="已儲存；資格比對已更新。";render()}
+function clearProfile(){profile={school:"nchu",degree:"",year:"",department:"",nationality:"",economic:""};localStorage.removeItem("nchuStudentProfile");getProfile();$("profileSaved").textContent="已清除個人條件。";render()}
 function links(r){var a=[];if(r.url)a.push({title:"官方來源",url:r.url});(r.linked_pages||[]).forEach(x=>a.push({title:x.title||"詳細資訊",url:x.url}));(r.registration_links||[]).forEach(x=>a.push(x));(r.attachments||[]).forEach(x=>a.push(x));return a.filter((x,i,z)=>x.url&&z.findIndex(y=>y.url===x.url)===i)}
 function scholarshipMatch(r){
+ if(r.school_scope==="ncyu"&&profile.school!=="ncyu")return {label:"嘉義大學在校生限定",cls:"bad",reason:"此為嘉義大學校內獎助學金；請選擇嘉義大學作為就讀學校才會列入符合條件比對。"};
  var text=[r.title,r.source_title,r.target_level,r.list_text,r.eligibility_original_text,r.eligibility_reason].join(" ");
  var conflicts=[],unknown=[];
  if(!profile.degree&&/(大學部|學士班|研究所|碩士班|博士班)/.test(text))unknown.push("請先設定學制");
