@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-11-16T02:04:20.278896+00:00",
+  "run_at": "2026-11-16T09:40:42.972380+00:00",
   "events": [
     {
       "source": "圖書館活動",
@@ -16,7 +16,7 @@
     {
       "source": "研習暨演講活動",
       "status": "ok",
-      "count": 36,
+      "count": 37,
       "error": null
     },
     {
@@ -60,7 +60,7 @@
     {
       "source": "獎學金",
       "status": "ok",
-      "count": 134,
+      "count": 135,
       "error": null,
       "warnings": [],
       "detail_pages_fetched": null,
@@ -84,13 +84,13 @@
     {
       "source": "高師大獎助學金",
       "status": "ok",
-      "count": 10,
+      "count": 11,
       "error": null,
       "warnings": [],
       "detail_pages_fetched": null,
       "internal_categories_crawled": null,
       "department_boards_crawled": null,
-      "attachment_count": 3
+      "attachment_count": 7
     }
   ],
   "transit": {
