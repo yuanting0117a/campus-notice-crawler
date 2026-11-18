@@ -1,27 +1,27 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-18T13:56:32.982886+00:00",
+  "updated_at": "2026-11-18T21:55:45.728215+00:00",
   "timezone": "Asia/Taipei",
   "policy": "不去重；來源失敗時保留上次成功資料；原文優先於摘要。",
   "sources": [
     {
       "source": "圖書館活動",
       "status": "empty",
-      "checked_at": "2026-11-18T13:55:57.199727+00:00",
+      "checked_at": "2026-11-18T21:55:12.961347+00:00",
       "count": 0,
       "records": []
     },
     {
       "source": "自主學習活動",
       "status": "empty",
-      "checked_at": "2026-11-18T13:56:00.188127+00:00",
+      "checked_at": "2026-11-18T21:55:16.001077+00:00",
       "count": 0,
       "records": []
     },
     {
       "source": "研習暨演講活動",
       "status": "ok",
-      "checked_at": "2026-11-18T13:56:01.240941+00:00",
+      "checked_at": "2026-11-18T21:55:16.890085+00:00",
       "count": 35,
       "records": [
         {
@@ -50,7 +50,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-18T13:56:02.325800+00:00",
+          "last_checked": "2026-11-18T21:55:17.793446+00:00",
           "list_text": "活動時間：2026/09/14 12:10 至 2026/11/23 13:10\n報名期間：2026/08/24 09:00 至 2026/09/02 17:00\n名額資訊：人數上限： 16 已報名人數： 10 待審核人數： 1",
           "event_time": "2026/09/14 12:10 至 2026/11/23 13:10",
           "registration_time": "2026/08/24 09:00 至 2026/09/02 17:00",
@@ -80,7 +80,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-18T13:56:02.325908+00:00",
+          "last_checked": "2026-11-18T21:55:17.793632+00:00",
           "list_text": "活動時間：2026/10/15 09:00 至 2026/12/24 17:00\n報名期間：2026/08/06 09:00 至 2026/12/24 17:00\n名額資訊：人數上限： 300 已報名人數： 31 待審核人數： 0",
           "event_time": "2026/10/15 09:00 至 2026/12/24 17:00",
           "registration_time": "2026/08/06 09:00 至 2026/12/24 17:00",
@@ -90,8 +90,8 @@
           "source": "研習暨演講活動",
           "title": "【學術研究倫理】運用生成式AI輔助撰寫研究計畫及論文：心態、技巧、學倫",
           "url": "https://psfcost.nchu.edu.tw/registration/index/actlist.jsp",
-          "full_text": "活動時間：2026/11/19 10:10 至 2026/11/19 12:00\n報名期間：2026/10/05 00:00 至 2026/11/12 00:00\n名額資訊：人數上限： 150 已報名人數： 138 待審核人數： 0",
-          "summary": "活動時間：2026/11/19 10:10 至 2026/11/19 12:00\n報名期間：2026/10/05 00:00 至 2026/11/12 00:00\n名額資訊：人數上限： 150 已報名人數： 138 待審核人數： 0",
+          "full_text": "活動時間：2026/11/19 10:10 至 2026/11/19 12:00\n報名期間：2026/10/05 00:00 至 2026/11/12 00:00\n名額資訊：人數上限： 150 已報名人數： 137 待審核人數： 0",
+          "summary": "活動時間：2026/11/19 10:10 至 2026/11/19 12:00\n報名期間：2026/10/05 00:00 至 2026/11/12 00:00\n名額資訊：人數上限： 150 已報名人數： 137 待審核人數： 0",
           "summary_type": "規則式重點摘錄（保留完整原文供核對）",
           "dates_found": [
             "2026/11/19",
@@ -111,11 +111,11 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-18T13:56:02.325990+00:00",
-          "list_text": "活動時間：2026/11/19 10:10 至 2026/11/19 12:00\n報名期間：2026/10/05 00:00 至 2026/11/12 00:00\n名額資訊：人數上限： 150 已報名人數： 138 待審核人數： 0",
+          "last_checked": "2026-11-18T21:55:17.793845+00:00",
+          "list_text": "活動時間：2026/11/19 10:10 至 2026/11/19 12:00\n報名期間：2026/10/05 00:00 至 2026/11/12 00:00\n名額資訊：人數上限： 150 已報名人數： 137 待審核人數： 0",
           "event_time": "2026/11/19 10:10 至 2026/11/19 12:00",
           "registration_time": "2026/10/05 00:00 至 2026/11/12 00:00",
-          "participant_info": "人數上限： 150 已報名人數： 138 待審核人數： 0"
+          "participant_info": "人數上限： 150 已報名人數： 137 待審核人數： 0"
         },
         {
           "source": "研習暨演講活動",
@@ -142,7 +142,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-18T13:56:02.326068+00:00",
+          "last_checked": "2026-11-18T21:55:17.794019+00:00",
           "list_text": "活動時間：2026/11/19 13:10 至 2026/11/19 16:10\n報名期間：2026/10/16 10:00 至 2026/11/17 10:00\n名額資訊：人數上限： 100 已報名人數： 98 待審核人數： 0",
           "event_time": "2026/11/19 13:10 至 2026/11/19 16:10",
           "registration_time": "2026/10/16 10:00 至 2026/11/17 10:00",
@@ -173,7 +173,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-18T13:56:02.326149+00:00",
+          "last_checked": "2026-11-18T21:55:17.794191+00:00",
           "list_text": "活動時間：2026/11/20 00:00 至 2026/11/20 00:00\n報名期間：2026/11/01 00:00 至 2026/11/19 00:00\n名額資訊：人數上限： 20 已報名人數： 14 待審核人數： 0",
           "event_time": "2026/11/20 00:00 至 2026/11/20 00:00",
           "registration_time": "2026/11/01 00:00 至 2026/11/19 00:00",
@@ -204,7 +204,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-18T13:56:02.326226+00:00",
+          "last_checked": "2026-11-18T21:55:17.794357+00:00",
           "list_text": "活動時間：2026/11/20 10:00 至 2026/11/20 12:00\n報名期間：2026/09/01 00:00 至 2026/11/19 15:00\n名額資訊：人數上限： 15 已報名人數： 11 待審核人數： 1",
           "event_time": "2026/11/20 10:00 至 2026/11/20 12:00",
           "registration_time": "2026/09/01 00:00 至 2026/11/19 15:00",
@@ -235,7 +235,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-18T13:56:02.326302+00:00",
+          "last_checked": "2026-11-18T21:55:17.794525+00:00",
           "list_text": "活動時間：2026/11/23 13:10 至 2026/11/23 15:00\n報名期間：2026/10/01 00:00 至 2026/11/18 12:00\n名額資訊：人數上限： 24 已報名人數： 5 待審核人數： 0",
           "event_time": "2026/11/23 13:10 至 2026/11/23 15:00",
           "registration_time": "2026/10/01 00:00 至 2026/11/18 12:00",
@@ -266,7 +266,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-18T13:56:02.326379+00:00",
+          "last_checked": "2026-11-18T21:55:17.794719+00:00",
           "list_text": "活動時間：2026/11/23 15:00 至 2026/11/23 17:00\n報名期間：2026/10/19 00:00 至 2026/11/18 12:00\n名額資訊：人數上限： 20 已報名人數： 4 待審核人數： 0",
           "event_time": "2026/11/23 15:00 至 2026/11/23 17:00",
           "registration_time": "2026/10/19 00:00 至 2026/11/18 12:00",
@@ -297,7 +297,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-18T13:56:02.326452+00:00",
+          "last_checked": "2026-11-18T21:55:17.794896+00:00",
           "list_text": "活動時間：2026/11/23 18:30 至 2026/11/23 20:00\n報名期間：2026/09/07 00:00 至 2026/11/09 00:00\n名額資訊：人數上限： 20 已報名人數： 7 待審核人數： 0",
           "event_time": "2026/11/23 18:30 至 2026/11/23 20:00",
           "registration_time": "2026/09/07 00:00 至 2026/11/09 00:00",
@@ -328,7 +328,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-18T13:56:02.326554+00:00",
+          "last_checked": "2026-11-18T21:55:17.795108+00:00",
           "list_text": "活動時間：2026/11/24 12:10 至 2026/11/24 13:00\n報名期間：2026/10/29 00:00 至 2026/11/19 00:00\n名額資訊：人數上限： 60 已報名人數： 39 待審核人數： 0",
           "event_time": "2026/11/24 12:10 至 2026/11/24 13:00",
           "registration_time": "2026/10/29 00:00 至 2026/11/19 00:00",
@@ -359,7 +359,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-18T13:56:02.326628+00:00",
+          "last_checked": "2026-11-18T21:55:17.795281+00:00",
           "list_text": "活動時間：2026/11/24 17:30 至 2026/11/24 20:00\n報名期間：2026/11/10 09:05 至 2026/11/20 16:00\n名額資訊：人數上限： 20 已報名人數： 20 待審核人數： 0",
           "event_time": "2026/11/24 17:30 至 2026/11/24 20:00",
           "registration_time": "2026/11/10 09:05 至 2026/11/20 16:00",
@@ -390,7 +390,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-18T13:56:02.326701+00:00",
+          "last_checked": "2026-11-18T21:55:17.795444+00:00",
           "list_text": "活動時間：2026/11/25 10:10 至 2026/11/25 12:10\n報名期間：2026/09/04 00:00 至 2026/11/23 17:00\n名額資訊：人數上限： 30 已報名人數： 9 待審核人數： 0",
           "event_time": "2026/11/25 10:10 至 2026/11/25 12:10",
           "registration_time": "2026/09/04 00:00 至 2026/11/23 17:00",
@@ -421,7 +421,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-18T13:56:02.326775+00:00",
+          "last_checked": "2026-11-18T21:55:17.795609+00:00",
           "list_text": "活動時間：2026/11/26 09:00 至 2026/11/26 11:00\n報名期間：2026/09/20 08:00 至 2026/11/25 12:00\n名額資訊：人數上限： 80 已報名人數： 21 待審核人數： 0",
           "event_time": "2026/11/26 09:00 至 2026/11/26 11:00",
           "registration_time": "2026/09/20 08:00 至 2026/11/25 12:00",
@@ -452,7 +452,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-18T13:56:02.326848+00:00",
+          "last_checked": "2026-11-18T21:55:17.795788+00:00",
           "list_text": "活動時間：2026/11/26 12:10 至 2026/11/26 14:10\n報名期間：2026/09/04 00:00 至 2026/11/24 17:00\n名額資訊：人數上限： 15 已報名人數： 8 待審核人數： 0",
           "event_time": "2026/11/26 12:10 至 2026/11/26 14:10",
           "registration_time": "2026/09/04 00:00 至 2026/11/24 17:00",
@@ -481,7 +481,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-18T13:56:02.326922+00:00",
+          "last_checked": "2026-11-18T21:55:17.795956+00:00",
           "list_text": "活動時間：2026/11/26 14:00 至 2026/11/26 16:00\n報名期間：2026/10/08 00:00 至 2026/11/26 14:00\n名額資訊：人數上限： 200 已報名人數： 5 待審核人數： 0",
           "event_time": "2026/11/26 14:00 至 2026/11/26 16:00",
           "registration_time": "2026/10/08 00:00 至 2026/11/26 14:00",
@@ -512,7 +512,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-18T13:56:02.326996+00:00",
+          "last_checked": "2026-11-18T21:55:17.796120+00:00",
           "list_text": "活動時間：2026/11/27 08:30 至 2026/11/27 17:00\n報名期間：2026/10/27 10:00 至 2026/11/23 10:00\n名額資訊：人數上限： 25 已報名人數： 25 待審核人數： 0",
           "event_time": "2026/11/27 08:30 至 2026/11/27 17:00",
           "registration_time": "2026/10/27 10:00 至 2026/11/23 10:00",
@@ -541,7 +541,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-18T13:56:02.327067+00:00",
+          "last_checked": "2026-11-18T21:55:17.796278+00:00",
           "list_text": "活動時間：2026/11/27 13:30 至 2026/11/27 15:00\n報名期間：2026/09/29 00:00 至 2026/11/27 00:00\n名額資訊：人數上限： 20 已報名人數： 2 待審核人數： 0",
           "event_time": "2026/11/27 13:30 至 2026/11/27 15:00",
           "registration_time": "2026/09/29 00:00 至 2026/11/27 00:00",
@@ -569,7 +569,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-18T13:56:02.327143+00:00",
+          "last_checked": "2026-11-18T21:55:17.796439+00:00",
           "list_text": "活動時間：2026/11/27 15:10 至 2026/11/27 17:00\n報名期間：2026/11/27 15:10 至 2026/11/27 17:00\n名額資訊：人數上限： 140 已報名人數： 0 待審核人數： 0",
           "event_time": "2026/11/27 15:10 至 2026/11/27 17:00",
           "registration_time": "2026/11/27 15:10 至 2026/11/27 17:00",
@@ -598,7 +598,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-18T13:56:02.327219+00:00",
+          "last_checked": "2026-11-18T21:55:17.796604+00:00",
           "list_text": "活動時間：2026/12/01 09:00 至 2026/12/01 16:00\n報名期間：2026/11/02 08:00 至 2026/12/01 16:00\n名額資訊：人數上限： 400 已報名人數： 1 待審核人數： 0",
           "event_time": "2026/12/01 09:00 至 2026/12/01 16:00",
           "registration_time": "2026/11/02 08:00 至 2026/12/01 16:00",
@@ -629,7 +629,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-18T13:56:02.327292+00:00",
+          "last_checked": "2026-11-18T21:55:17.796784+00:00",
           "list_text": "活動時間：2026/12/01 17:30 至 2026/12/01 20:00\n報名期間：2026/11/10 09:08 至 2026/11/30 16:00\n名額資訊：人數上限： 20 已報名人數： 20 待審核人數： 0",
           "event_time": "2026/12/01 17:30 至 2026/12/01 20:00",
           "registration_time": "2026/11/10 09:08 至 2026/11/30 16:00",
@@ -660,7 +660,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-18T13:56:02.327367+00:00",
+          "last_checked": "2026-11-18T21:55:17.796955+00:00",
           "list_text": "活動時間：2026/12/02 09:00 至 2026/12/02 12:00\n報名期間：2026/10/29 08:00 至 2026/11/30 12:00\n名額資訊：人數上限： 500 已報名人數： 0 待審核人數： 55",
           "event_time": "2026/12/02 09:00 至 2026/12/02 12:00",
           "registration_time": "2026/10/29 08:00 至 2026/11/30 12:00",
@@ -689,7 +689,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-18T13:56:02.327443+00:00",
+          "last_checked": "2026-11-18T21:55:17.797121+00:00",
           "list_text": "活動時間：2026/12/02 17:50 至 2026/12/02 20:30\n報名期間：2026/11/19 09:00 至 2026/12/02 20:30\n名額資訊：人數上限： 100 已報名人數： 0 待審核人數： 0",
           "event_time": "2026/12/02 17:50 至 2026/12/02 20:30",
           "registration_time": "2026/11/19 09:00 至 2026/12/02 20:30",
@@ -718,7 +718,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-18T13:56:02.327580+00:00",
+          "last_checked": "2026-11-18T21:55:17.797287+00:00",
           "list_text": "活動時間：2026/12/04 15:00 至 2026/12/04 17:00\n報名期間：2026/09/29 00:00 至 2026/12/04 00:00\n名額資訊：人數上限： 20 已報名人數： 6 待審核人數： 0",
           "event_time": "2026/12/04 15:00 至 2026/12/04 17:00",
           "registration_time": "2026/09/29 00:00 至 2026/12/04 00:00",
@@ -746,7 +746,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-18T13:56:02.327658+00:00",
+          "last_checked": "2026-11-18T21:55:17.797453+00:00",
           "list_text": "活動時間：2026/12/04 15:10 至 2026/12/04 17:00\n報名期間：2026/12/04 15:10 至 2026/12/04 17:00\n名額資訊：人數上限： 140 已報名人數： 0 待審核人數： 0",
           "event_time": "2026/12/04 15:10 至 2026/12/04 17:00",
           "registration_time": "2026/12/04 15:10 至 2026/12/04 17:00",
@@ -777,7 +777,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-18T13:56:02.327732+00:00",
+          "last_checked": "2026-11-18T21:55:17.797612+00:00",
           "list_text": "活動時間：2026/12/08 09:00 至 2026/12/08 12:00\n報名期間：2026/11/23 00:00 至 2026/12/07 10:00\n名額資訊：人數上限： 10 已報名人數： 0 待審核人數： 0",
           "event_time": "2026/12/08 09:00 至 2026/12/08 12:00",
           "registration_time": "2026/11/23 00:00 至 2026/12/07 10:00",
@@ -808,7 +808,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-18T13:56:02.327807+00:00",
+          "last_checked": "2026-11-18T21:55:17.797791+00:00",
           "list_text": "活動時間：2026/12/08 09:00 至 2026/12/08 11:00\n報名期間：2026/10/08 08:00 至 2026/12/03 17:00\n名額資訊：人數上限： 40 已報名人數： 0 待審核人數： 0",
           "event_time": "2026/12/08 09:00 至 2026/12/08 11:00",
           "registration_time": "2026/10/08 08:00 至 2026/12/03 17:00",
@@ -839,7 +839,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-18T13:56:02.327881+00:00",
+          "last_checked": "2026-11-18T21:55:17.797954+00:00",
           "list_text": "活動時間：2026/12/08 14:00 至 2026/12/08 15:00\n報名期間：2026/11/23 00:00 至 2026/12/07 10:00\n名額資訊：人數上限： 30 已報名人數： 0 待審核人數： 0",
           "event_time": "2026/12/08 14:00 至 2026/12/08 15:00",
           "registration_time": "2026/11/23 00:00 至 2026/12/07 10:00",
@@ -870,7 +870,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-18T13:56:02.327953+00:00",
+          "last_checked": "2026-11-18T21:55:17.798114+00:00",
           "list_text": "活動時間：2026/12/08 17:30 至 2026/12/08 20:00\n報名期間：2026/11/10 09:10 至 2026/12/07 16:00\n名額資訊：人數上限： 20 已報名人數： 20 待審核人數： 0",
           "event_time": "2026/12/08 17:30 至 2026/12/08 20:00",
           "registration_time": "2026/11/10 09:10 至 2026/12/07 16:00",
@@ -899,7 +899,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-18T13:56:02.328030+00:00",
+          "last_checked": "2026-11-18T21:55:17.798281+00:00",
           "list_text": "活動時間：2026/12/09 15:00 至 2026/12/09 17:00\n報名期間：2026/11/17 09:00 至 2026/12/09 17:00\n名額資訊：人數上限： 100 已報名人數： 0 待審核人數： 0",
           "event_time": "2026/12/09 15:00 至 2026/12/09 17:00",
           "registration_time": "2026/11/17 09:00 至 2026/12/09 17:00",
@@ -930,7 +930,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-18T13:56:02.328103+00:00",
+          "last_checked": "2026-11-18T21:55:17.798446+00:00",
           "list_text": "活動時間：2026/12/11 10:00 至 2026/12/11 11:30\n報名期間：2026/11/01 00:00 至 2026/12/09 00:00\n名額資訊：人數上限： 150 已報名人數： 11 待審核人數： 0",
           "event_time": "2026/12/11 10:00 至 2026/12/11 11:30",
           "registration_time": "2026/11/01 00:00 至 2026/12/09 00:00",
@@ -961,7 +961,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-18T13:56:02.328176+00:00",
+          "last_checked": "2026-11-18T21:55:17.798605+00:00",
           "list_text": "活動時間：2026/12/12 08:50 至 2026/12/12 16:30\n報名期間：2026/11/10 09:21 至 2026/12/04 16:00\n名額資訊：人數上限： 40 已報名人數： 40 待審核人數： 0",
           "event_time": "2026/12/12 08:50 至 2026/12/12 16:30",
           "registration_time": "2026/11/10 09:21 至 2026/12/04 16:00",
@@ -992,7 +992,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-18T13:56:02.328248+00:00",
+          "last_checked": "2026-11-18T21:55:17.798786+00:00",
           "list_text": "活動時間：2026/12/18 12:10 至 2026/12/18 13:00\n報名期間：2026/11/23 00:00 至 2026/12/17 12:00\n名額資訊：人數上限： 80 已報名人數： 0 待審核人數： 0",
           "event_time": "2026/12/18 12:10 至 2026/12/18 13:00",
           "registration_time": "2026/11/23 00:00 至 2026/12/17 12:00",
@@ -1020,7 +1020,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-18T13:56:02.328362+00:00",
+          "last_checked": "2026-11-18T21:55:17.798960+00:00",
           "list_text": "活動時間：2026/12/18 15:10 至 2026/12/18 16:30\n報名期間：2026/12/18 15:10 至 2026/12/18 16:30\n名額資訊：人數上限： 100 已報名人數： 0 待審核人數： 0",
           "event_time": "2026/12/18 15:10 至 2026/12/18 16:30",
           "registration_time": "2026/12/18 15:10 至 2026/12/18 16:30",
@@ -1051,7 +1051,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-18T13:56:02.328532+00:00",
+          "last_checked": "2026-11-18T21:55:17.799185+00:00",
           "list_text": "活動時間：2026/12/19 09:20 至 2026/12/19 15:30\n報名期間：2026/11/10 16:45 至 2026/12/10 12:00\n名額資訊：人數上限： 30 已報名人數： 30 待審核人數： 0",
           "event_time": "2026/12/19 09:20 至 2026/12/19 15:30",
           "registration_time": "2026/11/10 16:45 至 2026/12/10 12:00",
@@ -1082,7 +1082,7 @@
           "important_notes": [
             "審核"
           ],
-          "last_checked": "2026-11-18T13:56:02.328649+00:00",
+          "last_checked": "2026-11-18T21:55:17.799375+00:00",
           "list_text": "活動時間：2026/12/27 08:40 至 2026/12/27 17:00\n報名期間：2026/10/27 00:00 至 2026/12/19 00:00\n名額資訊：人數上限： 75 已報名人數： 0 待審核人數： 80",
           "event_time": "2026/12/27 08:40 至 2026/12/27 17:00",
           "registration_time": "2026/10/27 00:00 至 2026/12/19 00:00",
@@ -1093,7 +1093,7 @@
     {
       "source": "學校最新公告",
       "status": "ok",
-      "checked_at": "2026-11-18T13:56:02.328663+00:00",
+      "checked_at": "2026-11-18T21:55:17.799400+00:00",
       "count": 5,
       "records": [
         {
@@ -1126,7 +1126,7 @@
           ],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-18T13:56:04.971681+00:00",
+          "last_checked": "2026-11-18T21:55:19.734099+00:00",
           "linked_pages": [],
           "attachment_texts": [],
           "detail_fetch_status": "ok"
@@ -1177,7 +1177,7 @@
           ],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-18T13:56:04.971863+00:00",
+          "last_checked": "2026-11-18T21:55:19.734142+00:00",
           "linked_pages": [],
           "attachment_texts": [],
           "detail_fetch_status": "ok"
@@ -1212,7 +1212,7 @@
           ],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-18T13:56:04.971944+00:00",
+          "last_checked": "2026-11-18T21:55:19.734173+00:00",
           "linked_pages": [],
           "attachment_texts": [],
           "detail_fetch_status": "ok"
@@ -1229,7 +1229,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-18T13:56:04.971969+00:00",
+          "last_checked": "2026-11-18T21:55:19.734203+00:00",
           "linked_pages": [],
           "attachment_texts": [],
           "detail_fetch_status": "ok"
@@ -1264,7 +1264,7 @@
           ],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-18T13:56:04.972003+00:00",
+          "last_checked": "2026-11-18T21:55:19.734258+00:00",
           "linked_pages": [],
           "attachment_texts": [],
           "detail_fetch_status": "ok"
@@ -1274,7 +1274,7 @@
     {
       "source": "生涯發展與實習",
       "status": "ok",
-      "checked_at": "2026-11-18T13:56:08.983399+00:00",
+      "checked_at": "2026-11-18T21:55:23.684867+00:00",
       "count": 5,
       "records": [
         {
@@ -1289,7 +1289,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-18T13:56:10.216726+00:00",
+          "last_checked": "2026-11-18T21:55:24.695609+00:00",
           "linked_pages": [],
           "attachment_texts": [],
           "detail_fetch_status": "ok"
@@ -1306,7 +1306,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-18T13:56:10.216758+00:00",
+          "last_checked": "2026-11-18T21:55:24.695648+00:00",
           "linked_pages": [],
           "attachment_texts": [],
           "detail_fetch_status": "ok"
@@ -1323,7 +1323,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-18T13:56:10.216774+00:00",
+          "last_checked": "2026-11-18T21:55:24.695678+00:00",
           "linked_pages": [],
           "attachment_texts": [],
           "detail_fetch_status": "ok"
@@ -1340,7 +1340,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-18T13:56:10.216792+00:00",
+          "last_checked": "2026-11-18T21:55:24.695728+00:00",
           "linked_pages": [
             {
               "title": "租屋資訊(學安室)",
@@ -1364,7 +1364,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-18T13:56:10.216809+00:00",
+          "last_checked": "2026-11-18T21:55:24.695761+00:00",
           "linked_pages": [
             {
               "title": "租屋資訊(學安室)",
@@ -1381,15 +1381,15 @@
     {
       "source": "國際交流與交換",
       "status": "ok",
-      "checked_at": "2026-11-18T13:56:12.207096+00:00",
+      "checked_at": "2026-11-18T21:55:26.422274+00:00",
       "count": 2,
       "records": [
         {
           "source": "國際交流與交換",
           "title": "【本處】2026中興大學僑外生招生大使▶得獎名單/頒獎典禮/申請寒假文宣",
           "url": "https://oia.nchu.edu.tw/index.php/zh/1-2-news-tw/1-2-2-for-intl-tw/4618-result-2026-nchu-ambassador-ch",
-          "full_text": "詳細內容 點擊數: 285 2026中興大學僑外生招生大使徵件結果 感謝各位同學的參與，也恭喜得獎同學！國際處將會另以email通知獲獎者，敬請留意信件。 ▶️ 2026徵件規則 下次招募為2027招生大使，徵選辦法將於2026年4月公告。 更多學生心得影片作品，歡迎參閱國際處網站： ▶️ 心得-國際處影音網 ▶️ 影片-國際處YouTube 2026中興大學僑外生招生大使作品評選結果 返鄉／線上宣傳 Student ID 學號 Award 獎項 8112054003 Outstanding Performance Award 優選 8113030209 Outstanding Performance Award 優選 8113030213 Outstanding Performance Award 優選 8113030217 Outstanding Performance Award 優選 8113030221 Outstanding Performance Award 優選 7112040518 Honorable Mention Award 佳作 7114030506 Honorable Mention Award 佳作 7114082016 Honorable Mention Award 佳作 個人於興大就讀心得 Student ID 學號 Award 獎項 作品連結 LINK 7114062607 Gold Medal Award 金獎 LINK 8113030217 Silver Medal Award 銀獎 LINK 7114040054 Bronze Medal Award 銅獎 LINK 4114038130 Honorable Mention Award 佳作1 LINK 8113030221 Honorable Mention Award 佳作2 LINK 4114030328 Honorable Mention Award 佳作3 LINK 8113030209 Honorable Mention Award 佳作4 LINK 8113030213 Honorable Mention Award 佳作5 LINK 影片拍攝 Student ID 學號 Award 獎項 作品連結 LINK 7114070104 Gold Medal Award 金獎 LINK 7114062607 Silver Medal Award 銀獎 LINK 8113030221 Bronze Medal Award 銅獎 LINK 8113030214 Honorable Mention Award 1. 佳作1 LINK 4114038130 Honorable Mention Award 2. 佳作2 LINK 8113030217 Honorable Mention Award 3. 佳作3 LINK 7114070106 Honorable Mention Award 4. 佳作4 LINK 7114026051 Honorable Mention Award 5. 佳作5 LINK 7114061377 Honorable Mention Award 6. 佳作6 LINK 8114030207 Honorable Mention Award 7. 佳作7 LINK 7114026050 Honorable Mention Award 8. 佳作8 LINK 發放文宣 Student ID 學號 8112054003 8113030213 7112040518 8113030221 2026頒獎典禮暨2027說明會：11月18日中午12點 時間 : 11月18日(三)中午12點 地點 : 人文大樓一樓102演講廳 報名表單將於 11月15日關閉 本活動認列 我的中興時代國際\"關\" ，參加者可獲得1點 下載說明會簡報 ▶ 2027計畫說明 ▶ 外生大使經驗分享： 1. Hafiz Fikrie優漢哲- Short Film 2. Md. Reaz Mahamud 雷亞茲- Back Home/Online Promotion 2027年寒假發放文宣申請 ▶️ 點此報名 申請表單將於 12月14日(一)上午8點關閉 統一於 12月16日後 開放領取(請等候信件通知)。 文宣品項數量有限。 越早申請越有機會領取喔！ 須於2027年4月申請「2027年興大僑外生招生大使」。 需填寫領取人資料表( Recipient Information ) 並於2027年9月底前統一繳交至「2027年興大僑外生招生大使作品」。 Laurel Lai (Ms.) Office of International Affairs, Tel: +886-4-22840206 ext. 29 Email: Email住址會使用灌水程式保護機制。你需要啟動Javascript才能觀看它 Top 隱私聲明 | 資訊安全 | 網站導覽 | 智財宣導 | 聯絡我們 |\\n網站個人隱私權及資訊安全宣告 歡迎來到國立中興大學國際事務處網站！ 為了讓您能夠更安心的使用本網站所提供的各項服務，在此特別向您說明本網站的資訊安全及個人隱私權政策如下： 一、個人資料之收集及運用 當您參與訂閱電子報或其他相關服務時，您所提供之資料，本網站不會將其應用在超出收集特定目的以外的用途，亦不會對第三者揭露。 二、資料安全及保護 本網站裝設防火牆及入侵偵測系統防止非法入侵、破壞或竊取資料，避免相關資料遭到非法存取使用。此外，所有下載服務皆為本網站所製作檢測的，您可放心存取使用。 三、自我保護措施 最後提醒您切勿將個人資料提供給任何人。且在登入各管理網頁後，務必記得登出，以保障您的權益。",
-          "summary": "詳細內容 點擊數: 285 2026中興大學僑外生招生大使徵件結果 感謝各位同學的參與，也恭喜得獎同學！ 更多學生心得影片作品，歡迎參閱國際處網站： ▶️ 心得-國際處影音網 ▶️ 影片-國際處YouTube 2026中興大學僑外生招生大使作品評選結果 返鄉／線上宣傳 Student ID 學號 Award 獎項 8112054003 Outstanding Performance Award 優選 8113030209 Outstanding Performance Award 優選 8113030213 Outstanding Performance Award 優選 8113030217 Outstanding Performance Award 優選 8113030221 Outstanding Performance Award 優選 7112040518 Honorable Mention Award 佳作 7114030506 Honorable Mention Award 佳作 7114082016 Honorable Mention Award 佳作 個人於興大就讀心得 Student ID 學號 Award 獎項 作品連結 LINK 7114062607 Gold Medal Award 金獎 LINK 8113030217 Silver Medal Award 銀獎 LINK 7114040054 Bronze Medal Award 銅獎 LINK 4114038130 Honorable Mention Award 佳作1 LINK 8113030221 Honorable Mention Award 佳作2 LINK 4114030328 Honorable Mention Award 佳作3 LINK 8113030209 Honorable Mention Award 佳作4 LINK 8113030213 Honorable Mention Award 佳作5 LINK 影片拍攝 Student ID 學號 Award 獎項 作品連結 LINK 7114070104 Gold Medal Award 金獎 LINK 7114062607 Silver Medal Award 銀獎 LINK 8113030221 Bronze Medal Award 銅獎 LINK 8113030214 Honorable Mention Award 1. 佳作1 LINK 4114038130 Honorable Mention Award 2. 佳作2 LINK 8113030217 Honorable Mention Award 3. 佳作3 LINK 7114070106 Honorable Mention Award 4. 佳作4 ",
+          "full_text": "詳細內容 點擊數: 288 2026中興大學僑外生招生大使徵件結果 感謝各位同學的參與，也恭喜得獎同學！國際處將會另以email通知獲獎者，敬請留意信件。 ▶️ 2026徵件規則 下次招募為2027招生大使，徵選辦法將於2026年4月公告。 更多學生心得影片作品，歡迎參閱國際處網站： ▶️ 心得-國際處影音網 ▶️ 影片-國際處YouTube 2026中興大學僑外生招生大使作品評選結果 返鄉／線上宣傳 Student ID 學號 Award 獎項 8112054003 Outstanding Performance Award 優選 8113030209 Outstanding Performance Award 優選 8113030213 Outstanding Performance Award 優選 8113030217 Outstanding Performance Award 優選 8113030221 Outstanding Performance Award 優選 7112040518 Honorable Mention Award 佳作 7114030506 Honorable Mention Award 佳作 7114082016 Honorable Mention Award 佳作 個人於興大就讀心得 Student ID 學號 Award 獎項 作品連結 LINK 7114062607 Gold Medal Award 金獎 LINK 8113030217 Silver Medal Award 銀獎 LINK 7114040054 Bronze Medal Award 銅獎 LINK 4114038130 Honorable Mention Award 佳作1 LINK 8113030221 Honorable Mention Award 佳作2 LINK 4114030328 Honorable Mention Award 佳作3 LINK 8113030209 Honorable Mention Award 佳作4 LINK 8113030213 Honorable Mention Award 佳作5 LINK 影片拍攝 Student ID 學號 Award 獎項 作品連結 LINK 7114070104 Gold Medal Award 金獎 LINK 7114062607 Silver Medal Award 銀獎 LINK 8113030221 Bronze Medal Award 銅獎 LINK 8113030214 Honorable Mention Award 1. 佳作1 LINK 4114038130 Honorable Mention Award 2. 佳作2 LINK 8113030217 Honorable Mention Award 3. 佳作3 LINK 7114070106 Honorable Mention Award 4. 佳作4 LINK 7114026051 Honorable Mention Award 5. 佳作5 LINK 7114061377 Honorable Mention Award 6. 佳作6 LINK 8114030207 Honorable Mention Award 7. 佳作7 LINK 7114026050 Honorable Mention Award 8. 佳作8 LINK 發放文宣 Student ID 學號 8112054003 8113030213 7112040518 8113030221 2026頒獎典禮暨2027說明會：11月18日中午12點 時間 : 11月18日(三)中午12點 地點 : 人文大樓一樓102演講廳 報名表單將於 11月15日關閉 本活動認列 我的中興時代國際\"關\" ，參加者可獲得1點 下載說明會簡報 ▶ 2027計畫說明 ▶ 外生大使經驗分享： 1. Hafiz Fikrie優漢哲- Short Film 2. Md. Reaz Mahamud 雷亞茲- Back Home/Online Promotion 2027年寒假發放文宣申請 ▶️ 點此報名 申請表單將於 12月14日(一)上午8點關閉 統一於 12月16日後 開放領取(請等候信件通知)。 文宣品項數量有限。 越早申請越有機會領取喔！ 須於2027年4月申請「2027年興大僑外生招生大使」。 需填寫領取人資料表( Recipient Information ) 並於2027年9月底前統一繳交至「2027年興大僑外生招生大使作品」。 Laurel Lai (Ms.) Office of International Affairs, Tel: +886-4-22840206 ext. 29 Email: Email住址會使用灌水程式保護機制。你需要啟動Javascript才能觀看它 Top 隱私聲明 | 資訊安全 | 網站導覽 | 智財宣導 | 聯絡我們 |\\n網站個人隱私權及資訊安全宣告 歡迎來到國立中興大學國際事務處網站！ 為了讓您能夠更安心的使用本網站所提供的各項服務，在此特別向您說明本網站的資訊安全及個人隱私權政策如下： 一、個人資料之收集及運用 當您參與訂閱電子報或其他相關服務時，您所提供之資料，本網站不會將其應用在超出收集特定目的以外的用途，亦不會對第三者揭露。 二、資料安全及保護 本網站裝設防火牆及入侵偵測系統防止非法入侵、破壞或竊取資料，避免相關資料遭到非法存取使用。此外，所有下載服務皆為本網站所製作檢測的，您可放心存取使用。 三、自我保護措施 最後提醒您切勿將個人資料提供給任何人。且在登入各管理網頁後，務必記得登出，以保障您的權益。",
+          "summary": "詳細內容 點擊數: 288 2026中興大學僑外生招生大使徵件結果 感謝各位同學的參與，也恭喜得獎同學！ 更多學生心得影片作品，歡迎參閱國際處網站： ▶️ 心得-國際處影音網 ▶️ 影片-國際處YouTube 2026中興大學僑外生招生大使作品評選結果 返鄉／線上宣傳 Student ID 學號 Award 獎項 8112054003 Outstanding Performance Award 優選 8113030209 Outstanding Performance Award 優選 8113030213 Outstanding Performance Award 優選 8113030217 Outstanding Performance Award 優選 8113030221 Outstanding Performance Award 優選 7112040518 Honorable Mention Award 佳作 7114030506 Honorable Mention Award 佳作 7114082016 Honorable Mention Award 佳作 個人於興大就讀心得 Student ID 學號 Award 獎項 作品連結 LINK 7114062607 Gold Medal Award 金獎 LINK 8113030217 Silver Medal Award 銀獎 LINK 7114040054 Bronze Medal Award 銅獎 LINK 4114038130 Honorable Mention Award 佳作1 LINK 8113030221 Honorable Mention Award 佳作2 LINK 4114030328 Honorable Mention Award 佳作3 LINK 8113030209 Honorable Mention Award 佳作4 LINK 8113030213 Honorable Mention Award 佳作5 LINK 影片拍攝 Student ID 學號 Award 獎項 作品連結 LINK 7114070104 Gold Medal Award 金獎 LINK 7114062607 Silver Medal Award 銀獎 LINK 8113030221 Bronze Medal Award 銅獎 LINK 8113030214 Honorable Mention Award 1. 佳作1 LINK 4114038130 Honorable Mention Award 2. 佳作2 LINK 8113030217 Honorable Mention Award 3. 佳作3 LINK 7114070106 Honorable Mention Award 4. 佳作4 ",
           "summary_type": "規則式重點摘錄（保留完整原文供核對）",
           "dates_found": [
             " 2026-11-18",
@@ -1406,7 +1406,7 @@
           ],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-18T13:56:13.806958+00:00",
+          "last_checked": "2026-11-18T21:55:27.888762+00:00",
           "list_text": "重要訊息 公告-國際學生 【本處】2026中興大學僑外生招生大使▶得獎名單/頒獎典禮/申請寒假文宣 2026-11-18 【本處】【線上企業說明會】日月光投控旗下 USI 環旭電子 2026-11-18 【本處】【線上企業說明會】美律實業 Merry Electronics 2026-11-18 公告-徵才 【本處】國際志工 IVC 申請資訊 2026-11-18 公告-本地學生 【本處】國際志工 IVC 申請資訊 2026-11-18 【本處】我的中興時代🌍國際\"關\" ▶來活動 集5點 換好禮! (115-1) 2026-11-17",
           "linked_pages": [
             {
@@ -1450,7 +1450,7 @@
           ],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-18T13:56:13.807505+00:00",
+          "last_checked": "2026-11-18T21:55:27.889842+00:00",
           "list_text": "最新消息 國際學生 【本處】【線上企業說明會】日月光投控旗下 USI 環旭電子 2026-11-18 【本處】【線上企業說明會】美律實業 Merry Electronics 2026-11-18 【本處】12月一對一職涯諮詢 2026-11-17 【本處】【認識百工百業】斜槓職涯-生活花藝設計(迷你聖誕樹) 2026-11-09 【本處】【認識百工百業】探索文創產業：藍染-圍巾 2026-11-09 【本處】2026中興大學僑外生招生大使▶得獎名單/頒獎典禮/申請寒假文宣 2026-10-29 本地學生 【歐盟中心】「歐盟聯合碩士學位」獎學金計畫 說明會 2026-11-11 轉知 【轉知】2026 AIESEC x HULT YOUth Week｜全台校園講座 - 打造就業市場想要的Gen Z Profile 2026-11-05",
           "linked_pages": [
             {
@@ -1468,7 +1468,7 @@
     {
       "source": "宿舍公告",
       "status": "ok",
-      "checked_at": "2026-11-18T13:56:15.686346+00:00",
+      "checked_at": "2026-11-18T21:55:29.644091+00:00",
       "count": 5,
       "records": [
         {
@@ -1483,7 +1483,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-18T13:56:16.380499+00:00",
+          "last_checked": "2026-11-18T21:55:30.295330+00:00",
           "linked_pages": [],
           "attachment_texts": [],
           "detail_fetch_status": "ok"
@@ -1500,7 +1500,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-18T13:56:16.380528+00:00",
+          "last_checked": "2026-11-18T21:55:30.295368+00:00",
           "linked_pages": [],
           "attachment_texts": [],
           "detail_fetch_status": "ok"
@@ -1509,8 +1509,8 @@
           "source": "宿舍公告",
           "title": "ENGLISH",
           "url": "https://www.osa.nchu.edu.tw/osa/en/dorm",
-          "full_text": "Office of Student Affairs Student Housing Service Division Home Application for bed space for freshmen and Check-in precautions、Parking discount method News Loading... TOP\\n115學年度大一新生床位申請、入住注意事項、停車折抵方式Application for bed space for freshmen and Check-in precautions、Parking discount method 公告 T000520 Dorm 2026-07-30 5120",
-          "summary": "Office of Student Affairs Student Housing Service Division Home Application for bed space for freshmen and Check-in precautions、Parking discount method News Loading... TOP\\n115學年度大一新生床位申請、入住注意事項、停車折抵方式Application for bed space for freshmen and Check-in precautions、Parking discount method 公告 T000520 Dorm 2026-07-30 5120",
+          "full_text": "Office of Student Affairs Student Housing Service Division Home Application for bed space for freshmen and Check-in precautions、Parking discount method News Loading... TOP\\n115學年度大一新生床位申請、入住注意事項、停車折抵方式Application for bed space for freshmen and Check-in precautions、Parking discount method 公告 T000520 Dorm 2026-07-30 5123",
+          "summary": "Office of Student Affairs Student Housing Service Division Home Application for bed space for freshmen and Check-in precautions、Parking discount method News Loading... TOP\\n115學年度大一新生床位申請、入住注意事項、停車折抵方式Application for bed space for freshmen and Check-in precautions、Parking discount method 公告 T000520 Dorm 2026-07-30 5123",
           "summary_type": "規則式重點摘錄（保留完整原文供核對）",
           "dates_found": [
             " 2026-07-30",
@@ -1520,12 +1520,12 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-18T13:56:16.380544+00:00",
+          "last_checked": "2026-11-18T21:55:30.295398+00:00",
           "linked_pages": [
             {
               "title": "Application for bed space for freshmen and Check-in precautions、Parking discount method",
               "url": "https://www.osa.nchu.edu.tw/osa/dorm/sys/modules/tadnews/index.php?nsn=2029",
-              "full_text": "115學年度大一新生床位申請、入住注意事項、停車折抵方式Application for bed space for freshmen and Check-in precautions、Parking discount method 公告 T000520 Dorm 2026-07-30 5120",
+              "full_text": "115學年度大一新生床位申請、入住注意事項、停車折抵方式Application for bed space for freshmen and Check-in precautions、Parking discount method 公告 T000520 Dorm 2026-07-30 5123",
               "dates_found": [
                 " 2026-07-30",
                 "2026-07-30"
@@ -1547,7 +1547,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-18T13:56:16.380562+00:00",
+          "last_checked": "2026-11-18T21:55:30.295431+00:00",
           "linked_pages": [
             {
               "title": "租屋資訊(學安室)",
@@ -1571,7 +1571,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-18T13:56:16.380578+00:00",
+          "last_checked": "2026-11-18T21:55:30.295464+00:00",
           "linked_pages": [
             {
               "title": "租屋資訊(學安室)",
@@ -1588,7 +1588,7 @@
     {
       "source": "電機系公告",
       "status": "ok",
-      "checked_at": "2026-11-18T13:56:18.402036+00:00",
+      "checked_at": "2026-11-18T21:55:32.101208+00:00",
       "count": 5,
       "records": [
         {
@@ -1603,7 +1603,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-18T13:56:19.853444+00:00",
+          "last_checked": "2026-11-18T21:55:33.145198+00:00",
           "linked_pages": [
             {
               "title": "獎學金",
@@ -1633,7 +1633,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-18T13:56:19.853676+00:00",
+          "last_checked": "2026-11-18T21:55:33.145257+00:00",
           "linked_pages": [
             {
               "title": "獎學金",
@@ -1665,7 +1665,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-18T13:56:19.853720+00:00",
+          "last_checked": "2026-11-18T21:55:33.145299+00:00",
           "linked_pages": [
             {
               "title": "獎學金",
@@ -1695,7 +1695,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-18T13:56:19.853746+00:00",
+          "last_checked": "2026-11-18T21:55:33.145334+00:00",
           "linked_pages": [
             {
               "title": "獎學金",
@@ -1729,7 +1729,7 @@
           "important_notes": [
             "費用"
           ],
-          "last_checked": "2026-11-18T13:56:19.853772+00:00",
+          "last_checked": "2026-11-18T21:55:33.145381+00:00",
           "linked_pages": [
             {
               "title": "獎學金",
@@ -1752,29 +1752,9 @@
     {
       "source": "教務處選課與學籍",
       "status": "ok",
-      "checked_at": "2026-11-18T13:56:25.208333+00:00",
+      "checked_at": "2026-11-18T21:55:38.371895+00:00",
       "count": 10,
       "records": [
-        {
-          "source": "教務處選課與學籍",
-          "title": "【活動公告】115-1學分學程說明會",
-          "url": "https://oaa.nchu.edu.tw/zh-tw/news-detail/content-p.2209",
-          "full_text": "刊登日期：2026-11-03 為協助同學深入了解校內各項跨領域學分學程 課務組特別邀請各學程召集人親臨介紹， 幫助大家掌握課程核心與未來發展方向。 活動時間：12:10-13:00 活動日期、地點、報名連結： 學分學程說明會第一場：11/13(五)綜合教學大樓Y112教室 https://selfstudy.nchu.edu.tw/activity/1000053 學分學程說明會第二場：11/16(一)綜合教學大樓Y104教室 https://selfstudy.nchu.edu.tw/activity/1000055 學分學程說明會第三場：11/17(二)綜合教學大樓Y203教室 https://selfstudy.nchu.edu.tw/activity/1000054 學分學程說明會第四場：11/18(三)綜合教學大樓Y104教室 https://selfstudy.nchu.edu.tw/activity/1000056 活動流程： 活動資訊與好康： 本活動備有餐盒 可認證通識自主學習時數1點，四場都參加就有4點 活動承辦人：課務組 林先生04-22840214#18",
-          "summary": "刊登日期：2026-11-03 為協助同學深入了解校內各項跨領域學分學程 課務組特別邀請各學程召集人親臨介紹， 幫助大家掌握課程核心與未來發展方向。 活動時間：12:10-13:00 活動日期、地點、報名連結： 學分學程說明會第一場：11/13(五)綜合教學大樓Y112教室 https://selfstudy.nchu.edu.tw/activity/1000053 學分學程說明會第二場：11/16(一)綜合教學大樓Y104教室 https://selfstudy.nchu.edu.tw/activity/1000055 學分學程說明會第三場：11/17(二)綜合教學大樓Y203教室 https://selfstudy.nchu.edu.tw/activity/1000054 學分學程說明會第四場：11/18(三)綜合教學大樓Y104教室 https://selfstudy.nchu.edu.tw/activity/1000056 活動流程： 活動資訊與好康： 本活動備有餐盒 可認證通識自主學習時數1點，四場都參加就有4點 活動承辦人：課務組 林先生04-22840214#18",
-          "summary_type": "規則式重點摘錄（保留完整原文供核對）",
-          "dates_found": [
-            "2026-11-03"
-          ],
-          "audience_hints": [],
-          "registration_links": [],
-          "attachments": [],
-          "important_notes": [],
-          "last_checked": "2026-11-18T13:56:26.978293+00:00",
-          "list_text": "2026-11-03 【活動公告】115-1學分學程說明會",
-          "linked_pages": [],
-          "attachment_texts": [],
-          "detail_fetch_status": "ok"
-        },
         {
           "source": "教務處選課與學籍",
           "title": "【臺灣國立大學系統】首屆跨校合作開設學分學程徵件 即日起受理申請",
@@ -1790,7 +1770,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-18T13:56:26.978415+00:00",
+          "last_checked": "2026-11-18T21:55:40.092037+00:00",
           "list_text": "2026-10-07 【臺灣國立大學系統】首屆跨校合作開設學分學程徵件 即日起受理申請",
           "linked_pages": [],
           "attachment_texts": [],
@@ -1810,7 +1790,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-18T13:56:26.978525+00:00",
+          "last_checked": "2026-11-18T21:55:40.092270+00:00",
           "list_text": "2026-09-10 敬請各教學單位檢視課程規畫表所列必修0學分課程，並依教育部來函配合修正。",
           "linked_pages": [],
           "attachment_texts": [],
@@ -1830,7 +1810,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-18T13:56:26.978623+00:00",
+          "last_checked": "2026-11-18T21:55:40.092478+00:00",
           "list_text": "2026-09-09 【臺灣國立大學系統】115-1學期跨校學分學程申請公告",
           "linked_pages": [],
           "attachment_texts": [],
@@ -1850,7 +1830,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-18T13:56:26.978714+00:00",
+          "last_checked": "2026-11-18T21:55:40.092677+00:00",
           "list_text": "2026-09-08 遠距教學課程實施宣導說明會",
           "linked_pages": [],
           "attachment_texts": [],
@@ -1860,8 +1840,8 @@
           "source": "教務處選課與學籍",
           "title": "【調教室通知】因應綜合教學大樓1樓走廊裝修調教室通知~10/11",
           "url": "https://oaa.nchu.edu.tw/zh-tw/news-detail/content-p.2171",
-          "full_text": "2026-09-07 【調教室通知】因應綜合教學大樓1樓走廊裝修調教室通知~10/11",
-          "summary": "2026-09-07 【調教室通知】因應綜合教學大樓1樓走廊裝修調教室通知~10/11",
+          "full_text": "刊登日期：2026-09-07 施工期間-10/11前暫時更換教室表 Temporary Classroom Schedule (Effective until Oct. 11 during construction) 101教室調課表 星期(week) 課號(Course Number) 節次(Session) 課名(Course Title) 授課老師(Instructor) 調課地點(Rescheduled Class Location) 星期一 0212 5、6節 設計思考 趙欣怡 Y1308 星期三 0272 5、6節 創新思維與應用 鄭釗仁 Y1308 0271 7、8節 設計思考 鄭釗仁 Y1308 星期五 0231 3、4節 登山露營趣 林長鋆 Y1308 0229 5、6節 職涯規劃與成就自我 施又瑀 Y605 0230 7、8節 職涯規劃與成就自我 施又瑀 Y605 104教室調課表 星期(week) 課號(Course Number) 節次(Session) 課名(Course Title) 授課老師(Instructor) 調課地點(Rescheduled Class Location) 星期二 1077 2、3、4節 普通生物學 陳美娥 Y203 109教室調課表 星期(week) 課號(Course Number) 節次(Session) 課名(Course Title) 授課老師(Instructor) 調課地點(Rescheduled Class Location) 星期一 0249 3、4節 趣味生技與醫學應用 賴建成 Y411 0348 5、6節 永續、SDGs與藝術實踐 宋慧筠 Y411 0224 7、8節 生活實用急救技能 柳育澤 Y411 0102 A、B節 美感跨域遊藝思：立體創作 芝田典子 Y411 星期二 2525 A、B、C節 推廣科學 陳姿伶 Y1308 星期三 0260 3、4節 興大綠色校園沙龍 黎宗裕 Y411 0434 5、6節 網際文化 黎宗裕 Y411 星期五 0242 7、8節 藝術家之書 蔡佩儒 Y411 2542 A、B節 造型原理 蔡佩儒 Y411 0103 C、D節 藝術家之書 蔡佩儒 Y411 112教室調課表 星期(week) 課號(Course Number) 節次(Session) 課名(Course Title) 授課老師(Instructor) 調課地點(Rescheduled Class Location) 星期一 0244 3、4節 影像與音樂 李美賢 Y305 0245 5、6節 影像與音樂 李美賢 Y305 0342 7、8節 古典音樂賞析 李美賢 Y305 星期二 0512 3、4節 動物生物科技與生活 辛坤鎰 Y104 0347 5、6節 世界音樂與多元文化 呂承祐 Y204 0344 7、8節 古典音樂賞析 呂承祐 Y204 0110 A、B節 世界音樂與多元文化 呂承祐 Y204 星期三 0233 1、2節 人聲作品介紹 陳彥蓉 Y203 0234 3、4節 人聲作品介紹 陳彥蓉 Y104 0343 5、6節 古典音樂賞析 陳彥蓉 Y204 星期四 0535 3、4節 臺灣重要之病毒性傳染病 邱賢松 Y203 星期五 0650 7、8節 幸福溝通 劉秀丹 Y104(整學期更換)",
+          "summary": "刊登日期：2026-09-07 施工期間-10/11前暫時更換教室表 Temporary Classroom Schedule (Effective until Oct. 11 during construction) 101教室調課表 星期(week) 課號(Course Number) 節次(Session) 課名(Course Title) 授課老師(Instructor) 調課地點(Rescheduled Class Location) 星期一 0212 5、6節 設計思考 趙欣怡 Y1308 星期三 0272 5、6節 創新思維與應用 鄭釗仁 Y1308 0271 7、8節 設計思考 鄭釗仁 Y1308 星期五 0231 3、4節 登山露營趣 林長鋆 Y1308 0229 5、6節 職涯規劃與成就自我 施又瑀 Y605 0230 7、8節 職涯規劃與成就自我 施又瑀 Y605 104教室調課表 星期(week) 課號(Course Number) 節次(Session) 課名(Course Title) 授課老師(Instructor) 調課地點(Rescheduled Class Location) 星期二 1077 2、3、4節 普通生物學 陳美娥 Y203 109教室調課表 星期(week) 課號(Course Number) 節次(Session) 課名(Course Title) 授課老師(Instructor) 調課地點(Rescheduled Class Location) 星期一 0249 3、4節 趣味生技與醫學應用 賴建成 Y411 0348 5、6節 永續、SDGs與藝術實踐 宋慧筠 Y411 0224 7、8節 生活實用急救技能 柳育澤 Y411 0102 A、B節 美感跨域遊藝思：立體創作 芝田典子 Y411 星期二 2525 A、B、C節 推廣科學 陳姿伶 Y1308 星期三 0260 3、4節 興大綠色校園沙龍 黎宗裕 Y411 0434 5、6節 網際文化 黎宗裕 Y411 星期五 0242 7、8節 藝術家之書 蔡佩儒 Y411 2542 A、B節 造型原理 蔡佩儒 Y411 0103 C、D節 藝術家之書 蔡佩儒 Y411 112教室調課表 星期(week) 課號(Course Number) 節次(Session) 課名(Course Title) 授課老師(Instructor) 調課地點(Rescheduled Class Location) 星期一 0244 3、4節 影像與音樂 李美賢 Y305 0245 5、6節 影像與音樂 李美賢 Y305 0342 7、8節 古典音樂賞析 李美賢 Y305 星期二 0512 3、4節 動物生物科技與生活 辛坤鎰 Y104 0347 5、6節 世界音樂與多元文化 呂",
           "summary_type": "規則式重點摘錄（保留完整原文供核對）",
           "dates_found": [
             "2026-09-07"
@@ -1870,8 +1850,11 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-18T13:56:26.978806+00:00",
-          "list_text": "2026-09-07 【調教室通知】因應綜合教學大樓1樓走廊裝修調教室通知~10/11"
+          "last_checked": "2026-11-18T21:55:40.092900+00:00",
+          "list_text": "2026-09-07 【調教室通知】因應綜合教學大樓1樓走廊裝修調教室通知~10/11",
+          "linked_pages": [],
+          "attachment_texts": [],
+          "detail_fetch_status": "ok"
         },
         {
           "source": "教務處選課與學籍",
@@ -1887,7 +1870,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-18T13:56:26.978904+00:00",
+          "last_checked": "2026-11-18T21:55:40.093108+00:00",
           "list_text": "2026-09-04 【 施工通知】 9月3日至11月27日綜合教學大樓1樓走廊裝修通知"
         },
         {
@@ -1904,7 +1887,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-18T13:56:26.978997+00:00",
+          "last_checked": "2026-11-18T21:55:40.093309+00:00",
           "list_text": "2026-05-04 【臺灣國立大學系統】115學年度跨校輔系、雙主修申請公告"
         },
         {
@@ -1922,7 +1905,7 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-18T13:56:26.979091+00:00",
+          "last_checked": "2026-11-18T21:55:40.093514+00:00",
           "list_text": "2025-06-09 （115.5.6更新完成）公告新版教學大綱－因應114學年度正式實施【學期16週】"
         },
         {
@@ -1939,8 +1922,25 @@
           "registration_links": [],
           "attachments": [],
           "important_notes": [],
-          "last_checked": "2026-11-18T13:56:26.979182+00:00",
+          "last_checked": "2026-11-18T21:55:40.093723+00:00",
           "list_text": "2025-02-24 維護教學品質宣導說明"
+        },
+        {
+          "source": "教務處選課與學籍",
+          "title": "【公告】轉知教育部來函說明專科以上課程安排規範，請查照並配合辦理。",
+          "url": "https://oaa.nchu.edu.tw/zh-tw/news-detail/content-p.1551",
+          "full_text": "2024-04-25 【公告】轉知教育部來函說明專科以上課程安排規範，請查照並配合辦理。",
+          "summary": "2024-04-25 【公告】轉知教育部來函說明專科以上課程安排規範，請查照並配合辦理。",
+          "summary_type": "規則式重點摘錄（保留完整原文供核對）",
+          "dates_found": [
+            "2024-04-25"
+          ],
+          "audience_hints": [],
+          "registration_links": [],
+          "attachments": [],
+          "important_notes": [],
+          "last_checked": "2026-11-18T21:55:40.093929+00:00",
+          "list_text": "2024-04-25 【公告】轉知教育部來函說明專科以上課程安排規範，請查照並配合辦理。"
         }
       ]
     }
