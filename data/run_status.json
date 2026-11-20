@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-11-20T11:35:32.575455+00:00",
+  "run_at": "2026-11-20T20:14:44.555354+00:00",
   "events": [
     {
       "source": "圖書館活動",
@@ -60,7 +60,7 @@
     {
       "source": "獎學金",
       "status": "ok",
-      "count": 135,
+      "count": 104,
       "error": null,
       "warnings": [],
       "detail_pages_fetched": null,
