@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-11-22T19:37:20.885115+00:00",
+  "run_at": "2026-11-23T00:52:44.019532+00:00",
   "events": [
     {
       "source": "圖書館活動",
@@ -84,7 +84,7 @@
     {
       "source": "高師大獎助學金",
       "status": "ok",
-      "count": 10,
+      "count": 9,
       "error": null,
       "warnings": [],
       "detail_pages_fetched": null,
