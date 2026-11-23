@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-11-23T00:52:44.019532+00:00",
+  "run_at": "2026-11-23T09:01:56.055609+00:00",
   "events": [
     {
       "source": "圖書館活動",
@@ -16,7 +16,7 @@
     {
       "source": "研習暨演講活動",
       "status": "ok",
-      "count": 33,
+      "count": 34,
       "error": null
     },
     {
@@ -34,7 +34,7 @@
     {
       "source": "國際交流與交換",
       "status": "ok",
-      "count": 1,
+      "count": 2,
       "error": null
     },
     {
@@ -45,7 +45,7 @@
     },
     {
       "source": "電機系公告",
-      "status": "ok",
+      "status": "stale_previous_data",
       "count": 5,
       "error": null
     },
