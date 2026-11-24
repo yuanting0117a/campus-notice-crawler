@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-11-23T21:20:48.922253+00:00",
+  "run_at": "2026-11-24T06:01:17.992669+00:00",
   "events": [
     {
       "source": "圖書館活動",
@@ -16,7 +16,7 @@
     {
       "source": "研習暨演講活動",
       "status": "ok",
-      "count": 33,
+      "count": 32,
       "error": null
     },
     {
@@ -71,15 +71,15 @@
     {
       "source": "嘉義大學獎助學金",
       "status": "partial",
-      "count": 23,
+      "count": 22,
       "error": null,
       "warnings": [
         "校外獎助學金第 2 頁分頁回傳系統錯誤，僅保留已成功取得的公告"
       ],
-      "detail_pages_fetched": 23,
+      "detail_pages_fetched": 22,
       "internal_categories_crawled": 11,
       "department_boards_crawled": 6,
-      "attachment_count": 29
+      "attachment_count": 28
     },
     {
       "source": "高師大獎助學金",
