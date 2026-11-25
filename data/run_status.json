@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-11-25T02:26:37.278126+00:00",
+  "run_at": "2026-11-25T12:51:53.694261+00:00",
   "events": [
     {
       "source": "圖書館活動",
@@ -16,7 +16,7 @@
     {
       "source": "研習暨演講活動",
       "status": "ok",
-      "count": 31,
+      "count": 30,
       "error": null
     },
     {
@@ -51,7 +51,7 @@
     },
     {
       "source": "教務處選課與學籍",
-      "status": "ok",
+      "status": "stale_previous_data",
       "count": 10,
       "error": null
     }
